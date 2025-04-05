@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				portfolio: {
+					'blue-dark': '#0a192f',
+					'blue-medium': '#1e3a8a',
+					'blue-light': '#3b82f6',
+					'blue-lightest': '#93c5fd',
+					'orange-dark': '#c2410c',
+					'orange-medium': '#ea580c',
+					'orange-light': '#fb923c',
+					'orange-lightest': '#fed7aa',
 				}
 			},
 			borderRadius: {
@@ -70,25 +81,33 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-in-right': {
+					'0%': { opacity: '0', transform: 'translateX(20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'fade-in-right': 'fade-in-right 0.5s ease-out forwards',
+			},
+			backgroundImage: {
+				'hero-gradient': 'linear-gradient(135deg, #0a192f 0%, #1e3a8a 100%)',
+				'card-gradient': 'linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(30, 58, 138, 0.9) 100%)',
+				'orange-gradient': 'linear-gradient(135deg, #c2410c 0%, #fb923c 100%)',
+				'blue-orange-gradient': 'linear-gradient(135deg, #1e3a8a 0%, #ea580c 100%)',
 			}
 		}
 	},

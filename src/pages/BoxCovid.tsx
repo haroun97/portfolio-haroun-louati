@@ -1,5 +1,4 @@
-
-import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User } from 'lucide-react';
+import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
 
 const BoxCovid = () => {
@@ -68,6 +68,95 @@ const BoxCovid = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery Section */}
+      <section className="py-16 px-6 bg-gray-50 dark:bg-portfolio-blue-dark/70">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-white">
+            <span className="flex items-center justify-center gap-2">
+              <Images className="text-portfolio-orange-medium" />
+              Project Gallery
+            </span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            {/* Box-Covid Solution */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">The Box-Covid Solution</h3>
+              <Card className="overflow-hidden">
+                <div className="relative">
+                  <AspectRatio ratio={16 / 9}>
+                    <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-800">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 p-4 text-center">
+                        Upload your Box-Covid solution image to<br />
+                        <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">src/assets/box-covid-solution.jpg</code><br />
+                        and it will appear here
+                      </p>
+                    </div>
+                  </AspectRatio>
+                </div>
+                <CardContent className="p-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    The Box-Covid monitoring system with sensors for tracking patient vitals and environmental conditions.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            {/* Development Team */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Development Team</h3>
+              <Card className="overflow-hidden">
+                <div className="relative">
+                  <AspectRatio ratio={16 / 9}>
+                    <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-800">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 p-4 text-center">
+                        Upload your team photo to<br />
+                        <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">src/assets/box-covid-team.jpg</code><br />
+                        and it will appear here
+                      </p>
+                    </div>
+                  </AspectRatio>
+                </div>
+                <CardContent className="p-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    The talented team of developers and engineers who brought the Box-Covid solution to life.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          
+          {/* Carousel for Multiple Images (Optional) */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">More Project Photos</h3>
+            <Carousel className="w-full">
+              <CarouselContent>
+                {[1, 2, 3].map((index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="overflow-hidden">
+                      <AspectRatio ratio={3/2}>
+                        <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-800">
+                          <p className="text-sm text-gray-500 dark:text-gray-400 p-4 text-center">
+                            Additional photo #{index}<br />
+                            <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">
+                              src/assets/box-covid-photo-{index}.jpg
+                            </code>
+                          </p>
+                        </div>
+                      </AspectRatio>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-2 mt-4">
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

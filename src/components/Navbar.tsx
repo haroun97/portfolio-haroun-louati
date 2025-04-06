@@ -6,17 +6,28 @@ import { Button } from "@/components/ui/button";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
+      // Check if we've scrolled past the home section
+      const homeSection = document.getElementById('home');
+      const homeSectionHeight = homeSection?.offsetHeight || 0;
+      
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+      
+      // Set isHomePage based on whether we're still in the home section
+      setIsHomePage(window.scrollY < (homeSectionHeight - 100));
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -30,6 +41,20 @@ const Navbar = () => {
     { href: "#contact", label: "Contact" },
   ];
 
+  const getNavTextColor = () => {
+    if (!isScrolled && isHomePage) {
+      return "text-white hover:text-portfolio-orange-light";
+    }
+    return "text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light";
+  };
+
+  const getLogoTextColor = () => {
+    if (!isScrolled && isHomePage) {
+      return "text-white";
+    }
+    return "text-portfolio-blue-dark dark:text-white";
+  };
+
   return (
     <header 
       className={`fixed w-full z-30 transition-all duration-300 ${
@@ -39,7 +64,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a 
           href="#home" 
-          className="flex items-center gap-2 text-portfolio-blue-dark dark:text-white font-bold text-xl"
+          className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
           <span>Portfolio</span>
@@ -51,7 +76,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors"
+              className={`transition-colors ${getNavTextColor()}`}
             >
               {link.label}
             </a>
@@ -63,7 +88,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-portfolio-blue-dark dark:text-white"
+          className={`md:hidden ${!isScrolled && isHomePage ? 'text-white' : 'text-portfolio-blue-dark dark:text-white'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

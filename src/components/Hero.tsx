@@ -15,7 +15,8 @@ const Hero = () => {
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-orange-light shadow-xl animate-pulse">
                 <Avatar className="w-full h-full">
-                  <AvatarImage src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&h=500" alt="Profile" />
+                  {/* Replace this with your local image path, e.g., "/src/assets/profile.jpg" */}
+                  <AvatarImage src="/src/assets/profile.jpg" alt="Profile" />
                   <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">SE</AvatarFallback>
                 </Avatar>
               </div>

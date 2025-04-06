@@ -2,6 +2,7 @@
 import { ExternalLink, Github, Code } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 interface Project {
   title: string;
@@ -10,9 +11,17 @@ interface Project {
   tags: string[];
   github?: string;
   demo?: string;
+  localPath?: string;
 }
 
 const projects: Project[] = [
+  {
+    title: "Box-Covid",
+    description: "An intelligent monitoring system that enables doctors to remotely monitor COVID-19 patients using sensors and a cross-platform application.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23ea580c'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ECovid%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["IoT", "AWS", "Raspberry Pi", "Mobile App"],
+    localPath: "/box-covid"
+  },
   {
     title: "E-commerce Platform",
     description: "A full-stack e-commerce application with product listings, shopping cart, and secure checkout.",
@@ -28,13 +37,6 @@ const projects: Project[] = [
     tags: ["TypeScript", "Redux", "Firebase", "Material UI"],
     github: "https://github.com/yourusername/task-manager",
     demo: "https://task-app-demo.example.com"
-  },
-  {
-    title: "Weather Dashboard",
-    description: "A real-time weather application with location-based forecasts, interactive maps, and historical data.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["React", "OpenWeather API", "Chart.js", "Leaflet"],
-    github: "https://github.com/yourusername/weather-dashboard"
   },
 ];
 
@@ -95,6 +97,15 @@ const Projects = () => {
                   >
                     <ExternalLink size={20} />
                   </a>
+                )}
+                
+                {project.localPath && (
+                  <Link 
+                    to={project.localPath}
+                    className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
+                  >
+                    <Code size={20} />
+                  </Link>
                 )}
               </CardFooter>
             </Card>

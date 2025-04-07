@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import BoxCovid from "./pages/BoxCovid";
 import RobotArm from "./pages/RobotArm";
 import PanTiltRobot from "./pages/PanTiltRobot";
+import RoboticsCompetition from "./pages/RoboticsCompetition";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/box-covid" element={<BoxCovid />} />
           <Route path="/robot-arm" element={<RobotArm />} />
           <Route path="/pan-tilt-robot" element={<PanTiltRobot />} />
+          <Route path="/robotics-competition" element={<RoboticsCompetition />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

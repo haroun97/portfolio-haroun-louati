@@ -1,4 +1,3 @@
-
 import { Bot, Camera, Code, Computer, Database, Eye, Github, Hammer, Heart, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -141,7 +140,7 @@ const PanTiltRobot = () => {
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
                   <div className="w-full h-full flex items-center justify-center bg-portfolio-blue-dark/10">
-                    <Robot size={64} className="text-portfolio-blue-light opacity-40" />
+                    <Bot size={64} className="text-portfolio-blue-light opacity-40" />
                   </div>
                 </AspectRatio>
               </div>

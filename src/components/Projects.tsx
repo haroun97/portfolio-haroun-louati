@@ -23,20 +23,19 @@ const projects: Project[] = [
     localPath: "/box-covid"
   },
   {
+    title: "Autonomous Robot Arm",
+    description: "A machine learning and computer vision-based robot arm designed to assist people with reduced mobility in everyday tasks.",
+    image: "/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png",
+    tags: ["Computer Vision", "Arduino", "Machine Learning", "Python"],
+    localPath: "/robot-arm"
+  },
+  {
     title: "E-commerce Platform",
     description: "A full-stack e-commerce application with product listings, shopping cart, and secure checkout.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
     tags: ["React", "Node.js", "MongoDB", "Stripe API"],
     github: "https://github.com/yourusername/ecommerce-platform",
     demo: "https://ecommerce-demo.example.com"
-  },
-  {
-    title: "Task Management App",
-    description: "A productivity application for managing tasks, with features like drag-and-drop, tags, and reminders.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["TypeScript", "Redux", "Firebase", "Material UI"],
-    github: "https://github.com/yourusername/task-manager",
-    demo: "https://task-app-demo.example.com"
   },
 ];
 

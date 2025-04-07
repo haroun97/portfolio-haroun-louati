@@ -1,3 +1,4 @@
+
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -89,13 +90,11 @@ const BoxCovid = () => {
               <Card className="overflow-hidden">
                 <div className="relative">
                   <AspectRatio ratio={16 / 9}>
-                    <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-800">
-                      <p className="text-sm text-gray-500 dark:text-gray-400 p-4 text-center">
-                        Upload your Box-Covid solution image to<br />
-                        <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">src/assets/box-covid-solution.jpg</code><br />
-                        and it will appear here
-                      </p>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/2043bb29-8e6c-4619-b395-3197dba69f81.png" 
+                      alt="Box-Covid device" 
+                      className="w-full h-full object-contain"
+                    />
                   </AspectRatio>
                 </div>
                 <CardContent className="p-4">
@@ -112,13 +111,11 @@ const BoxCovid = () => {
               <Card className="overflow-hidden">
                 <div className="relative">
                   <AspectRatio ratio={16 / 9}>
-                    <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-800">
-                      <p className="text-sm text-gray-500 dark:text-gray-400 p-4 text-center">
-                        Upload your team photo to<br />
-                        <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">src/assets/box-covid-team.jpg</code><br />
-                        and it will appear here
-                      </p>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/67d493e2-52b0-4230-91ff-93b9c61a63e7.png" 
+                      alt="Box-Covid development team" 
+                      className="w-full h-full object-contain"
+                    />
                   </AspectRatio>
                 </div>
                 <CardContent className="p-4">
@@ -130,27 +127,97 @@ const BoxCovid = () => {
             </div>
           </div>
           
+          {/* The Solution Overview */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">The Complete Solution</h3>
+            <Card className="overflow-hidden">
+              <div className="relative">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="/lovable-uploads/33ced765-8b96-4bdc-b77d-923e9356a3ae.png" 
+                    alt="Box-Covid complete solution" 
+                    className="w-full h-full object-contain"
+                  />
+                </AspectRatio>
+              </div>
+              <CardContent className="p-4">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  The Box-Covid solution includes both the physical monitoring device and a cross-platform application for doctors and patients.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          {/* Multi-Platform Application */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">Multi-Platform Application</h3>
+            <Card className="overflow-hidden">
+              <div className="relative">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="/lovable-uploads/26e03e3a-2314-4165-867b-2e090ca2828c.png" 
+                    alt="Box-Covid application screenshots" 
+                    className="w-full h-full object-contain"
+                  />
+                </AspectRatio>
+              </div>
+              <CardContent className="p-4">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  The application interface showing patient monitoring dashboard, chat functionality, and login screen across multiple devices.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          
           {/* Carousel for Multiple Images (Optional) */}
           <div className="mt-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">More Project Photos</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">Gallery View</h3>
             <Carousel className="w-full">
               <CarouselContent>
-                {[1, 2, 3].map((index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="overflow-hidden">
-                      <AspectRatio ratio={3/2}>
-                        <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-800">
-                          <p className="text-sm text-gray-500 dark:text-gray-400 p-4 text-center">
-                            Additional photo #{index}<br />
-                            <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-xs">
-                              src/assets/box-covid-photo-{index}.jpg
-                            </code>
-                          </p>
-                        </div>
-                      </AspectRatio>
-                    </Card>
-                  </CarouselItem>
-                ))}
+                <CarouselItem>
+                  <Card className="overflow-hidden">
+                    <AspectRatio ratio={3/2}>
+                      <img 
+                        src="/lovable-uploads/2043bb29-8e6c-4619-b395-3197dba69f81.png" 
+                        alt="Box-Covid device" 
+                        className="w-full h-full object-contain"
+                      />
+                    </AspectRatio>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card className="overflow-hidden">
+                    <AspectRatio ratio={3/2}>
+                      <img 
+                        src="/lovable-uploads/33ced765-8b96-4bdc-b77d-923e9356a3ae.png" 
+                        alt="Box-Covid solution" 
+                        className="w-full h-full object-contain"
+                      />
+                    </AspectRatio>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card className="overflow-hidden">
+                    <AspectRatio ratio={3/2}>
+                      <img 
+                        src="/lovable-uploads/26e03e3a-2314-4165-867b-2e090ca2828c.png" 
+                        alt="Box-Covid application screenshots" 
+                        className="w-full h-full object-contain"
+                      />
+                    </AspectRatio>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card className="overflow-hidden">
+                    <AspectRatio ratio={3/2}>
+                      <img 
+                        src="/lovable-uploads/67d493e2-52b0-4230-91ff-93b9c61a63e7.png" 
+                        alt="Box-Covid team" 
+                        className="w-full h-full object-contain"
+                      />
+                    </AspectRatio>
+                  </Card>
+                </CarouselItem>
               </CarouselContent>
               <div className="flex justify-center gap-2 mt-4">
                 <CarouselPrevious />

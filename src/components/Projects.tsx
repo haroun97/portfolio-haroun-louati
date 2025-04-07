@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Code } from 'lucide-react';
+import { ExternalLink, Github, Code, Bot } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";

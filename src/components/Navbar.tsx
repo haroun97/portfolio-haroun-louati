@@ -1,7 +1,17 @@
 
 import { useState, useEffect } from 'react';
-import { Code, Menu, X } from 'lucide-react';
+import { Code, Menu, X, ChevronDown, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,7 +81,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-5">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -81,6 +91,55 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          
+          {/* Experiences Navigation Dropdown */}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
+                  Experiences
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[200px]">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/professional-experience"
+                          className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                        >
+                          <Briefcase size={18} />
+                          <span>Professional</span>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/volunteering-experience"
+                          className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                        >
+                          <HandHeart size={18} />
+                          <span>Volunteering</span>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/awards"
+                          className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                        >
+                          <Trophy size={18} />
+                          <span>Awards</span>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          
           <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
             Resume
           </Button>
@@ -109,6 +168,38 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            
+            {/* Mobile Experiences Menu */}
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-2">
+              <p className="text-portfolio-blue-dark dark:text-white font-medium py-2">Experiences</p>
+              <div className="pl-4 space-y-2">
+                <Link 
+                  to="/professional-experience"
+                  className="flex items-center gap-2 text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Briefcase size={16} />
+                  <span>Professional</span>
+                </Link>
+                <Link 
+                  to="/volunteering-experience"
+                  className="flex items-center gap-2 text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <HandHeart size={16} />
+                  <span>Volunteering</span>
+                </Link>
+                <Link 
+                  to="/awards"
+                  className="flex items-center gap-2 text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Trophy size={16} />
+                  <span>Awards</span>
+                </Link>
+              </div>
+            </div>
+            
             <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white w-full">
               Resume
             </Button>

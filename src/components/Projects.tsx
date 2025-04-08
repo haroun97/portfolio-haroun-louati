@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap } from 'lucide-react';
+import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane, Car } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -16,22 +16,6 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: "Professional Experience",
-    description: "Overview of my professional experiences at Siemens Healthineers, Roche, and various other roles throughout my career.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Siemens Healthineers", "Roche", "Coding Betounsi", "ESPRIT", "AKWEL"],
-    localPath: "/professional-experience",
-    icon: <Briefcase size={20} />
-  },
-  {
-    title: "Siemens Healthineers Experience",
-    description: "Professional experience as a Test Automation Engineer at Siemens Healthineers in Germany, focusing on radiography systems development.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Test Automation", "Python", "Electron", "C++"],
-    localPath: "/siemens-experience",
-    icon: <Briefcase size={20} />
-  },
   {
     title: "Box-Covid",
     description: "An intelligent monitoring system that enables doctors to remotely monitor COVID-19 patients using sensors and a cross-platform application.",
@@ -51,7 +35,8 @@ const projects: Project[] = [
     description: "A camera system with pan-tilt mechanism for object and face detection and tracking using computer vision.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
     tags: ["Computer Vision", "Arduino", "OpenCV", "Python"],
-    localPath: "/pan-tilt-robot"
+    localPath: "/pan-tilt-robot",
+    icon: <Bot size={20} />
   },
   {
     title: "Robotics Competition",
@@ -62,13 +47,48 @@ const projects: Project[] = [
     icon: <Bot size={20} />
   },
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce application with product listings, shopping cart, and secure checkout.",
+    title: "Flights & Car Rentals Booking",
+    description: "A full-stack booking application for a travel agency with customer, agent, and administrator interfaces.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["React", "Node.js", "MongoDB", "Stripe API"],
-    github: "https://github.com/yourusername/ecommerce-platform",
-    demo: "https://ecommerce-demo.example.com"
+    tags: ["C Programming", "Glade Interface", "Software Development"],
+    localPath: "/flights-car-rentals",
+    icon: <Plane size={20} />
   },
+  {
+    title: "Smart Recycled Chandelier",
+    description: "A chandelier created from recycled materials featuring smartphone-controlled RGB LED lighting via Bluetooth.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Arduino", "Bluetooth", "Embedded Systems", "Sustainable Design"],
+    localPath: "/chandelier-project",
+    icon: <Lightbulb size={20} />
+  },
+];
+
+const experiences = [
+  {
+    title: "Awards & Achievements",
+    description: "Recognition for excellence in engineering, innovation, and technical competitions.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EAwards%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Competition", "Recognition", "Technical Excellence"],
+    localPath: "/awards",
+    icon: <Trophy size={20} />
+  },
+  {
+    title: "Volunteering Experience",
+    description: "Giving back to the community through education and technical training initiatives.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%2310b981'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EVolunteer%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Teaching", "Robotics", "Education", "Community"],
+    localPath: "/volunteering-experience",
+    icon: <GraduationCap size={20} />
+  },
+  {
+    title: "Professional Experience",
+    description: "Overview of my professional experiences at Siemens Healthineers, Roche, and various other roles throughout my career.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Siemens Healthineers", "Roche", "Coding Betounsi", "ESPRIT", "AKWEL"],
+    localPath: "/professional-experience",
+    icon: <Briefcase size={20} />
+  }
 ];
 
 const Projects = () => {
@@ -138,6 +158,50 @@ const Projects = () => {
                     {project.icon || <Code size={20} />}
                   </Link>
                 )}
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+        
+        {/* Experience Section */}
+        <h2 className="section-title mt-16">Experiences & Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {experiences.map((exp, index) => (
+            <Card key={index} className="project-card">
+              <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+                <img 
+                  src={exp.image} 
+                  alt={exp.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="p-4">
+                    <CardTitle className="text-white">{exp.title}</CardTitle>
+                  </div>
+                </div>
+              </div>
+              
+              <CardContent className="pt-4">
+                <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+                  {exp.description}
+                </CardDescription>
+                
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {exp.tags.map((tag, tagIndex) => (
+                    <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+              
+              <CardFooter className="flex justify-end gap-3 border-t pt-4">
+                <Link 
+                  to={exp.localPath}
+                  className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
+                >
+                  {exp.icon || <Code size={20} />}
+                </Link>
               </CardFooter>
             </Card>
           ))}

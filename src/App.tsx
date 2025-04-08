@@ -18,6 +18,10 @@ import EspritInternshipExperience from "./pages/EspritInternshipExperience";
 import AkwelInternshipExperience from "./pages/AkwelInternshipExperience";
 import SilvatrimExperience from "./pages/SilvatrimExperience";
 import MaintenanceExperience from "./pages/MaintenanceExperience";
+import Awards from "./pages/Awards";
+import VolunteeringExperience from "./pages/VolunteeringExperience";
+import FlightsCarRentals from "./pages/FlightsCarRentals";
+import ChandelierProject from "./pages/ChandelierProject";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,10 @@ const App = () => (
           <Route path="/akwel-internship-experience" element={<AkwelInternshipExperience />} />
           <Route path="/silvatrim-experience" element={<SilvatrimExperience />} />
           <Route path="/maintenance-experience" element={<MaintenanceExperience />} />
+          <Route path="/awards" element={<Awards />} />
+          <Route path="/volunteering-experience" element={<VolunteeringExperience />} />
+          <Route path="/flights-car-rentals" element={<FlightsCarRentals />} />
+          <Route path="/chandelier-project" element={<ChandelierProject />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane, Car } from 'lucide-react';
+import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -99,43 +99,46 @@ const Projects = () => {
         <h2 className="section-title">Experiences & Achievements</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="project-card flex flex-col">
-              <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
-                <img 
-                  src={exp.image} 
-                  alt={exp.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                  <div className="p-4">
-                    <CardTitle className="text-white">{exp.title}</CardTitle>
+            <Link 
+              key={index} 
+              to={exp.localPath}
+              className="block h-full"
+            >
+              <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
+                <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+                  <img 
+                    src={exp.image} 
+                    alt={exp.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <div className="p-4">
+                      <CardTitle className="text-white">{exp.title}</CardTitle>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <CardContent className="pt-4 flex-grow">
-                <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
-                  {exp.description}
-                </CardDescription>
                 
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {exp.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-              
-              <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
-                <Link 
-                  to={exp.localPath}
-                  className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
-                >
-                  {exp.icon || <Code size={20} />}
-                </Link>
-              </CardFooter>
-            </Card>
+                <CardContent className="pt-4 flex-grow">
+                  <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+                    {exp.description}
+                  </CardDescription>
+                  
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {exp.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                
+                <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+                  <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
+                    {exp.icon || <Code size={20} />}
+                  </div>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
         
@@ -143,67 +146,75 @@ const Projects = () => {
         <h2 className="section-title mt-16">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="project-card flex flex-col">
-              <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                  <div className="p-4">
-                    <CardTitle className="text-white">{project.title}</CardTitle>
+            <Link 
+              key={index} 
+              to={project.localPath || "#"} 
+              className="block h-full"
+              onClick={(e) => {
+                if (!project.localPath) {
+                  e.preventDefault();
+                }
+              }}
+            >
+              <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
+                <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <div className="p-4">
+                      <CardTitle className="text-white">{project.title}</CardTitle>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <CardContent className="pt-4 flex-grow">
-                <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
-                  {project.description}
-                </CardDescription>
                 
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-              
-              <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
-                {project.github && (
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
-                  >
-                    <Github size={20} />
-                  </a>
-                )}
+                <CardContent className="pt-4 flex-grow">
+                  <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+                    {project.description}
+                  </CardDescription>
+                  
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
                 
-                {project.demo && (
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                )}
-                
-                {project.localPath && (
-                  <Link 
-                    to={project.localPath}
-                    className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
-                  >
+                <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+                  {project.github && (
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Github size={20} />
+                    </a>
+                  )}
+                  
+                  {project.demo && (
+                    <a 
+                      href={project.demo} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
+                  
+                  <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
                     {project.icon || <Code size={20} />}
-                  </Link>
-                )}
-              </CardFooter>
-            </Card>
+                  </div>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

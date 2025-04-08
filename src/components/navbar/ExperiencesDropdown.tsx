@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuLink
+  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 
 interface ExperiencesDropdownProps {
@@ -29,37 +29,31 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 w-[200px] bg-white dark:bg-slate-800">
               <li>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/professional-experience"
-                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <Briefcase size={18} />
-                    <span>Professional</span>
-                  </Link>
-                </NavigationMenuLink>
+                <Link
+                  to="/professional-experience"
+                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                >
+                  <Briefcase size={18} />
+                  <span>Professional</span>
+                </Link>
               </li>
               <li>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/volunteering-experience"
-                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <HandHeart size={18} />
-                    <span>Volunteering</span>
-                  </Link>
-                </NavigationMenuLink>
+                <Link
+                  to="/volunteering-experience"
+                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                >
+                  <HandHeart size={18} />
+                  <span>Volunteering</span>
+                </Link>
               </li>
               <li>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/awards"
-                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <Trophy size={18} />
-                    <span>Awards</span>
-                  </Link>
-                </NavigationMenuLink>
+                <Link
+                  to="/awards"
+                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                >
+                  <Trophy size={18} />
+                  <span>Awards</span>
+                </Link>
               </li>
             </ul>
           </NavigationMenuContent>

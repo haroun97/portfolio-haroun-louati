@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -97,8 +96,10 @@ const Navbar = () => {
                   <NavigationMenu key="experiences-menu">
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`} showChevron={false}>
-                          Experiences
+                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
+                          <span className="flex items-center">
+                            <span>Experiences</span>
+                          </span>
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <ul className="grid gap-3 p-4 w-[200px]">

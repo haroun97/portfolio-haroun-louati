@@ -94,57 +94,57 @@ const Navbar = () => {
             if (index === 3) {
               return (
                 <React.Fragment key="experiences-fragment">
-                  <NavigationMenu key="experiences-menu" className="mr-0">
-                    <NavigationMenuList>
-                      <NavigationMenuItem>
-                        <NavigationMenuTrigger 
-                          className={`${getNavTextColor()} bg-transparent p-0 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none`}
-                          style={{ boxShadow: 'none' }}
-                        >
-                          <span className="flex items-center">
-                            <span>Experiences</span>
-                          </span>
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid gap-3 p-4 w-[200px]">
-                            <li>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  to="/professional-experience"
-                                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
-                                >
-                                  <Briefcase size={18} />
-                                  <span>Professional</span>
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                            <li>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  to="/volunteering-experience"
-                                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
-                                >
-                                  <HandHeart size={18} />
-                                  <span>Volunteering</span>
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                            <li>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  to="/awards"
-                                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
-                                >
-                                  <Trophy size={18} />
-                                  <span>Awards</span>
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          </ul>
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                    </NavigationMenuList>
-                  </NavigationMenu>
+                  <div className="relative inline-block">
+                    <NavigationMenu key="experiences-menu" className="inline-flex">
+                      <NavigationMenuList>
+                        <NavigationMenuItem>
+                          <NavigationMenuTrigger 
+                            className={`${getNavTextColor()} bg-transparent p-0 px-0 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0`}
+                            style={{ boxShadow: 'none', fontSize: 'inherit' }}
+                          >
+                            Experiences
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="grid gap-3 p-4 w-[200px]">
+                              <li>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to="/professional-experience"
+                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                  >
+                                    <Briefcase size={18} />
+                                    <span>Professional</span>
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                              <li>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to="/volunteering-experience"
+                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                  >
+                                    <HandHeart size={18} />
+                                    <span>Volunteering</span>
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                              <li>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to="/awards"
+                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                  >
+                                    <Trophy size={18} />
+                                    <span>Awards</span>
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                      </NavigationMenuList>
+                    </NavigationMenu>
+                  </div>
                   
                   <a
                     href={link.href}
@@ -172,7 +172,7 @@ const Navbar = () => {
           })}
           
           <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <Link to="/resume">Resume</Link>
           </Button>
         </nav>
 
@@ -240,7 +240,7 @@ const Navbar = () => {
             ))}
             
             <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white w-full">
-              Resume
+              <Link to="/resume" onClick={() => setIsMobileMenuOpen(false)}>Resume</Link>
             </Button>
           </div>
         </div>

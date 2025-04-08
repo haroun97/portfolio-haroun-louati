@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Code, Menu, X, ChevronDown, Trophy, Briefcase, HandHeart } from 'lucide-react';
+import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -73,10 +74,10 @@ const Navbar = () => {
           className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
-          <span>Haroun Louati</span>
+          <span>Software Engineer</span>
         </a>
 
-        <nav className="hidden md:flex items-center space-x-5">
+        <nav className="hidden md:flex items-center space-x-4">
           {navLinks.map((link, index) => {
             if (index <= 2) {
               return (
@@ -96,7 +97,7 @@ const Navbar = () => {
                   <NavigationMenu key="experiences-menu">
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
+                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`} showChevron={false}>
                           Experiences
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>

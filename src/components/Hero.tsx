@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="md:w-2/3 animate-fade-in" style={{animationDelay: "0.2s"}}>
             <p className="text-portfolio-orange-light font-mono mb-4">Hi, my name is</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">Haroun Louati.</h1>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">I build things for the web.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">Transforming ideas into seamless, automated solutions.</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-xl">
               I'm a software engineer specializing in building exceptional digital experiences. 
               Currently, I'm focused on building accessible, human-centered products.
@@ -46,10 +46,10 @@ const Hero = () => {
             
             <div className="flex flex-wrap gap-4">
               <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-                View My Projects
+                <a href="#projects">View My Projects</a>
               </Button>
               <Button variant="outline" className="border-portfolio-blue-light text-portfolio-blue-lightest hover:bg-portfolio-blue-medium/20">
-                Get In Touch
+                <a href="#contact">Get In Touch</a>
               </Button>
             </div>
           </div>

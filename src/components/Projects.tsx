@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Code, Bot, Trophy, Briefcase } from 'lucide-react';
+import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -18,9 +18,9 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Professional Experience",
-    description: "Overview of my professional experiences at Siemens Healthineers and Roche, showcasing industry projects and achievements.",
+    description: "Overview of my professional experiences at Siemens Healthineers, Roche, and various other roles throughout my career.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Siemens Healthineers", "Roche", "Test Automation", "Resource Management"],
+    tags: ["Siemens Healthineers", "Roche", "Coding Betounsi", "ESPRIT", "AKWEL"],
     localPath: "/professional-experience",
     icon: <Briefcase size={20} />
   },

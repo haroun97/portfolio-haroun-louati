@@ -13,6 +13,11 @@ import RoboticsCompetition from "./pages/RoboticsCompetition";
 import SiemensExperience from "./pages/SiemensExperience";
 import ProfessionalExperience from "./pages/ProfessionalExperience";
 import RocheExperience from "./pages/RocheExperience";
+import CodingBetounsiExperience from "./pages/CodingBetounsiExperience";
+import EspritInternshipExperience from "./pages/EspritInternshipExperience";
+import AkwelInternshipExperience from "./pages/AkwelInternshipExperience";
+import SilvatrimExperience from "./pages/SilvatrimExperience";
+import MaintenanceExperience from "./pages/MaintenanceExperience";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +36,11 @@ const App = () => (
           <Route path="/siemens-experience" element={<SiemensExperience />} />
           <Route path="/professional-experience" element={<ProfessionalExperience />} />
           <Route path="/roche-experience" element={<RocheExperience />} />
+          <Route path="/coding-betounsi-experience" element={<CodingBetounsiExperience />} />
+          <Route path="/esprit-internship-experience" element={<EspritInternshipExperience />} />
+          <Route path="/akwel-internship-experience" element={<AkwelInternshipExperience />} />
+          <Route path="/silvatrim-experience" element={<SilvatrimExperience />} />
+          <Route path="/maintenance-experience" element={<MaintenanceExperience />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

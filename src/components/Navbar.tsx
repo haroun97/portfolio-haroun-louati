@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 const Navbar = () => {

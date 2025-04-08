@@ -88,7 +88,7 @@ const EspritInternshipExperience = () => {
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
                     <span className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                      <Robot size={18} className="text-blue-700 dark:text-blue-400" />
+                      <Bot size={18} className="text-blue-700 dark:text-blue-400" />
                     </span>
                     Department
                   </CardTitle>

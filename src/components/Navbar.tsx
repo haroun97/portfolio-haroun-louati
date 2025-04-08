@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -42,8 +43,8 @@ const Navbar = () => {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -73,7 +74,7 @@ const Navbar = () => {
           className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
-          <span>Software Engineer</span>
+          <span>Haroun's Lab</span>
         </a>
 
         <nav className="hidden md:flex items-center space-x-4">
@@ -96,7 +97,7 @@ const Navbar = () => {
                   <NavigationMenu key="experiences-menu">
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
+                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent p-0`}>
                           <span className="flex items-center">
                             <span>Experiences</span>
                           </span>

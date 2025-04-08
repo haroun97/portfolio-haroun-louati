@@ -1,5 +1,5 @@
 
-import { Lightbulb, Smartphone, Recycling } from "lucide-react";
+import { Lightbulb, Smartphone, Recycle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,7 +45,7 @@ const ChandelierProject = () => {
                   <CardContent className="pt-6">
                     <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
                       <span className="p-2 rounded-full bg-purple-100 dark:bg-purple-900">
-                        <Recycling size={18} className="text-purple-600" />
+                        <Recycle size={18} className="text-purple-600" />
                       </span>
                       Materials Used
                     </h3>

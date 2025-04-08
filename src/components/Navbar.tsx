@@ -97,7 +97,7 @@ const Navbar = () => {
                   <NavigationMenu key="experiences-menu">
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent p-0`}>
+                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent p-0 hover:bg-transparent`}>
                           <span className="flex items-center">
                             <span>Experiences</span>
                           </span>
@@ -169,7 +169,7 @@ const Navbar = () => {
           })}
           
           <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-            Resume
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </Button>
         </nav>
 

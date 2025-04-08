@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,6 +16,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,12 +40,15 @@ const Navbar = () => {
     };
   }, []);
 
+  // Determine if we're on the home page route
+  const isHomeRoute = location.pathname === '/';
+
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: isHomeRoute ? "#home" : "/", label: "Home" },
+    { href: isHomeRoute ? "#about" : "/#about", label: "About" },
+    { href: isHomeRoute ? "#skills" : "/#skills", label: "Skills" },
+    { href: isHomeRoute ? "#projects" : "/#projects", label: "Projects" },
+    { href: isHomeRoute ? "#contact" : "/#contact", label: "Contact" },
   ];
 
   const getNavTextColor = () => {
@@ -67,25 +72,25 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a 
-          href="#home" 
+        <Link 
+          to="/"
           className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
           <span>Haroun's Lab</span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center space-x-4">
           {navLinks.map((link, index) => {
             if (index <= 2) {
               return (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className={`transition-colors ${getNavTextColor()}`}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             }
             
@@ -97,18 +102,19 @@ const Navbar = () => {
                       <NavigationMenuList>
                         <NavigationMenuItem>
                           <NavigationMenuTrigger 
-                            className={`${getNavTextColor()} bg-transparent p-0 px-0 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0`}
+                            className={`${getNavTextColor()} bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0`}
                             style={{ boxShadow: 'none', fontSize: 'inherit' }}
                           >
                             Experiences
                           </NavigationMenuTrigger>
                           <NavigationMenuContent>
-                            <ul className="grid gap-3 p-4 w-[200px]">
+                            <ul className="grid gap-3 p-4 w-[200px] bg-white dark:bg-slate-800">
                               <li>
                                 <NavigationMenuLink asChild>
                                   <Link
                                     to="/professional-experience"
-                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                                    onClick={() => setIsMobileMenuOpen(false)}
                                   >
                                     <Briefcase size={18} />
                                     <span>Professional</span>
@@ -119,7 +125,8 @@ const Navbar = () => {
                                 <NavigationMenuLink asChild>
                                   <Link
                                     to="/volunteering-experience"
-                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                                    onClick={() => setIsMobileMenuOpen(false)}
                                   >
                                     <HandHeart size={18} />
                                     <span>Volunteering</span>
@@ -130,7 +137,8 @@ const Navbar = () => {
                                 <NavigationMenuLink asChild>
                                   <Link
                                     to="/awards"
-                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                                    onClick={() => setIsMobileMenuOpen(false)}
                                   >
                                     <Trophy size={18} />
                                     <span>Awards</span>
@@ -144,25 +152,25 @@ const Navbar = () => {
                     </NavigationMenu>
                   </div>
                   
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className={`transition-colors ${getNavTextColor()}`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </React.Fragment>
               );
             }
             
             if (index === 4) {
               return (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className={`transition-colors ${getNavTextColor()}`}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             }
             
@@ -186,14 +194,14 @@ const Navbar = () => {
         <div className="md:hidden bg-white dark:bg-portfolio-blue-dark shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.slice(0, 3).map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             
             <div className="border-t border-gray-200 dark:border-gray-700 pt-2">
@@ -227,14 +235,14 @@ const Navbar = () => {
             </div>
             
             {navLinks.slice(3).map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             
             <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white w-full">

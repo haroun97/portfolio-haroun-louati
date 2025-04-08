@@ -17,6 +17,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Professional Experience",
+    description: "Overview of my professional experiences at Siemens Healthineers and Roche, showcasing industry projects and achievements.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Siemens Healthineers", "Roche", "Test Automation", "Resource Management"],
+    localPath: "/professional-experience",
+    icon: <Briefcase size={20} />
+  },
+  {
     title: "Siemens Healthineers Experience",
     description: "Professional experience as a Test Automation Engineer at Siemens Healthineers in Germany, focusing on radiography systems development.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",

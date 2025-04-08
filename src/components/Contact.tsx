@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -50,16 +50,16 @@ const Contact = () => {
               <div className="flex items-center gap-3">
                 <Mail className="text-portfolio-orange-light" size={20} />
                 <a 
-                  href="mailto:your.email@example.com" 
+                  href="mailto:louatiharoun@gmail.com" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  your.email@example.com
+                  louatiharoun@gmail.com
                 </a>
               </div>
               
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/haroun97" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-300 hover:text-white transition-colors"
@@ -67,7 +67,7 @@ const Contact = () => {
                   <Github size={24} />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/yourusername" 
+                  href="https://linkedin.com/in/haroun-louati" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-300 hover:text-white transition-colors"
@@ -75,12 +75,12 @@ const Contact = () => {
                   <Linkedin size={24} />
                 </a>
                 <a 
-                  href="https://twitter.com/yourusername" 
+                  href="https://instagram.com/haroun_louati" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <Twitter size={24} />
+                  <Instagram size={24} />
                 </a>
               </div>
             </div>

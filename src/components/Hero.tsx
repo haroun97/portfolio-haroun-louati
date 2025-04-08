@@ -20,13 +20,13 @@ const Hero = () => {
                   <div className="w-full h-full">
                     <AspectRatio ratio={1/1} className="h-full">
                       <AvatarImage 
-                        src="/src/assets/profile.jpg" 
-                        alt="Profile" 
+                        src="/lovable-uploads/29a713e2-1f2d-4b20-aaa5-25ab3282ac45.png" 
+                        alt="Haroun Louati" 
                         className="object-cover w-full h-full"
                       />
                     </AspectRatio>
                   </div>
-                  <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">SE</AvatarFallback>
+                  <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">HL</AvatarFallback>
                 </Avatar>
               </div>
               <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-portfolio-orange-medium opacity-20 animate-pulse" style={{animationDelay: "1s"}}></div>
@@ -37,7 +37,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="md:w-2/3 animate-fade-in" style={{animationDelay: "0.2s"}}>
             <p className="text-portfolio-orange-light font-mono mb-4">Hi, my name is</p>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Software Engineer.</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">Haroun Louati.</h1>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">I build things for the web.</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-xl">
               I'm a software engineer specializing in building exceptional digital experiences. 

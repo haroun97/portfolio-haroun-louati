@@ -21,7 +21,7 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className={`${getNavTextColor()} bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0`}
+            className={`${getNavTextColor()} bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=open]:text-portfolio-orange-medium dark:data-[state=open]:text-portfolio-orange-light`}
             style={{ boxShadow: 'none', fontSize: 'inherit', padding: '0' }}
           >
             Experiences

@@ -94,10 +94,13 @@ const Navbar = () => {
             if (index === 3) {
               return (
                 <React.Fragment key="experiences-fragment">
-                  <NavigationMenu key="experiences-menu">
+                  <NavigationMenu key="experiences-menu" className="mr-0">
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent p-0 hover:bg-transparent`}>
+                        <NavigationMenuTrigger 
+                          className={`${getNavTextColor()} bg-transparent p-0 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none`}
+                          style={{ boxShadow: 'none' }}
+                        >
                           <span className="flex items-center">
                             <span>Experiences</span>
                           </span>

@@ -47,6 +47,8 @@ const Navbar = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
+    // Moving Experiences dropdown to be after Projects
+    // Experiences dropdown is implemented separately in the JSX
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ];
@@ -82,63 +84,98 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-5">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`transition-colors ${getNavTextColor()}`}
-            >
-              {link.label}
-            </a>
-          ))}
-          
-          {/* Experiences Navigation Dropdown */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
-                  Experiences
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[200px]">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/professional-experience"
-                          className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
-                        >
-                          <Briefcase size={18} />
-                          <span>Professional</span>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/volunteering-experience"
-                          className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
-                        >
-                          <HandHeart size={18} />
-                          <span>Volunteering</span>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/awards"
-                          className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
-                        >
-                          <Trophy size={18} />
-                          <span>Awards</span>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          {navLinks.map((link, index) => {
+            // Render the Home, About, and Projects links
+            if (index <= 2) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-colors ${getNavTextColor()}`}
+                >
+                  {link.label}
+                </a>
+              );
+            }
+            
+            // After Projects (index 2), insert the Experiences dropdown
+            if (index === 3) {
+              return (
+                <React.Fragment key="experiences-fragment">
+                  {/* Experiences Navigation Dropdown */}
+                  <NavigationMenu key="experiences-menu">
+                    <NavigationMenuList>
+                      <NavigationMenuItem>
+                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
+                          Experiences
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid gap-3 p-4 w-[200px]">
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/professional-experience"
+                                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                >
+                                  <Briefcase size={18} />
+                                  <span>Professional</span>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/volunteering-experience"
+                                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                >
+                                  <HandHeart size={18} />
+                                  <span>Volunteering</span>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/awards"
+                                  className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+                                >
+                                  <Trophy size={18} />
+                                  <span>Awards</span>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          </ul>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    </NavigationMenuList>
+                  </NavigationMenu>
+                  
+                  {/* Then render the rest of the standard links - Skills and Contact */}
+                  <a
+                    href={link.href}
+                    className={`transition-colors ${getNavTextColor()}`}
+                  >
+                    {link.label}
+                  </a>
+                </React.Fragment>
+              );
+            }
+            
+            // Render the Contact link
+            if (index === 4) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-colors ${getNavTextColor()}`}
+                >
+                  {link.label}
+                </a>
+              );
+            }
+            
+            return null;
+          })}
           
           <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
             Resume
@@ -158,7 +195,8 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-portfolio-blue-dark shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {navLinks.map((link) => (
+            {/* Home, About, Projects links */}
+            {navLinks.slice(0, 3).map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -169,7 +207,7 @@ const Navbar = () => {
               </a>
             ))}
             
-            {/* Mobile Experiences Menu */}
+            {/* Mobile Experiences Menu - moved up to be after Projects */}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-2">
               <p className="text-portfolio-blue-dark dark:text-white font-medium py-2">Experiences</p>
               <div className="pl-4 space-y-2">
@@ -199,6 +237,18 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
+            
+            {/* Skills and Contact links */}
+            {navLinks.slice(3).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
             
             <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white w-full">
               Resume

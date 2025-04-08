@@ -3,6 +3,7 @@ import React from 'react';
 import { Briefcase, HandHeart, Trophy } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { scrollToElement } from '@/utils/scrollUtils';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -13,6 +14,14 @@ interface MobileMenuProps {
 const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
   if (!isOpen) return null;
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      scrollToElement(href.substring(1));
+      onClose(); // Close the menu after navigating
+    }
+  };
+
   return (
     <div className="md:hidden bg-white dark:bg-portfolio-blue-dark shadow-lg">
       <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
@@ -21,7 +30,10 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
             key={link.href}
             to={link.href}
             className="text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-2"
-            onClick={onClose}
+            onClick={(e) => {
+              handleNavClick(e, link.href);
+              onClose();
+            }}
           >
             {link.label}
           </Link>
@@ -62,7 +74,10 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
             key={link.href}
             to={link.href}
             className="text-portfolio-blue-dark dark:text-white hover:text-portfolio-orange-medium dark:hover:text-portfolio-orange-light transition-colors py-2"
-            onClick={onClose}
+            onClick={(e) => {
+              handleNavClick(e, link.href);
+              onClose();
+            }}
           >
             {link.label}
           </Link>

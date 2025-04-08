@@ -8,7 +8,6 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 
 interface ExperiencesDropdownProps {
@@ -16,12 +15,14 @@ interface ExperiencesDropdownProps {
 }
 
 const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
+  const navTextColor = getNavTextColor();
+  
   return (
     <NavigationMenu className="inline-flex">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className={`${getNavTextColor()} bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=open]:text-portfolio-orange-medium dark:data-[state=open]:text-portfolio-orange-light`}
+            className={`${navTextColor} bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=open]:text-portfolio-orange-medium dark:data-[state=open]:text-portfolio-orange-light data-[state=open]:bg-opacity-0`}
             style={{ boxShadow: 'none', fontSize: 'inherit', padding: '0' }}
           >
             Experiences

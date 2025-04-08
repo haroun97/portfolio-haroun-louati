@@ -99,7 +99,7 @@ const Projects = () => {
         <h2 className="section-title">Experiences & Achievements</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="project-card">
+            <Card key={index} className="project-card flex flex-col">
               <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
                 <img 
                   src={exp.image} 
@@ -113,7 +113,7 @@ const Projects = () => {
                 </div>
               </div>
               
-              <CardContent className="pt-4">
+              <CardContent className="pt-4 flex-grow">
                 <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
                   {exp.description}
                 </CardDescription>
@@ -127,7 +127,7 @@ const Projects = () => {
                 </div>
               </CardContent>
               
-              <CardFooter className="flex justify-end gap-3 border-t pt-4">
+              <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
                 <Link 
                   to={exp.localPath}
                   className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
@@ -143,7 +143,7 @@ const Projects = () => {
         <h2 className="section-title mt-16">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="project-card">
+            <Card key={index} className="project-card flex flex-col">
               <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -157,7 +157,7 @@ const Projects = () => {
                 </div>
               </div>
               
-              <CardContent className="pt-4">
+              <CardContent className="pt-4 flex-grow">
                 <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
                   {project.description}
                 </CardDescription>
@@ -171,7 +171,7 @@ const Projects = () => {
                 </div>
               </CardContent>
               
-              <CardFooter className="flex justify-end gap-3 border-t pt-4">
+              <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
                 {project.github && (
                   <a 
                     href={project.github} 

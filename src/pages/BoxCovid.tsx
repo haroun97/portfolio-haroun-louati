@@ -1,5 +1,5 @@
 
-import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images } from 'lucide-react';
+import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images, Award } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +21,6 @@ const BoxCovid = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMWEyZTQ0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyYTRhN2YiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center">
-            <Badge className="mb-6 bg-portfolio-orange-medium hover:bg-portfolio-orange-dark">Academic Project</Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Box-Covid</h1>
             <p className="text-xl md:text-2xl text-portfolio-blue-lightest max-w-3xl mb-8">
               An intelligent remote monitoring system for COVID-19 patients that protects healthcare providers
@@ -45,6 +44,19 @@ const BoxCovid = () => {
               to remotely monitor and contact their COVID-19 patients. The primary goal is to minimize direct contact, 
               reduce infection risks, and protect healthcare providers while providing quality care.
             </p>
+            
+            {/* Award Section */}
+            <div className="my-8 p-6 bg-blue-50 dark:bg-portfolio-blue-medium/30 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4 flex items-center justify-center gap-3 dark:text-white">
+                <Award className="text-portfolio-orange-medium" size={28}/>
+                Award-Winning Project
+                <Award className="text-portfolio-orange-medium" size={28}/>
+              </h3>
+              <p className="text-center dark:text-gray-300">
+                This project won two prestigious awards among over 200 competing projects on campus, 
+                recognizing its innovation and positive impact on healthcare delivery during the pandemic.
+              </p>
+            </div>
             
             <div className="my-12 flex flex-col md:flex-row gap-8">
               <div className="flex-1 bg-blue-50 dark:bg-portfolio-blue-medium/30 p-6 rounded-lg">
@@ -83,9 +95,8 @@ const BoxCovid = () => {
             </span>
           </h2>
           
-          {/* The Complete Solution - UPDATED with new Box PNG */}
+          {/* The Box-Covid Device */}
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">The Complete Solution</h3>
             <div className="flex justify-center">
               <div className="max-w-md">
                 <div className="relative">
@@ -107,26 +118,22 @@ const BoxCovid = () => {
           
           {/* Multi-Platform Application */}
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">Multi-Platform Application</h3>
-            <Card className="overflow-hidden">
-              <div className="relative">
-                <AspectRatio ratio={16 / 9}>
-                  <img 
-                    src="/lovable-uploads/26e03e3a-2314-4165-867b-2e090ca2828c.png" 
-                    alt="Box-Covid application screenshots" 
-                    className="w-full h-full object-contain"
-                  />
-                </AspectRatio>
-              </div>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  The application interface showing patient monitoring dashboard, chat functionality, and login screen across multiple devices.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/26e03e3a-2314-4165-867b-2e090ca2828c.png" 
+                alt="Box-Covid application screenshots" 
+                className="w-full object-contain"
+              />
+            </div>
+            <div className="text-center mt-4">
+              <h4 className="text-xl font-semibold dark:text-white">Multi-Platform Application</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                The application interface showing patient monitoring dashboard, chat functionality, and login screen across multiple devices.
+              </p>
+            </div>
           </div>
           
-          {/* Development Team - Moved below Multi-Platform Application and removed rectangular background */}
+          {/* Development Team */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">Development Team</h3>
             <div className="relative">
@@ -355,7 +362,7 @@ const BoxCovid = () => {
               </Button>
             </Link>
             <Link to="/#contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button className="bg-portfolio-blue-medium hover:bg-portfolio-blue-dark text-white">
                 Contact Me
               </Button>
             </Link>

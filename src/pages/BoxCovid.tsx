@@ -1,3 +1,4 @@
+
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -142,25 +143,52 @@ const BoxCovid = () => {
             </div>
           </div>
           
-          {/* The Solution Overview */}
+          {/* The Complete Solution - UPDATED */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">The Complete Solution</h3>
-            <Card className="overflow-hidden">
-              <div className="relative">
-                <AspectRatio ratio={16 / 9}>
-                  <img 
-                    src="/lovable-uploads/33ced765-8b96-4bdc-b77d-923e9356a3ae.png" 
-                    alt="Box-Covid complete solution" 
-                    className="w-full h-full object-contain"
-                  />
-                </AspectRatio>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Box Image */}
+              <div>
+                <Card className="overflow-hidden h-full">
+                  <div className="relative">
+                    <AspectRatio ratio={1/1}>
+                      <img 
+                        src="/lovable-uploads/3066ca3e-4d0a-4992-9600-70cad6ed42c1.png" 
+                        alt="Box-Covid physical device" 
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </AspectRatio>
+                  </div>
+                  <CardContent className="p-4 text-center">
+                    <h4 className="text-xl font-semibold dark:text-white">Box-Covid</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                      The physical monitoring device with integrated sensors
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  The Box-Covid solution includes both the physical monitoring device and a cross-platform application for doctors and patients.
-                </p>
-              </CardContent>
-            </Card>
+              
+              {/* App UI Image */}
+              <div>
+                <Card className="overflow-hidden h-full">
+                  <div className="relative">
+                    <AspectRatio ratio={1/1}>
+                      <img 
+                        src="/lovable-uploads/92e3d1aa-fb87-4bb8-94b0-188588f943ad.png" 
+                        alt="Box-Covid application UI" 
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </AspectRatio>
+                  </div>
+                  <CardContent className="p-4 text-center">
+                    <h4 className="text-xl font-semibold dark:text-white">Cross-Platform Application</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                      The software interface for doctors and patients
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
           
           {/* Multi-Platform Application */}

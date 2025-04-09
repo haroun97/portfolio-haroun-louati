@@ -1,4 +1,3 @@
-
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,22 +15,6 @@ import { Link } from "react-router-dom";
 const BoxCovid = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-blue-dark">
-      {/* Floating Images */}
-      <div className="fixed left-0 top-1/4 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
-        <img 
-          src="/lovable-uploads/3066ca3e-4d0a-4992-9600-70cad6ed42c1.png" 
-          alt="Box-Covid device" 
-          className="w-full animate-floating-left"
-        />
-      </div>
-      <div className="fixed right-0 top-1/2 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
-        <img 
-          src="/lovable-uploads/92e3d1aa-fb87-4bb8-94b0-188588f943ad.png" 
-          alt="Box-Covid app UI" 
-          className="w-full animate-floating-right"
-        />
-      </div>
-
       {/* Hero Section */}
       <section className="bg-portfolio-blue-dark text-white relative overflow-hidden py-24">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMWEyZTQ0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyYTRhN2YiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"></div>
@@ -146,47 +129,21 @@ const BoxCovid = () => {
           {/* The Complete Solution - UPDATED */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">The Complete Solution</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Box Image */}
-              <div>
-                <Card className="overflow-hidden h-full">
-                  <div className="relative">
-                    <AspectRatio ratio={1/1}>
-                      <img 
-                        src="/lovable-uploads/3066ca3e-4d0a-4992-9600-70cad6ed42c1.png" 
-                        alt="Box-Covid physical device" 
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </AspectRatio>
-                  </div>
-                  <CardContent className="p-4 text-center">
-                    <h4 className="text-xl font-semibold dark:text-white">Box-Covid</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                      The physical monitoring device with integrated sensors
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              {/* App UI Image */}
-              <div>
-                <Card className="overflow-hidden h-full">
-                  <div className="relative">
-                    <AspectRatio ratio={1/1}>
-                      <img 
-                        src="/lovable-uploads/92e3d1aa-fb87-4bb8-94b0-188588f943ad.png" 
-                        alt="Box-Covid application UI" 
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </AspectRatio>
-                  </div>
-                  <CardContent className="p-4 text-center">
-                    <h4 className="text-xl font-semibold dark:text-white">Cross-Platform Application</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                      The software interface for doctors and patients
-                    </p>
-                  </CardContent>
-                </Card>
+            <div className="flex justify-center">
+              <div className="max-w-md">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/3066ca3e-4d0a-4992-9600-70cad6ed42c1.png" 
+                    alt="Box-Covid physical device" 
+                    className="w-full object-contain animate-floating-center p-4"
+                  />
+                </div>
+                <div className="text-center mt-4">
+                  <h4 className="text-xl font-semibold dark:text-white">Box-Covid</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                    The physical monitoring device with integrated sensors
+                  </p>
+                </div>
               </div>
             </div>
           </div>

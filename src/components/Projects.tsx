@@ -96,7 +96,7 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-white dark:bg-portfolio-blue-dark">
       <div className="container mx-auto">
         {/* Experience Section - Moved to the top */}
-        <h2 className="section-title">Experiences & Achievements</h2>
+        <h2 id="experiences" className="section-title">Experiences & Achievements</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {experiences.map((exp, index) => (
             <Link 
@@ -143,7 +143,7 @@ const Projects = () => {
         </div>
         
         {/* Projects Section - Now below the experiences */}
-        <h2 className="section-title mt-16">Featured Projects</h2>
+        <h2 id="featured-projects" className="section-title mt-16">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Link 

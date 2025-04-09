@@ -135,7 +135,6 @@ const BoxCovid = () => {
           
           {/* Development Team */}
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">Development Team</h3>
             <div className="relative">
               <AspectRatio ratio={16 / 9}>
                 <img 
@@ -146,6 +145,7 @@ const BoxCovid = () => {
               </AspectRatio>
             </div>
             <div className="text-center mt-4">
+              <h3 className="text-2xl font-semibold mb-4 dark:text-white">Development Team</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300">
                 The talented team of developers and engineers who brought the Box-Covid solution to life.
               </p>

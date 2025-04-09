@@ -1,4 +1,3 @@
-
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Tablet, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +15,22 @@ import { Link } from "react-router-dom";
 const BoxCovid = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-blue-dark">
+      {/* Floating Images */}
+      <div className="fixed left-0 top-1/4 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
+        <img 
+          src="/lovable-uploads/3066ca3e-4d0a-4992-9600-70cad6ed42c1.png" 
+          alt="Box-Covid device" 
+          className="w-full animate-floating-left"
+        />
+      </div>
+      <div className="fixed right-0 top-1/2 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
+        <img 
+          src="/lovable-uploads/92e3d1aa-fb87-4bb8-94b0-188588f943ad.png" 
+          alt="Box-Covid app UI" 
+          className="w-full animate-floating-right"
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="bg-portfolio-blue-dark text-white relative overflow-hidden py-24">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMWEyZTQ0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyYTRhN2YiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"></div>

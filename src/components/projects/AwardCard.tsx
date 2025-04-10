@@ -3,7 +3,6 @@ import React from 'react';
 import { Trophy, Award } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
 import { ProjectItem } from './ProjectCard';
 
 interface AwardCardProps {
@@ -13,11 +12,11 @@ interface AwardCardProps {
 const AwardCard = ({ award }: AwardCardProps) => {
   return (
     <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
-      <div className="h-48 bg-white dark:bg-amber-900/30 relative overflow-hidden">
+      <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
         <img 
           src={award.image} 
           alt={award.title}
-          className="w-full h-full object-cover p-2"
+          className="w-full h-full object-contain p-2"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
           <div className="p-4">
@@ -33,7 +32,7 @@ const AwardCard = ({ award }: AwardCardProps) => {
         
         <div className="flex flex-wrap gap-2 mt-2">
           {award.tags.map((tag, tagIndex) => (
-            <Badge key={tagIndex} variant="secondary" className="bg-amber-100/50 text-amber-800 dark:text-amber-200 dark:bg-amber-800/30">
+            <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
               {tag}
             </Badge>
           ))}
@@ -41,7 +40,7 @@ const AwardCard = ({ award }: AwardCardProps) => {
       </CardContent>
       
       <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
-        <div className="text-amber-500 hover:text-amber-600 dark:text-amber-400 dark:hover:text-amber-300">
+        <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
           {award.icon || <Trophy size={20} />}
         </div>
       </CardFooter>

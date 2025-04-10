@@ -66,7 +66,6 @@ const AwardsSection = () => {
         <ShowMoreButton 
           showAll={showAllAwards} 
           toggleShowAll={() => setShowAllAwards(!showAllAwards)} 
-          isAmber={true}
         />
       )}
     </>

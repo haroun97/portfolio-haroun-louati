@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane } from 'lucide-react';
+import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane, Award, Medal, HandHeart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -15,6 +15,7 @@ interface Project {
   icon?: JSX.Element;
 }
 
+// Projects data
 const projects: Project[] = [
   {
     title: "Box-Covid",
@@ -64,41 +65,106 @@ const projects: Project[] = [
   },
 ];
 
-const experiences = [
+// Professional experiences data
+const professionalExperiences: Project[] = [
   {
-    title: "Awards & Achievements",
-    description: "Recognition for excellence in engineering, innovation, and technical competitions.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EAwards%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Competition", "Recognition", "Technical Excellence"],
-    localPath: "/awards",
-    icon: <Trophy size={20} />
+    title: "Siemens Healthineers",
+    description: "Developing and implementing advanced diagnostics software solutions for healthcare systems.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ESiemens%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Software Development", "Medical Technology", "Diagnostics"],
+    localPath: "/siemens-experience",
+    icon: <Briefcase size={20} />
   },
+  {
+    title: "Roche",
+    description: "Working on innovative healthcare solutions and diagnostic systems.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERoche%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Healthcare", "Diagnostics", "Research"],
+    localPath: "/roche-experience",
+    icon: <Briefcase size={20} />
+  },
+  {
+    title: "Coding Betounsi",
+    description: "Leading software development projects and technical initiatives.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ECoding%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Software Development", "Team Leadership", "Project Management"],
+    localPath: "/coding-betounsi-experience",
+    icon: <Briefcase size={20} />
+  },
+  {
+    title: "ESPRIT Internship",
+    description: "Academic internship developing technical skills and industry experience.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EESPRIT%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Internship", "Technical Development", "Academic"],
+    localPath: "/esprit-internship-experience",
+    icon: <Briefcase size={20} />
+  },
+  {
+    title: "AKWEL Internship",
+    description: "Industrial experience in mechanical and systems engineering.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EAKWEL%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Mechanical Engineering", "Automotive", "Industrial"],
+    localPath: "/akwel-internship-experience",
+    icon: <Briefcase size={20} />
+  },
+  {
+    title: "Silvatrim Experience",
+    description: "Experience in manufacturing and production systems.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ESilvatrim%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Manufacturing", "Production", "Industrial"],
+    localPath: "/silvatrim-experience",
+    icon: <Briefcase size={20} />
+  },
+  {
+    title: "Maintenance Experience",
+    description: "Technical maintenance and system support role.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EMaintenance%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Technical Support", "Maintenance", "Engineering"],
+    localPath: "/maintenance-experience",
+    icon: <Briefcase size={20} />
+  },
+];
+
+// Volunteering data
+const volunteeringExperiences: Project[] = [
   {
     title: "Volunteering Experience",
     description: "Giving back to the community through education and technical training initiatives.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%2310b981'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EVolunteer%3C/tspan%3E%3C/text%3E%3C/svg%3E",
     tags: ["Teaching", "Robotics", "Education", "Community"],
     localPath: "/volunteering-experience",
-    icon: <GraduationCap size={20} />
+    icon: <HandHeart size={20} />
+  },
+];
+
+// Awards data
+const awardsExperiences: Project[] = [
+  {
+    title: "Box-Covid Project Awards",
+    description: "1st Prize in ESPRIT Projects Ball Event and Silver Medal among 200+ projects across all departments.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EAwards%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Box-Covid", "Recognition", "Excellence"],
+    localPath: "/awards",
+    icon: <Trophy size={20} />
   },
   {
-    title: "Professional Experience",
-    description: "Overview of my professional experiences at Siemens Healthineers, Roche, and various other roles throughout my career.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Siemens Healthineers", "Roche", "Coding Betounsi", "ESPRIT", "AKWEL"],
-    localPath: "/professional-experience",
-    icon: <Briefcase size={20} />
-  }
+    title: "Robotics Competition Awards",
+    description: "Multiple awards for robotics competitions including maze-solving and all-terrain robot challenges.",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EMedal%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    tags: ["Robotics", "Competition", "Innovation"],
+    localPath: "/awards",
+    icon: <Medal size={20} />
+  },
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-white dark:bg-portfolio-blue-dark">
       <div className="container mx-auto">
-        {/* Experience Section - Moved to the top */}
-        <h2 id="experiences" className="section-title">Experiences & Achievements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {experiences.map((exp, index) => (
+        {/* Professional Experience Section */}
+        <h2 id="professional-experiences" className="section-title">Professional Experiences</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {professionalExperiences.map((exp, index) => (
             <Link 
               key={index} 
               to={exp.localPath}
@@ -134,7 +200,7 @@ const Projects = () => {
                 
                 <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
                   <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
-                    {exp.icon || <Code size={20} />}
+                    {exp.icon || <Briefcase size={20} />}
                   </div>
                 </CardFooter>
               </Card>
@@ -142,8 +208,102 @@ const Projects = () => {
           ))}
         </div>
         
-        {/* Projects Section - Now below the experiences */}
-        <h2 id="featured-projects" className="section-title mt-16">Featured Projects</h2>
+        {/* Volunteering Experience Section */}
+        <h2 id="volunteering-experiences" className="section-title">Volunteering Experience</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {volunteeringExperiences.map((exp, index) => (
+            <Link 
+              key={index} 
+              to={exp.localPath}
+              className="block h-full"
+            >
+              <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
+                <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+                  <img 
+                    src={exp.image} 
+                    alt={exp.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <div className="p-4">
+                      <CardTitle className="text-white">{exp.title}</CardTitle>
+                    </div>
+                  </div>
+                </div>
+                
+                <CardContent className="pt-4 flex-grow">
+                  <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+                    {exp.description}
+                  </CardDescription>
+                  
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {exp.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                
+                <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+                  <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
+                    {exp.icon || <HandHeart size={20} />}
+                  </div>
+                </CardFooter>
+              </Card>
+            </Link>
+          ))}
+        </div>
+        
+        {/* Awards Section */}
+        <h2 id="awards" className="section-title">Awards & Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {awardsExperiences.map((award, index) => (
+            <Link 
+              key={index} 
+              to={award.localPath}
+              className="block h-full"
+            >
+              <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300 border-amber-200 dark:border-amber-800">
+                <div className="h-48 bg-amber-50 dark:bg-amber-900/30 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-amber-500 dark:text-amber-400">
+                      {award.icon || <Award size={64} />}
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <div className="p-4">
+                      <CardTitle className="text-white">{award.title}</CardTitle>
+                    </div>
+                  </div>
+                </div>
+                
+                <CardContent className="pt-4 flex-grow">
+                  <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+                    {award.description}
+                  </CardDescription>
+                  
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {award.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="bg-amber-100/50 text-amber-800 dark:text-amber-200 dark:bg-amber-800/30">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                
+                <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+                  <div className="text-amber-500 hover:text-amber-600 dark:text-amber-400 dark:hover:text-amber-300">
+                    <Trophy size={20} />
+                  </div>
+                </CardFooter>
+              </Card>
+            </Link>
+          ))}
+        </div>
+        
+        {/* Projects Section */}
+        <h2 id="featured-projects" className="section-title">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Link 

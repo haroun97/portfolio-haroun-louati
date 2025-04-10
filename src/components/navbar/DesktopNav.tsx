@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { scrollToElement } from '@/utils/scrollUtils';
+import ExperiencesDropdown from './ExperiencesDropdown';
 
 interface DesktopNavProps {
   navLinks: { href: string; label: string }[];
@@ -17,9 +18,12 @@ const DesktopNav = ({ navLinks, getNavTextColor }: DesktopNavProps) => {
     }
   };
   
+  // Filter out "Experiences" link which will be replaced by dropdown
+  const filteredNavLinks = navLinks.filter(link => link.label !== "Experiences");
+  
   return (
     <nav className="hidden md:flex items-center space-x-4">
-      {navLinks.map((link) => (
+      {filteredNavLinks.map((link) => (
         <Link
           key={link.href}
           to={link.href}
@@ -30,7 +34,9 @@ const DesktopNav = ({ navLinks, getNavTextColor }: DesktopNavProps) => {
         </Link>
       ))}
       
-      <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
+      <ExperiencesDropdown getNavTextColor={getNavTextColor} />
+      
+      <Button className="bg-portfolio-blue-medium hover:bg-portfolio-blue-dark text-white">
         <Link to="/resume">Resume</Link>
       </Button>
     </nav>

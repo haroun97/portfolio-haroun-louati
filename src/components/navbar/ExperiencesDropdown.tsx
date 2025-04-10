@@ -31,11 +31,11 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
             <ul className="grid gap-3 p-4 w-[200px] bg-white dark:bg-slate-800">
               <li>
                 <Link
-                  to="/professional-experience"
+                  to="/siemens-experience"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
                 >
                   <Briefcase size={18} />
-                  <span>Professional</span>
+                  <span>Siemens</span>
                 </Link>
               </li>
               <li>

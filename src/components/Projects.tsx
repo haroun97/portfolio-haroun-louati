@@ -70,7 +70,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Siemens Healthineers",
     description: "Developing and implementing advanced diagnostics software solutions for healthcare systems.",
-    image: "/lovable-uploads/0f1307dc-22fb-48af-ad49-4860776ab65b.png",
+    image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png", // Swapped with Coding Betounsi
     tags: ["Software Development", "Medical Technology", "Diagnostics"],
     localPath: "/siemens-experience",
     icon: <Briefcase size={20} />
@@ -86,7 +86,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Coding Betounsi",
     description: "Leading software development projects and technical initiatives.",
-    image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png",
+    image: "/lovable-uploads/0f1307dc-22fb-48af-ad49-4860776ab65b.png", // Swapped with Siemens
     tags: ["Software Development", "Team Leadership", "Project Management"],
     localPath: "/coding-betounsi-experience",
     icon: <Briefcase size={20} />
@@ -94,7 +94,7 @@ const professionalExperiences: Project[] = [
   {
     title: "ESPRIT Internship",
     description: "Academic internship developing technical skills and industry experience.",
-    image: "/lovable-uploads/bd91216a-67a8-41a3-b72d-fcaf3d966a08.png",
+    image: "/lovable-uploads/3f02a935-1c51-449b-a5ef-e0b2a6fac9d8.png", // Updated with new image
     tags: ["Internship", "Technical Development", "Academic"],
     localPath: "/esprit-internship-experience",
     icon: <Briefcase size={20} />
@@ -108,7 +108,7 @@ const professionalExperiences: Project[] = [
     icon: <Briefcase size={20} />
   },
   {
-    title: "Silvatrim Experience",
+    title: "Silvatrim Internship", // Renamed from "Silvatrim Experience"
     description: "Experience in manufacturing and production systems.",
     image: "/lovable-uploads/44e45b1f-3570-4dc3-b5f0-5782827edc9d.png",
     tags: ["Manufacturing", "Production", "Industrial"],

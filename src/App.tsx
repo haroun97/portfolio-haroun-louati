@@ -12,7 +12,6 @@ import RobotArm from "./pages/RobotArm";
 import PanTiltRobot from "./pages/PanTiltRobot";
 import RoboticsCompetition from "./pages/RoboticsCompetition";
 import SiemensExperience from "./pages/SiemensExperience";
-import ProfessionalExperience from "./pages/ProfessionalExperience";
 import RocheExperience from "./pages/RocheExperience";
 import CodingBetounsiExperience from "./pages/CodingBetounsiExperience";
 import EspritInternshipExperience from "./pages/EspritInternshipExperience";
@@ -46,7 +45,6 @@ const App = () => (
           <Route path="/pan-tilt-robot" element={<RouteHandler><PanTiltRobot /></RouteHandler>} />
           <Route path="/robotics-competition" element={<RouteHandler><RoboticsCompetition /></RouteHandler>} />
           <Route path="/siemens-experience" element={<RouteHandler><SiemensExperience /></RouteHandler>} />
-          <Route path="/professional-experience" element={<RouteHandler><ProfessionalExperience /></RouteHandler>} />
           <Route path="/roche-experience" element={<RouteHandler><RocheExperience /></RouteHandler>} />
           <Route path="/coding-betounsi-experience" element={<RouteHandler><CodingBetounsiExperience /></RouteHandler>} />
           <Route path="/esprit-internship-experience" element={<RouteHandler><EspritInternshipExperience /></RouteHandler>} />

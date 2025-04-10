@@ -22,7 +22,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       }}
     >
       <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
-        <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+        <div className="h-48 bg-white dark:bg-portfolio-blue-dark relative overflow-hidden">
           <img 
             src={experience.image} 
             alt={experience.title}

@@ -1,7 +1,5 @@
 
 import { Images } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const RobotArmGallery = () => {
   const galleryImages = [
@@ -36,25 +35,23 @@ const RobotArmGallery = () => {
           </span>
         </h2>
         
-        {/* Desktop View with Cards */}
+        {/* Desktop View - Simple image display */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {galleryImages.map((image, index) => (
             <div key={index}>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">{image.title}</h3>
-              <Card className="overflow-hidden h-full">
-                <AspectRatio ratio={16 / 9}>
-                  <img 
-                    src={image.src} 
-                    alt={image.alt} 
-                    className="w-full h-full object-contain"
-                  />
-                </AspectRatio>
-                <CardContent>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    {image.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <AspectRatio ratio={16 / 9}>
+                <img 
+                  src={image.src} 
+                  alt={image.alt} 
+                  className="w-full h-full object-contain rounded-lg shadow-md"
+                />
+              </AspectRatio>
+              <div className="mt-4">
+                <p className="text-sm text-gray-600 dark:text-gray-300 text-center">
+                  {image.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -67,20 +64,18 @@ const RobotArmGallery = () => {
                 <CarouselItem key={index}>
                   <div className="p-1">
                     <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">{image.title}</h3>
-                    <Card className="overflow-hidden h-full">
-                      <AspectRatio ratio={16 / 9}>
-                        <img 
-                          src={image.src} 
-                          alt={image.alt} 
-                          className="w-full h-full object-contain"
-                        />
-                      </AspectRatio>
-                      <CardContent>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">
-                          {image.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <AspectRatio ratio={16 / 9}>
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full h-full object-contain rounded-lg shadow-md"
+                      />
+                    </AspectRatio>
+                    <div className="mt-4">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 text-center">
+                        {image.description}
+                      </p>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
@@ -99,7 +94,7 @@ const RobotArmGallery = () => {
             <img 
               src="/lovable-uploads/2043bb29-8e6c-4619-b395-3197dba69f81.png" 
               alt="Robot Arm Development Process" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded-lg shadow-md"
             />
           </AspectRatio>
           <div className="text-center mt-4">

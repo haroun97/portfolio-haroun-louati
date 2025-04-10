@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 
@@ -54,9 +53,7 @@ export const getNavLinks = (isHomeRoute: boolean) => [
   { href: isHomeRoute ? "#home" : "/", label: "Home" },
   { href: isHomeRoute ? "#about" : "/#about", label: "About" },
   { href: isHomeRoute ? "#skills" : "/#skills", label: "Skills" },
-  { href: isHomeRoute ? "#professional-experiences" : "/#professional-experiences", label: "Professional" },
-  { href: isHomeRoute ? "#volunteering-experiences" : "/#volunteering-experiences", label: "Volunteering" },
-  { href: isHomeRoute ? "#awards" : "/#awards", label: "Awards" },
+  { href: isHomeRoute ? "#projects" : "/#projects", label: "Experiences" },
   { href: isHomeRoute ? "#featured-projects" : "/#featured-projects", label: "Projects" },
   { href: isHomeRoute ? "#contact" : "/#contact", label: "Contact" },
 ];

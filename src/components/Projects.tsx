@@ -1,8 +1,9 @@
-
+import React, { useState } from 'react';
 import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane, Award, Medal, HandHeart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { Button } from '@/components/ui/button';
 
 interface Project {
   title: string;
@@ -15,7 +16,6 @@ interface Project {
   icon?: JSX.Element;
 }
 
-// Projects data
 const projects: Project[] = [
   {
     title: "Box-Covid",
@@ -65,7 +65,6 @@ const projects: Project[] = [
   },
 ];
 
-// Professional experiences data
 const professionalExperiences: Project[] = [
   {
     title: "Siemens Healthineers",
@@ -125,7 +124,6 @@ const professionalExperiences: Project[] = [
   },
 ];
 
-// Volunteering data
 const volunteeringExperiences: Project[] = [
   {
     title: "Volunteering Experience",
@@ -137,7 +135,6 @@ const volunteeringExperiences: Project[] = [
   },
 ];
 
-// Awards data
 const awardsExperiences: Project[] = [
   {
     title: "Box-Covid Project Awards",
@@ -158,13 +155,23 @@ const awardsExperiences: Project[] = [
 ];
 
 const Projects = () => {
+  const [showAllProfessional, setShowAllProfessional] = useState(false);
+  const [showAllVolunteering, setShowAllVolunteering] = useState(false);
+  const [showAllAwards, setShowAllAwards] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  
+  const displayedProfessional = showAllProfessional ? professionalExperiences : professionalExperiences.slice(0, 3);
+  const displayedVolunteering = showAllVolunteering ? volunteeringExperiences : volunteeringExperiences.slice(0, 3);
+  const displayedAwards = showAllAwards ? awardsExperiences : awardsExperiences.slice(0, 3);
+  const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
+  
   return (
     <section id="projects" className="section-padding bg-white dark:bg-portfolio-blue-dark">
       <div className="container mx-auto">
         {/* Professional Experience Section */}
         <h2 id="professional-experiences" className="section-title">Professional Experiences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {professionalExperiences.map((exp, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          {displayedProfessional.map((exp, index) => (
             <Link 
               key={index} 
               to={exp.localPath}
@@ -208,10 +215,22 @@ const Projects = () => {
           ))}
         </div>
         
+        {professionalExperiences.length > 3 && (
+          <div className="flex justify-center mb-16">
+            <Button 
+              variant="outline" 
+              onClick={() => setShowAllProfessional(!showAllProfessional)}
+              className="border-portfolio-blue-medium text-portfolio-blue-medium dark:border-portfolio-blue-light dark:text-portfolio-blue-light hover:bg-portfolio-blue-light/10"
+            >
+              {showAllProfessional ? "Show Less" : "View More"}
+            </Button>
+          </div>
+        )}
+        
         {/* Volunteering Experience Section */}
         <h2 id="volunteering-experiences" className="section-title">Volunteering Experience</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {volunteeringExperiences.map((exp, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          {displayedVolunteering.map((exp, index) => (
             <Link 
               key={index} 
               to={exp.localPath}
@@ -255,10 +274,22 @@ const Projects = () => {
           ))}
         </div>
         
+        {volunteeringExperiences.length > 3 && (
+          <div className="flex justify-center mb-16">
+            <Button 
+              variant="outline" 
+              onClick={() => setShowAllVolunteering(!showAllVolunteering)}
+              className="border-portfolio-blue-medium text-portfolio-blue-medium dark:border-portfolio-blue-light dark:text-portfolio-blue-light hover:bg-portfolio-blue-light/10"
+            >
+              {showAllVolunteering ? "Show Less" : "View More"}
+            </Button>
+          </div>
+        )}
+        
         {/* Awards Section */}
         <h2 id="awards" className="section-title">Awards & Achievements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {awardsExperiences.map((award, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          {displayedAwards.map((award, index) => (
             <Link 
               key={index} 
               to={award.localPath}
@@ -302,10 +333,22 @@ const Projects = () => {
           ))}
         </div>
         
+        {awardsExperiences.length > 3 && (
+          <div className="flex justify-center mb-16">
+            <Button 
+              variant="outline" 
+              onClick={() => setShowAllAwards(!showAllAwards)}
+              className="border-amber-500 text-amber-600 dark:border-amber-400 dark:text-amber-400 hover:bg-amber-500/10"
+            >
+              {showAllAwards ? "Show Less" : "View More"}
+            </Button>
+          </div>
+        )}
+        
         {/* Projects Section */}
         <h2 id="featured-projects" className="section-title">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <Link 
               key={index} 
               to={project.localPath || "#"} 
@@ -377,6 +420,18 @@ const Projects = () => {
             </Link>
           ))}
         </div>
+        
+        {projects.length > 3 && (
+          <div className="flex justify-center mt-8">
+            <Button 
+              variant="outline" 
+              onClick={() => setShowAllProjects(!showAllProjects)}
+              className="border-portfolio-blue-medium text-portfolio-blue-medium dark:border-portfolio-blue-light dark:text-portfolio-blue-light hover:bg-portfolio-blue-light/10"
+            >
+              {showAllProjects ? "Show Less" : "View More"}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

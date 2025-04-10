@@ -111,17 +111,18 @@ const RobotArm = () => {
                 </CardContent>
               </Card>
             </div>
+            
             {/* Vision System */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Computer Vision System</h3>
               <Card className="overflow-hidden h-full flex flex-col">
-                <div className="relative flex-1">
-                  <AspectRatio ratio={16 / 9}>
-                    <div className="w-full h-full flex items-center justify-center bg-portfolio-blue-dark/10">
-                      <Code size={64} className="text-portfolio-blue-light opacity-40" />
-                    </div>
-                  </AspectRatio>
-                </div>
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="/lovable-uploads/e15743c8-6243-42ee-8e4e-51003d35a896.png"
+                    alt="Computer Vision Face Detection"
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
                 <CardContent className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV and Haarcascade classifiers to detect and track objects in real-time.

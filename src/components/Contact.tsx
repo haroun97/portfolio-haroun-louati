@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GitHub, Linkedin, MessageSquare } from 'lucide-react';
+import { Github, Linkedin, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -20,7 +20,7 @@ const Contact = () => {
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button asChild className="bg-portfolio-blue-medium hover:bg-portfolio-blue-light">
                     <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <GitHub className="h-5 w-5" />
+                      <Github className="h-5 w-5" />
                       <span>GitHub</span>
                     </a>
                   </Button>

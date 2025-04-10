@@ -86,23 +86,6 @@ const RobotArmGallery = () => {
             </div>
           </Carousel>
         </div>
-
-        {/* Development Process Images */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Development Process</h3>
-          <AspectRatio ratio={16 / 9}>
-            <img 
-              src="/lovable-uploads/2043bb29-8e6c-4619-b395-3197dba69f81.png" 
-              alt="Robot Arm Development Process" 
-              className="w-full h-full object-contain rounded-lg shadow-md"
-            />
-          </AspectRatio>
-          <div className="text-center mt-4">
-            <p className="text-sm text-gray-600 dark:text-gray-300">
-              Stages of development from design to implementation of the autonomous robot arm project.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

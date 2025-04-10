@@ -37,7 +37,7 @@ const Resume = () => {
     <main className="bg-background min-h-screen flex flex-col">
       <div className="flex-1 container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-6 flex justify-center">
+          <div className="mb-6 flex justify-end">
             <Link to="/">
               <Button className="flex items-center gap-2 bg-portfolio-blue-medium hover:bg-portfolio-blue-dark">
                 <Home size={18} />

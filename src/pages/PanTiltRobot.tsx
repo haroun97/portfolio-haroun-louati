@@ -1,4 +1,3 @@
-
 import { Bot, Camera, Code, Computer, Database, Eye, Github, Hammer, Heart, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -131,15 +130,13 @@ const PanTiltRobot = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Computer Vision System</h3>
               <Card className="overflow-hidden h-full flex flex-col">
-                <div className="relative flex-1">
-                  <AspectRatio ratio={16 / 9}>
-                    <img
-                      src="/lovable-uploads/a2b775ce-0488-4369-93b1-cb5466eb98dc.png"
-                      alt="Computer Vision Object Detection"
-                      className="w-full h-full object-cover"
-                    />
-                  </AspectRatio>
-                </div>
+                <AspectRatio ratio={16 / 9}>
+                  <img
+                    src="/lovable-uploads/a2b775ce-0488-4369-93b1-cb5466eb98dc.png"
+                    alt="Computer Vision Object Detection"
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
                 <CardContent className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV to detect and track objects and faces in real-time.
@@ -147,27 +144,6 @@ const PanTiltRobot = () => {
                 </CardContent>
               </Card>
             </div>
-          </div>
-          
-          {/* Complete System Image */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center dark:text-white">Complete System</h3>
-            <Card className="overflow-hidden">
-              <div className="relative">
-                <AspectRatio ratio={16 / 9}>
-                  <img
-                    src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
-                    alt="Pan-Tilt Head Robot Complete System"
-                    className="w-full h-full object-contain"
-                  />
-                </AspectRatio>
-              </div>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  The complete pan-tilt-head robot system with camera and Arduino integration
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

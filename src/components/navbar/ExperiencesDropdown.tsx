@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { scrollToElement } from '@/utils/scrollUtils';
 
 interface ExperiencesDropdownProps {
   getNavTextColor: () => string;
@@ -16,6 +17,14 @@ interface ExperiencesDropdownProps {
 
 const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
   const navTextColor = getNavTextColor();
+  
+  const handleSectionNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    // If we're on the home page, scroll to the section
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      scrollToElement(sectionId);
+    }
+  };
   
   return (
     <NavigationMenu className="inline-flex">
@@ -39,17 +48,19 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
               </li>
               <li>
                 <Link
-                  to="/siemens-experience"
+                  to="/#professional-experiences"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                  onClick={(e) => handleSectionNavigation(e, "professional-experiences")}
                 >
                   <Briefcase size={18} />
-                  <span>Siemens</span>
+                  <span>Professional</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/volunteering-experience"
+                  to="/#volunteering-experiences"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                  onClick={(e) => handleSectionNavigation(e, "volunteering-experiences")}
                 >
                   <HandHeart size={18} />
                   <span>Volunteering</span>
@@ -57,8 +68,9 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
               </li>
               <li>
                 <Link
-                  to="/awards"
+                  to="/#awards"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
+                  onClick={(e) => handleSectionNavigation(e, "awards")}
                 >
                   <Trophy size={18} />
                   <span>Awards</span>

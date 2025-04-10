@@ -1,7 +1,8 @@
+
 import { Bot, Camera, Code, Computer, Database, Eye, Heart, Hammer, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { 
   Carousel,
   CarouselContent,
@@ -20,18 +21,6 @@ const PanTiltRobot = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-blue-dark">
-      {/* Floating Images */}
-      <div className="fixed left-0 top-1/4 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
-        <div className="w-full flex items-center justify-center bg-portfolio-blue-dark/10 rounded-full p-4 animate-floating-left">
-          <Camera size={64} className="text-portfolio-blue-light" />
-        </div>
-      </div>
-      <div className="fixed right-0 top-1/2 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
-        <div className="w-full flex items-center justify-center bg-portfolio-blue-dark/10 rounded-full p-4 animate-floating-right">
-          <Bot size={64} className="text-portfolio-blue-light" />
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-portfolio-blue-dark text-white relative overflow-hidden py-24">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMWEyZTQ0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyYTRhN2YiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"></div>
@@ -116,11 +105,11 @@ const PanTiltRobot = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                <CardContent className="p-4">
+                <div className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The pan-tilt head system with two servo motors for precise camera positioning
                   </p>
-                </CardContent>
+                </div>
               </Card>
             </div>
             
@@ -135,11 +124,11 @@ const PanTiltRobot = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                <CardContent className="p-4">
+                <div className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV to detect and track objects and faces in real-time.
                   </p>
-                </CardContent>
+                </div>
               </Card>
             </div>
           </div>
@@ -153,7 +142,7 @@ const PanTiltRobot = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <Card className="shadow-lg border-t-4 border-portfolio-blue-light">
-              <CardContent className="pt-6">
+              <div className="pt-6 p-6">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-portfolio-blue-light/20 p-4 rounded-full">
                     <Camera size={32} className="text-portfolio-blue-light" />
@@ -163,11 +152,11 @@ const PanTiltRobot = () => {
                 <p className="text-gray-600 dark:text-gray-300">
                   Camera module attached to the pan-tilt-head for capturing real-time images for object detection and tracking.
                 </p>
-              </CardContent>
+              </div>
             </Card>
             
             <Card className="shadow-lg border-t-4 border-portfolio-orange-medium">
-              <CardContent className="pt-6">
+              <div className="pt-6 p-6">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-portfolio-orange-medium/20 p-4 rounded-full">
                     <Computer size={32} className="text-portfolio-orange-medium" />
@@ -177,11 +166,11 @@ const PanTiltRobot = () => {
                 <p className="text-gray-600 dark:text-gray-300">
                   Computer processes images from the camera using OpenCV, detects objects and faces, and sends control commands to Arduino.
                 </p>
-              </CardContent>
+              </div>
             </Card>
             
             <Card className="shadow-lg border-t-4 border-portfolio-blue-medium">
-              <CardContent className="pt-6">
+              <div className="pt-6 p-6">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-portfolio-blue-medium/20 p-4 rounded-full">
                     <Bot size={32} className="text-portfolio-blue-medium" />
@@ -191,7 +180,7 @@ const PanTiltRobot = () => {
                 <p className="text-gray-600 dark:text-gray-300">
                   Arduino board receives decisions from the computer and controls the servo motors for panning and tilting the camera.
                 </p>
-              </CardContent>
+              </div>
             </Card>
           </div>
         </div>
@@ -276,7 +265,7 @@ const PanTiltRobot = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-white">Skills Applied</h2>
           
           <Card className="shadow-lg">
-            <CardContent className="pt-6">
+            <div className="pt-6 p-6">
               <div className="flex flex-wrap gap-3 justify-center">
                 {skills.map((skill, index) => (
                   <Badge key={index} variant="secondary" className="text-base py-2 px-4 bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
@@ -284,12 +273,12 @@ const PanTiltRobot = () => {
                   </Badge>
                 ))}
               </div>
-            </CardContent>
+            </div>
           </Card>
           
           <div className="mt-12">
             <Card className="shadow-lg">
-              <CardContent className="pt-6">
+              <div className="pt-6 p-6">
                 <h3 className="text-xl font-bold mb-4 dark:text-white">Object and Face Detection System</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   The system is designed to detect and track objects and faces in real-time. When an 
@@ -301,7 +290,7 @@ const PanTiltRobot = () => {
                   interactive installations, and robotic vision systems. The ability to track 
                   objects smoothly makes it useful for automated camera systems in various applications.
                 </p>
-              </CardContent>
+              </div>
             </Card>
           </div>
         </div>

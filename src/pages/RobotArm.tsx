@@ -105,11 +105,11 @@ const RobotArm = () => {
                     className="w-full h-full object-contain"
                   />
                 </AspectRatio>
-                <CardContent className="p-4 pb-0">
+                <div className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     "SALAH" - Named after my father who believed in me and invested in this project
                   </p>
-                </CardContent>
+                </div>
               </Card>
             </div>
             
@@ -124,11 +124,11 @@ const RobotArm = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                <CardContent className="p-4 pb-0">
+                <div className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV and Haarcascade classifiers to detect and track objects in real-time.
                   </p>
-                </CardContent>
+                </div>
               </Card>
             </div>
           </div>

@@ -13,11 +13,13 @@ const AwardCard = ({ award }: AwardCardProps) => {
   return (
     <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
       <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
-        <img 
-          src={award.image} 
-          alt={award.title}
-          className="w-full h-full object-contain p-2"
-        />
+        <div className="w-full h-full bg-white dark:bg-white/90 flex items-center justify-center p-2">
+          <img 
+            src={award.image} 
+            alt={award.title}
+            className="w-full h-full object-contain"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
           <div className="p-4">
             <CardTitle className="text-white">{award.title}</CardTitle>

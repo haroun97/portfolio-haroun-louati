@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, MessageSquare } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
@@ -84,7 +84,7 @@ const Contact = () => {
                       placeholder="Your message here..."
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-portfolio-orange-medium hover:bg-portfolio-orange-dark">
+                  <Button type="submit" className="w-full bg-portfolio-blue-medium hover:bg-portfolio-blue-light">
                     Send Message
                   </Button>
                 </form>

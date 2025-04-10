@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane, Award, Medal, HandHeart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,7 +70,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Siemens Healthineers",
     description: "Developing and implementing advanced diagnostics software solutions for healthcare systems.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ESiemens%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/0f1307dc-22fb-48af-ad49-4860776ab65b.png",
     tags: ["Software Development", "Medical Technology", "Diagnostics"],
     localPath: "/siemens-experience",
     icon: <Briefcase size={20} />
@@ -77,7 +78,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Roche",
     description: "Working on innovative healthcare solutions and diagnostic systems.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERoche%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/0821873c-31c0-4049-abce-9b09466aec83.png",
     tags: ["Healthcare", "Diagnostics", "Research"],
     localPath: "/roche-experience",
     icon: <Briefcase size={20} />
@@ -85,7 +86,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Coding Betounsi",
     description: "Leading software development projects and technical initiatives.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ECoding%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png",
     tags: ["Software Development", "Team Leadership", "Project Management"],
     localPath: "/coding-betounsi-experience",
     icon: <Briefcase size={20} />
@@ -93,7 +94,7 @@ const professionalExperiences: Project[] = [
   {
     title: "ESPRIT Internship",
     description: "Academic internship developing technical skills and industry experience.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EESPRIT%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/bd91216a-67a8-41a3-b72d-fcaf3d966a08.png",
     tags: ["Internship", "Technical Development", "Academic"],
     localPath: "/esprit-internship-experience",
     icon: <Briefcase size={20} />
@@ -101,7 +102,7 @@ const professionalExperiences: Project[] = [
   {
     title: "AKWEL Internship",
     description: "Industrial experience in mechanical and systems engineering.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EAKWEL%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/f22477d8-4be7-4748-acdd-f49d97168bc6.png",
     tags: ["Mechanical Engineering", "Automotive", "Industrial"],
     localPath: "/akwel-internship-experience",
     icon: <Briefcase size={20} />
@@ -109,7 +110,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Silvatrim Experience",
     description: "Experience in manufacturing and production systems.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ESilvatrim%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/44e45b1f-3570-4dc3-b5f0-5782827edc9d.png",
     tags: ["Manufacturing", "Production", "Industrial"],
     localPath: "/silvatrim-experience",
     icon: <Briefcase size={20} />
@@ -117,7 +118,7 @@ const professionalExperiences: Project[] = [
   {
     title: "Maintenance Experience",
     description: "Technical maintenance and system support role.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EMaintenance%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/0fe50239-19a9-4be2-bd16-c25aabca71e8.png",
     tags: ["Technical Support", "Maintenance", "Engineering"],
     localPath: "/maintenance-experience",
     icon: <Briefcase size={20} />
@@ -178,11 +179,11 @@ const Projects = () => {
               className="block h-full"
             >
               <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
-                <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+                <div className="h-48 bg-white dark:bg-portfolio-blue-dark relative overflow-hidden">
                   <img 
                     src={exp.image} 
                     alt={exp.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-4"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                     <div className="p-4">
@@ -215,6 +216,7 @@ const Projects = () => {
           ))}
         </div>
         
+        {/* Show More/Less Button for Professional Experiences */}
         {professionalExperiences.length > 3 && (
           <div className="flex justify-center mb-16">
             <Button 

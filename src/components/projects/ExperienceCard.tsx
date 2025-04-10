@@ -11,6 +11,9 @@ interface ExperienceCardProps {
 }
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
+  // Replace "Diagnostics" with "Software Development" in description if present
+  const updatedDescription = experience.description.replace("Diagnostics", "Software Development");
+  
   return (
     <Link 
       to={experience.localPath || "#"}
@@ -37,7 +40,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         
         <CardContent className="pt-4 flex-grow">
           <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
-            {experience.description}
+            {updatedDescription}
           </CardDescription>
           
           <div className="flex flex-wrap gap-2 mt-2">

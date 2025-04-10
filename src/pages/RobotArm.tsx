@@ -1,4 +1,3 @@
-
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Cpu, Hammer, Code, Github, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +25,6 @@ const RobotArm = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMWEyZTQ0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyYTRhN2YiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center">
-            <Badge className="mb-6 bg-portfolio-orange-medium hover:bg-portfolio-orange-dark">Academic Project</Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Autonomous Robot Arm</h1>
             <p className="text-xl md:text-2xl text-portfolio-blue-lightest max-w-3xl mb-8">
               Based on Machine Learning and Computer Vision for people with reduced mobility
@@ -122,9 +120,11 @@ const RobotArm = () => {
               <Card className="overflow-hidden h-full flex flex-col">
                 <div className="relative flex-1">
                   <AspectRatio ratio={16 / 9}>
-                    <div className="w-full h-full flex items-center justify-center bg-portfolio-blue-dark/10">
-                      <Code size={64} className="text-portfolio-blue-light opacity-40" />
-                    </div>
+                    <img 
+                      src="/lovable-uploads/e15743c8-6243-42ee-8e4e-51003d35a896.png"
+                      alt="Computer Vision Face Detection"
+                      className="w-full h-full object-cover"
+                    />
                   </AspectRatio>
                 </div>
                 <CardContent className="p-4">

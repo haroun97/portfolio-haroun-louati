@@ -13,8 +13,13 @@ interface AwardCardProps {
 const AwardCard = ({ award }: AwardCardProps) => {
   return (
     <Link 
-      to={award.localPath}
+      to={award.localPath || "#"}
       className="block h-full"
+      onClick={(e) => {
+        if (!award.localPath) {
+          e.preventDefault();
+        }
+      }}
     >
       <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300 border-amber-200 dark:border-amber-800">
         <div className="h-48 bg-amber-50 dark:bg-amber-900/30 relative overflow-hidden">
@@ -23,14 +28,10 @@ const AwardCard = ({ award }: AwardCardProps) => {
               {award.icon || <Award size={64} />}
             </div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-            <div className="p-4">
-              <CardTitle className="text-white">{award.title}</CardTitle>
-            </div>
-          </div>
         </div>
         
         <CardContent className="pt-4 flex-grow">
+          <CardTitle className="mb-2">{award.title}</CardTitle>
           <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
             {award.description}
           </CardDescription>

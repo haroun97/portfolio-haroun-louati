@@ -13,8 +13,9 @@ interface VolunteeringCardProps {
 const VolunteeringCard = ({ experience }: VolunteeringCardProps) => {
   return (
     <Link 
-      to={experience.localPath}
+      to="#"
       className="block h-full"
+      onClick={(e) => e.preventDefault()}
     >
       <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
         <div className="h-48 bg-white dark:bg-portfolio-blue-dark relative overflow-hidden">
@@ -23,14 +24,10 @@ const VolunteeringCard = ({ experience }: VolunteeringCardProps) => {
             alt={experience.title}
             className="w-full h-full object-contain"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-            <div className="p-4">
-              <CardTitle className="text-white">{experience.title}</CardTitle>
-            </div>
-          </div>
         </div>
         
         <CardContent className="pt-4 flex-grow">
+          <CardTitle className="mb-2">{experience.title}</CardTitle>
           <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
             {experience.description}
           </CardDescription>

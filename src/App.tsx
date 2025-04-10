@@ -19,7 +19,6 @@ import AkwelInternshipExperience from "./pages/AkwelInternshipExperience";
 import SilvatrimExperience from "./pages/SilvatrimExperience";
 import MaintenanceExperience from "./pages/MaintenanceExperience";
 import Awards from "./pages/Awards";
-import VolunteeringExperience from "./pages/VolunteeringExperience";
 import FlightsCarRentals from "./pages/FlightsCarRentals";
 import ChandelierProject from "./pages/ChandelierProject";
 import Resume from "./pages/Resume";
@@ -52,7 +51,6 @@ const App = () => (
           <Route path="/silvatrim-experience" element={<RouteHandler><SilvatrimExperience /></RouteHandler>} />
           <Route path="/maintenance-experience" element={<RouteHandler><MaintenanceExperience /></RouteHandler>} />
           <Route path="/awards" element={<RouteHandler><Awards /></RouteHandler>} />
-          <Route path="/volunteering-experience" element={<RouteHandler><VolunteeringExperience /></RouteHandler>} />
           <Route path="/flights-car-rentals" element={<RouteHandler><FlightsCarRentals /></RouteHandler>} />
           <Route path="/chandelier-project" element={<RouteHandler><ChandelierProject /></RouteHandler>} />
           <Route path="/resume" element={<RouteHandler><Resume /></RouteHandler>} />

@@ -94,42 +94,31 @@ const PanTiltRobot = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-            {/* Pan-Tilt Robot */}
+            {/* Direct images instead of cards */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Pan-Tilt System</h3>
-              <Card className="overflow-hidden h-full flex flex-col">
-                <AspectRatio ratio={16 / 9}>
-                  <img
-                    src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
-                    alt="Pan-Tilt Head Robot"
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-                <div className="p-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    The pan-tilt head system with two servo motors for precise camera positioning
-                  </p>
-                </div>
-              </Card>
+              <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+                <img
+                  src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
+                  alt="Pan-Tilt Head Robot"
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-3 text-center">
+                The pan-tilt head system with two servo motors for precise camera positioning
+              </p>
             </div>
             
-            {/* Vision System */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Computer Vision System</h3>
-              <Card className="overflow-hidden h-full flex flex-col">
-                <AspectRatio ratio={16 / 9}>
-                  <img
-                    src="/lovable-uploads/a2b775ce-0488-4369-93b1-cb5466eb98dc.png"
-                    alt="Computer Vision Object Detection"
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-                <div className="p-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    The vision system uses OpenCV to detect and track objects and faces in real-time.
-                  </p>
-                </div>
-              </Card>
+              <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+                <img
+                  src="/lovable-uploads/a2b775ce-0488-4369-93b1-cb5466eb98dc.png"
+                  alt="Computer Vision Object Detection"
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-3 text-center">
+                The vision system uses OpenCV to detect and track objects and faces in real-time.
+              </p>
             </div>
           </div>
         </div>

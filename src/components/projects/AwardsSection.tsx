@@ -13,7 +13,6 @@ const awardsExperiences: ProjectItem[] = [
     description: "Recognized as the best project in the 4th year – SLEAM specialization (Embedded Systems & Software and Mobile Development).",
     image: "/lovable-uploads/ac2f3304-5a81-47d3-89c1-062d394f4cf0.png",
     tags: ["Box-Covid", "Recognition", "Academic Excellence"],
-    localPath: "/box-covid",
     icon: <Trophy size={20} />
   },
   {
@@ -22,7 +21,6 @@ const awardsExperiences: ProjectItem[] = [
     description: "Ranked 2nd among 200+ projects across all departments at ESPRIT.",
     image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Box-Covid", "Recognition", "Academic Excellence"],
-    localPath: "/box-covid",
     icon: <Medal size={20} />
   },
   {
@@ -31,7 +29,6 @@ const awardsExperiences: ProjectItem[] = [
     description: "Secured 2nd place with a maze-solving robot built for autonomous navigation challenges - ISET Sousse.",
     image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Robotics", "Competition", "Innovation"],
-    localPath: "/robotics-competition",
     icon: <Medal size={20} />
   },
   {
@@ -40,7 +37,6 @@ const awardsExperiences: ProjectItem[] = [
     description: "Awarded for outstanding performance in the All Terrain Robot challenge - CRATT Junior Robotics Competition.",
     image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Robotics", "Competition", "Innovation"],
-    localPath: "/robotics-competition",
     icon: <Medal size={20} />
   },
   {
@@ -49,7 +45,6 @@ const awardsExperiences: ProjectItem[] = [
     description: "Earned 2nd place with an efficient maze-solving robot design - CRATT Junior Robotics Competition.",
     image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Robotics", "Competition", "Innovation"],
-    localPath: "/robotics-competition",
     icon: <Medal size={20} />
   }
 ];

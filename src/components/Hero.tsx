@@ -36,11 +36,13 @@ const Hero = () => {
 
           {/* Text Content - Animation classes removed */}
           <div className="md:w-2/3">
+            <div className="mb-4">
+              <p className="text-portfolio-orange-light font-mono">
+                Hi, my name is Haroun Louati
+              </p>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">Software Engineer.</h1>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-300 mb-6">Transforming ideas into seamless, automated solutions.</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-xl">
-              Passionate about creating efficient and innovative software solutions with expertise in automation, healthcare systems, and web development. I bring a diverse background in electrical engineering and computer science to solve complex problems.
-            </p>
             
             <div className="flex flex-wrap gap-4">
               <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">

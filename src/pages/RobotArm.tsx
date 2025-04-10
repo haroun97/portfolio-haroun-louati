@@ -1,3 +1,4 @@
+
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Cpu, Hammer, Code, Github, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -96,7 +97,7 @@ const RobotArm = () => {
             {/* Robot Arm Solution */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">The Robot Arm</h3>
-              <Card className="overflow-hidden h-full flex flex-col">
+              <Card className="overflow-hidden h-full">
                 <AspectRatio ratio={16 / 9}>
                   <img 
                     src="/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png" 
@@ -104,7 +105,7 @@ const RobotArm = () => {
                     className="w-full h-full object-contain"
                   />
                 </AspectRatio>
-                <CardContent className="p-4">
+                <CardContent>
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     "SALAH" - Named after my father who believed in me and invested in this project
                   </p>
@@ -115,7 +116,7 @@ const RobotArm = () => {
             {/* Vision System */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Computer Vision System</h3>
-              <Card className="overflow-hidden h-full flex flex-col">
+              <Card className="overflow-hidden h-full">
                 <AspectRatio ratio={16 / 9}>
                   <img 
                     src="/lovable-uploads/e15743c8-6243-42ee-8e4e-51003d35a896.png"
@@ -123,7 +124,7 @@ const RobotArm = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                <CardContent className="p-4">
+                <CardContent>
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV and Haarcascade classifiers to detect and track objects in real-time.
                   </p>

@@ -1,8 +1,8 @@
 
-import { HandHeart, School, Users } from "lucide-react";
+import { HandHeart, School, Users, Building } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 interface VolunteerExperience {
@@ -13,6 +13,7 @@ interface VolunteerExperience {
   field: string;
   responsibilities: string[];
   icon: JSX.Element;
+  logo?: string;
 }
 
 const volunteerExperiences: VolunteerExperience[] = [
@@ -26,7 +27,8 @@ const volunteerExperiences: VolunteerExperience[] = [
       "Leading training sessions for students on various technical topics.",
       "Leading and organising training for SOS village."
     ],
-    icon: <School className="h-8 w-8 text-blue-500" />
+    icon: <School className="h-8 w-8 text-blue-500" />,
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Crect width='200' height='100' fill='%230056B3'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='30' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EIEEE%3C/text%3E%3C/svg%3E"
   },
   {
     id: "ieee-robotics",
@@ -38,7 +40,8 @@ const volunteerExperiences: VolunteerExperience[] = [
       "Teaching robotics principles and practices to students of varying levels.",
       "Organizing workshops and providing hands-on training in robotics technology."
     ],
-    icon: <School className="h-8 w-8 text-green-500" />
+    icon: <School className="h-8 w-8 text-green-500" />,
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Crect width='200' height='100' fill='%230056B3'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='30' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EIEEE%3C/text%3E%3C/svg%3E"
   },
   {
     id: "gyl-robotics",
@@ -53,7 +56,8 @@ const volunteerExperiences: VolunteerExperience[] = [
       "Understanding button functions",
       "Teaching basic coding concepts using the Microsoft MakeCode block editor."
     ],
-    icon: <School className="h-8 w-8 text-purple-500" />
+    icon: <School className="h-8 w-8 text-purple-500" />,
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Crect width='200' height='100' fill='%23228B22'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='12' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EGlobal Young Leaders%3C/text%3E%3C/svg%3E"
   },
   {
     id: "jci-member",
@@ -64,7 +68,8 @@ const volunteerExperiences: VolunteerExperience[] = [
     responsibilities: [
       "Assisted in organizing community-building events and initiatives."
     ],
-    icon: <Users className="h-8 w-8 text-orange-500" />
+    icon: <Users className="h-8 w-8 text-orange-500" />,
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Crect width='200' height='100' fill='%23B22222'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EJCI%3C/text%3E%3C/svg%3E"
   }
 ];
 
@@ -94,10 +99,10 @@ const VolunteeringExperience = () => {
       {/* Volunteering Experiences Section */}
       <section className="py-16 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {volunteerExperiences.map((exp) => (
-              <Card key={exp.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader className="flex flex-row items-center gap-4">
+              <Card key={exp.id} className="hover:shadow-lg transition-shadow flex flex-col h-full">
+                <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-full">
                     {exp.icon}
                   </div>
@@ -108,7 +113,20 @@ const VolunteeringExperience = () => {
                     </CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
+                
+                {exp.logo && (
+                  <div className="px-6 py-2">
+                    <div className="h-14 bg-white dark:bg-slate-700 rounded border dark:border-slate-600 flex items-center justify-center p-2">
+                      <img 
+                        src={exp.logo} 
+                        alt={`${exp.organization} logo`} 
+                        className="max-h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
+                
+                <CardContent className="pt-4 flex-grow">
                   <div className="space-y-4">
                     <div>
                       <p className="font-medium mb-1">Field:</p>
@@ -125,6 +143,13 @@ const VolunteeringExperience = () => {
                     </div>
                   </div>
                 </CardContent>
+                <CardFooter className="border-t pt-4">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                    {exp.id.includes("ieee") ? "IEEE - Advancing Technology for Humanity" : 
+                     exp.id.includes("gyl") ? "Empowering Youth Through Education" : 
+                     "Creating Positive Change in Communities"}
+                  </p>
+                </CardFooter>
               </Card>
             ))}
           </div>

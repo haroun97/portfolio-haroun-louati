@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ExternalLink, Github, Code, Bot, Trophy, Briefcase, GraduationCap, Lightbulb, Plane, Award, Medal, HandHeart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,7 +34,7 @@ const projects: Project[] = [
   {
     title: "Pan-Tilt-Head-Robot",
     description: "A camera system with pan-tilt mechanism for object and face detection and tracking using computer vision.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png",
     tags: ["Computer Vision", "Arduino", "OpenCV", "Python"],
     localPath: "/pan-tilt-robot",
     icon: <Bot size={20} />
@@ -185,7 +184,7 @@ const Projects = () => {
                     alt={exp.title}
                     className="w-full h-full object-contain p-4"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
                     <div className="p-4">
                       <CardTitle className="text-white">{exp.title}</CardTitle>
                     </div>
@@ -245,7 +244,7 @@ const Projects = () => {
                     alt={exp.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
                     <div className="p-4">
                       <CardTitle className="text-white">{exp.title}</CardTitle>
                     </div>

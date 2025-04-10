@@ -1,3 +1,4 @@
+
 import { Bot, Camera, Code, Computer, Database, Eye, Github, Hammer, Heart, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -112,9 +113,11 @@ const PanTiltRobot = () => {
               <Card className="overflow-hidden">
                 <div className="relative">
                   <AspectRatio ratio={16 / 9}>
-                    <div className="w-full h-full flex items-center justify-center bg-portfolio-blue-dark/10">
-                      <Camera size={64} className="text-portfolio-blue-light opacity-40" />
-                    </div>
+                    <img
+                      src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
+                      alt="Pan-Tilt Head Robot"
+                      className="w-full h-full object-cover"
+                    />
                   </AspectRatio>
                 </div>
                 <CardContent className="p-4">
@@ -151,9 +154,11 @@ const PanTiltRobot = () => {
             <Card className="overflow-hidden">
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
-                  <div className="w-full h-full flex items-center justify-center bg-portfolio-blue-dark/10">
-                    <Bot size={64} className="text-portfolio-blue-light opacity-40" />
-                  </div>
+                  <img
+                    src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
+                    alt="Pan-Tilt Head Robot Complete System"
+                    className="w-full h-full object-contain"
+                  />
                 </AspectRatio>
               </div>
               <CardContent className="p-4">

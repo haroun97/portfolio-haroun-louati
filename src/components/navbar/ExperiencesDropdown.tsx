@@ -28,7 +28,15 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
             Experiences
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 w-[200px] bg-white dark:bg-slate-800">
+            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-white dark:bg-slate-800">
+              <li className="row-span-3">
+                <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-portfolio-blue-light to-portfolio-blue-medium p-6 no-underline outline-none focus:shadow-md">
+                  <div className="mt-4 mb-2 text-lg font-medium text-white">Experiences</div>
+                  <p className="text-sm leading-tight text-white/90">
+                    Browse through my professional journey, volunteering work, and achievements.
+                  </p>
+                </div>
+              </li>
               <li>
                 <Link
                   to="/siemens-experience"

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 
 export interface ProjectItem {
+  id?: string;
   title: string;
   description: string;
   image: string;

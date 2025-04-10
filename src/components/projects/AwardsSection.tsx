@@ -11,7 +11,7 @@ const awardsExperiences: ProjectItem[] = [
     id: "box-covid-1st",
     title: "1st Prize – \"Box-Covid\" Project",
     description: "Recognized as the best project in the 4th year – SLEAM specialization (Embedded Systems & Software and Mobile Development).",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EAwards%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/ac2f3304-5a81-47d3-89c1-062d394f4cf0.png",
     tags: ["Box-Covid", "Recognition", "Academic Excellence"],
     localPath: "/box-covid",
     icon: <Trophy size={20} />
@@ -20,7 +20,7 @@ const awardsExperiences: ProjectItem[] = [
     id: "box-covid-2nd",
     title: "Silver Medal for \"Box-Covid\" Project",
     description: "Ranked 2nd among 200+ projects across all departments at ESPRIT.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EMedal%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Box-Covid", "Recognition", "Academic Excellence"],
     localPath: "/box-covid",
     icon: <Medal size={20} />
@@ -29,7 +29,7 @@ const awardsExperiences: ProjectItem[] = [
     id: "maze-solver-iset",
     title: "2nd Prize – Maze Solver Robot Competition",
     description: "Secured 2nd place with a maze-solving robot built for autonomous navigation challenges - ISET Sousse.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobotics%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Robotics", "Competition", "Innovation"],
     localPath: "/robotics-competition",
     icon: <Medal size={20} />
@@ -38,7 +38,7 @@ const awardsExperiences: ProjectItem[] = [
     id: "all-terrain-robot",
     title: "2nd Prize – All Terrain Robot Competition",
     description: "Awarded for outstanding performance in the All Terrain Robot challenge - CRATT Junior Robotics Competition.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobotics%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Robotics", "Competition", "Innovation"],
     localPath: "/robotics-competition",
     icon: <Medal size={20} />
@@ -47,7 +47,7 @@ const awardsExperiences: ProjectItem[] = [
     id: "maze-solver-cratt",
     title: "2nd Prize – Maze Solver Robot Competition",
     description: "Earned 2nd place with an efficient maze-solving robot design - CRATT Junior Robotics Competition.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23fbbf24'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobotics%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png",
     tags: ["Robotics", "Competition", "Innovation"],
     localPath: "/robotics-competition",
     icon: <Medal size={20} />

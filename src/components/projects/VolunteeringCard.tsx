@@ -26,7 +26,7 @@ const VolunteeringCard = ({ experience }: VolunteeringCardProps) => {
           <img 
             src={experience.image} 
             alt={experience.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain p-2"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
             <div className="p-4">

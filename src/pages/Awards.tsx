@@ -15,6 +15,7 @@ interface Award {
   project?: string;
   projectLink?: string;
   category?: string;
+  medalImage?: string;
 }
 
 const awards: Award[] = [
@@ -27,7 +28,8 @@ const awards: Award[] = [
     icon: <Trophy className="h-8 w-8 text-yellow-500" />,
     project: "Box-Covid",
     projectLink: "/box-covid",
-    category: "Academic Excellence"
+    category: "Academic Excellence",
+    medalImage: "/lovable-uploads/ac2f3304-5a81-47d3-89c1-062d394f4cf0.png"
   },
   {
     id: "box-covid-2nd",
@@ -38,7 +40,8 @@ const awards: Award[] = [
     icon: <Medal className="h-8 w-8 text-gray-400" />,
     project: "Box-Covid",
     projectLink: "/box-covid",
-    category: "Academic Excellence"
+    category: "Academic Excellence",
+    medalImage: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png"
   },
   {
     id: "maze-solver-iset",
@@ -49,7 +52,8 @@ const awards: Award[] = [
     icon: <Medal className="h-8 w-8 text-gray-400" />,
     project: "Robotics Competition",
     projectLink: "/robotics-competition",
-    category: "Robotics Competition"
+    category: "Robotics Competition",
+    medalImage: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png"
   },
   {
     id: "all-terrain-robot",
@@ -60,7 +64,8 @@ const awards: Award[] = [
     icon: <Medal className="h-8 w-8 text-gray-400" />,
     project: "Robotics Competition",
     projectLink: "/robotics-competition",
-    category: "Robotics Competition"
+    category: "Robotics Competition",
+    medalImage: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png"
   },
   {
     id: "maze-solver-cratt",
@@ -71,7 +76,8 @@ const awards: Award[] = [
     icon: <Medal className="h-8 w-8 text-gray-400" />,
     project: "Robotics Competition",
     projectLink: "/robotics-competition",
-    category: "Robotics Competition"
+    category: "Robotics Competition",
+    medalImage: "/lovable-uploads/f2f8fc35-6bbd-4b43-bc1d-dbac118bec7a.png"
   }
 ];
 
@@ -122,7 +128,13 @@ const Awards = () => {
                   <Card key={award.id} className="hover:shadow-lg transition-shadow border-amber-100 dark:border-amber-900/20">
                     <CardHeader className="flex flex-row items-center gap-4 bg-amber-50 dark:bg-amber-900/20">
                       <div className="p-3 bg-amber-100 dark:bg-amber-900/30 rounded-full">
-                        {award.icon}
+                        {award.medalImage ? (
+                          <div className="w-16 h-16 overflow-hidden">
+                            <img src={award.medalImage} alt={award.title} className="w-full h-full object-contain" />
+                          </div>
+                        ) : (
+                          award.icon
+                        )}
                       </div>
                       <div>
                         <CardTitle className="text-xl">{award.title}</CardTitle>

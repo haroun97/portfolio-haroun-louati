@@ -21,27 +21,18 @@ const AwardCard = ({ award }: AwardCardProps) => {
         }
       }}
     >
-      <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300 border-amber-200 dark:border-amber-800">
-        <div className="h-48 bg-amber-50 dark:bg-amber-900/30 relative overflow-hidden">
-          {award.image && (
-            <img 
-              src={award.image} 
-              alt={award.title}
-              className="w-full h-full object-cover"
-            />
-          )}
+      <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
+        <div className="h-48 bg-white dark:bg-amber-900/30 relative overflow-hidden">
+          <img 
+            src={award.image} 
+            alt={award.title}
+            className="w-full h-full object-contain p-2"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
             <div className="p-4">
               <CardTitle className="text-white">{award.title}</CardTitle>
             </div>
           </div>
-          {!award.image && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-amber-500 dark:text-amber-400">
-                {award.icon || <Award size={64} />}
-              </div>
-            </div>
-          )}
         </div>
         
         <CardContent className="pt-4 flex-grow">
@@ -60,7 +51,7 @@ const AwardCard = ({ award }: AwardCardProps) => {
         
         <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
           <div className="text-amber-500 hover:text-amber-600 dark:text-amber-400 dark:hover:text-amber-300">
-            <Trophy size={20} />
+            {award.icon || <Trophy size={20} />}
           </div>
         </CardFooter>
       </Card>

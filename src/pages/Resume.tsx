@@ -1,10 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Download, ZoomIn, ZoomOut } from 'lucide-react';
-import Navbar from "@/components/Navbar";
+import { Download, ZoomIn, ZoomOut, Home } from 'lucide-react';
 import Footer from "@/components/Footer";
 import { Slider } from "@/components/ui/slider";
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { scrollToElement } from '@/utils/scrollUtils';
 
 const Resume = () => {
@@ -35,10 +35,17 @@ const Resume = () => {
 
   return (
     <main className="bg-background min-h-screen flex flex-col">
-      <Navbar />
-      
-      <div className="flex-1 container mx-auto px-4 pt-32 pb-16">
+      <div className="flex-1 container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-5xl mx-auto">
+          <div className="mb-6">
+            <Link to="/">
+              <Button className="flex items-center gap-2 bg-portfolio-blue-medium hover:bg-portfolio-blue-dark">
+                <Home size={18} />
+                Back to Home
+              </Button>
+            </Link>
+          </div>
+          
           <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
             <h1 className="text-3xl md:text-4xl font-bold text-portfolio-blue-dark dark:text-white">
               My Resume

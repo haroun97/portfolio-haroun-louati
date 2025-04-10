@@ -14,7 +14,7 @@ const About = () => {
                 My background includes projects like a humanoid robot for kids and a robotic arm for people with limited mobility, using machine learning and computer vision. I also won an award during COVID-19 for an IoT system that safely monitored patients remotely.
               </p>
               <p>
-                I hold a Master's Degree in Computer Science (2019–2022) from ESPRIT, Tunisia, and a Bachelor's Degree in Electrical Engineering (2016–2019) from ISETB, Tunisia. These programs provided me with a strong foundation in both software development and engineering principles.
+                I hold a Master's Degree in Computer Science and a Bachelor's Degree in Electrical Engineering. These programs provided me with a strong foundation in both software development and engineering principles.
               </p>
               <p>
                 Outside of work, I enjoy hiking, badminton, exploring new places, and constantly learning through books, podcasts, and YouTube.

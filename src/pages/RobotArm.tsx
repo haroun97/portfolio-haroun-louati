@@ -1,4 +1,3 @@
-
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Cpu, Hammer, Code, Github, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -97,6 +96,33 @@ const RobotArm = () => {
             {/* Robot Arm Solution */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">The Robot Arm</h3>
+              <Card className="max-w-4xl mx-auto">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png" 
+                    alt="SALAH Robot Arm" 
+                    className="w-full h-full object-contain"
+                  />
+                </AspectRatio>
+                <CardContent className="pt-6">
+                  <h2 className="text-2xl font-semibold mb-4">Technical Implementation</h2>
+                  <p className="text-lg mb-6">
+                    The robot arm, named "SALAH", integrates computer vision to identify objects and 
+                    machine learning algorithms to determine optimal grasping positions and movements.
+                  </p>
+                </CardContent>
+              </Card>
+
+
+
+
+
+
+
+
+
+
+              
               <Card className="overflow-hidden h-full flex flex-col">
                 <AspectRatio ratio={16 / 9}>
                   <img 
@@ -105,11 +131,11 @@ const RobotArm = () => {
                     className="w-full h-full object-contain"
                   />
                 </AspectRatio>
-                <div className="p-4">
+                <CardContent className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     "SALAH" - Named after my father who believed in me and invested in this project
                   </p>
-                </div>
+                </CardContent>
               </Card>
             </div>
             
@@ -124,11 +150,11 @@ const RobotArm = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                <div className="p-4">
+                <CardContent className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV and Haarcascade classifiers to detect and track objects in real-time.
                   </p>
-                </div>
+                </CardContent>
               </Card>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import { ThermometerIcon, Heart, Activity, Cloud, Database, Smartphone, Cpu, Hammer, Code, Github, Users, User, Images } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -104,7 +105,7 @@ const RobotArm = () => {
                     className="w-full h-full object-contain"
                   />
                 </AspectRatio>
-                <CardContent className="p-4">
+                <CardContent className="p-4 pb-0">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     "SALAH" - Named after my father who believed in me and invested in this project
                   </p>
@@ -123,7 +124,7 @@ const RobotArm = () => {
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
-                <CardContent className="p-4">
+                <CardContent className="p-4 pb-0">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The vision system uses OpenCV and Haarcascade classifiers to detect and track objects in real-time.
                   </p>

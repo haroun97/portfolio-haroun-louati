@@ -96,16 +96,14 @@ const RobotArm = () => {
             {/* Robot Arm Solution */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">The Robot Arm</h3>
-              <Card className="overflow-hidden">
-                <div className="relative">
-                  <AspectRatio ratio={16 / 9}>
-                    <img 
-                      src="/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png" 
-                      alt="SALAH Robot Arm" 
-                      className="w-full h-full object-contain"
-                    />
-                  </AspectRatio>
-                </div>
+              <Card className="overflow-hidden h-full flex flex-col">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png" 
+                    alt="SALAH Robot Arm" 
+                    className="w-full h-full object-contain"
+                  />
+                </AspectRatio>
                 <CardContent className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     "SALAH" - Named after my father who believed in me and invested in this project
@@ -304,14 +302,9 @@ const RobotArm = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Check out my other work or get in touch to discuss collaboration opportunities.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/#projects">
-              <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-                View All Projects
-              </Button>
-            </Link>
+          <div className="flex justify-center">
             <Link to="/#contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button className="bg-portfolio-blue-light hover:bg-portfolio-blue-lightest/90 text-white">
                 Contact Me
               </Button>
             </Link>

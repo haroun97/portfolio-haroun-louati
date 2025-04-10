@@ -1,4 +1,4 @@
-import { Bot, Camera, Code, Computer, Database, Eye, Github, Hammer, Heart, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
+import { Bot, Camera, Code, Computer, Database, Eye, Heart, Hammer, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -108,16 +108,14 @@ const PanTiltRobot = () => {
             {/* Pan-Tilt Robot */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center dark:text-white">Pan-Tilt System</h3>
-              <Card className="overflow-hidden">
-                <div className="relative">
-                  <AspectRatio ratio={16 / 9}>
-                    <img
-                      src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
-                      alt="Pan-Tilt Head Robot"
-                      className="w-full h-full object-cover"
-                    />
-                  </AspectRatio>
-                </div>
+              <Card className="overflow-hidden h-full flex flex-col">
+                <AspectRatio ratio={16 / 9}>
+                  <img
+                    src="/lovable-uploads/025885b2-7c7b-453f-a374-1214fc8015fb.png"
+                    alt="Pan-Tilt Head Robot"
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
                 <CardContent className="p-4">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
                     The pan-tilt head system with two servo motors for precise camera positioning
@@ -316,14 +314,9 @@ const PanTiltRobot = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Check out my other work or get in touch to discuss collaboration opportunities.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/#projects">
-              <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-                View All Projects
-              </Button>
-            </Link>
+          <div className="flex justify-center">
             <Link to="/#contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button className="bg-portfolio-blue-light hover:bg-portfolio-blue-lightest/90 text-white">
                 Contact Me
               </Button>
             </Link>

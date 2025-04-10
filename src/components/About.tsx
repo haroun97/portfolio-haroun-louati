@@ -6,7 +6,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
             <h2 className="section-title">About Me</h2>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
               <p>
                 I'm a software engineer with 2+ years of professional experience building smart, user-focused solutions. At Siemens Healthineers, I help improve radiography systems by creating diagnostic tools that reduce troubleshooting time from hours to minutes.
               </p>

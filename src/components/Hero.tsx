@@ -2,6 +2,7 @@
 import { ArrowDownCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Hero = () => {
   return (
@@ -15,8 +16,16 @@ const Hero = () => {
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-orange-light shadow-xl animate-pulse">
                 <Avatar className="w-full h-full">
-                  {/* Replace this with your local image path, e.g., "/src/assets/profile.jpg" */}
-                  <AvatarImage src="/src/assets/profile.jpg" alt="Profile" />
+                  {/* Profile image with proper aspect ratio */}
+                  <div className="w-full h-full">
+                    <AspectRatio ratio={1/1} className="h-full">
+                      <AvatarImage 
+                        src="/src/assets/profile.jpg" 
+                        alt="Profile" 
+                        className="object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                  </div>
                   <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">SE</AvatarFallback>
                 </Avatar>
               </div>

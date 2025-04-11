@@ -40,7 +40,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<RouteHandler><Index /></RouteHandler>} />
           <Route path="/box-covid" element={<RouteHandler><BoxCovid /></RouteHandler>} />
-          <Route path="/robot-arm" element={<RobotArm />} />
+          <Route path="/robot-arm" element={<RouteHandler><RobotArm /></RouteHandler>} />
           <Route path="/pan-tilt-robot" element={<RouteHandler><PanTiltRobot /></RouteHandler>} />
           <Route path="/robotics-competition" element={<RouteHandler><RoboticsCompetition /></RouteHandler>} />
           <Route path="/siemens-experience" element={<RouteHandler><SiemensExperience /></RouteHandler>} />

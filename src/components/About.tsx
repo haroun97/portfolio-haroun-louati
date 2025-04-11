@@ -8,13 +8,16 @@ const About = () => {
             <h2 className="section-title">About Me</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                I'm a software engineer with 2+ years of experience building smart, user-focused solutions. At Siemens Healthineers, I help improve radiography systems by creating diagnostic tools that reduce troubleshooting time from hours to minutes.
+                I'm a dedicated software engineer with over two years of professional experience in software development. At <strong>Siemens Healthineers</strong>, I am helping my team reduce troubleshooting time from hours to minutes by developing diagnostic tests and data platforms that enhance radiography system performance. My expertise includes <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>C++</strong>, and <strong>Python</strong>.
               </p>
               <p>
-                My background includes projects like a humanoid robot for kids and a robotic arm for people with limited mobility, using machine learning and computer vision. I also won an award during COVID-19 for an IoT system that safely monitored patients remotely.
+                Previously, I worked on impactful projects like a <strong>humanoid robot</strong> for children and an <strong>autonomous robot arm</strong> for individuals with limited mobility, leveraging <strong>machine learning</strong> and <strong>computer vision</strong>. These experiences taught me the importance of combining hardware and software to create meaningful solutions that help people.
               </p>
               <p>
-                Outside of work, I enjoy hiking, badminton, exploring new places, and constantly learning through books, podcasts, and YouTube.
+                I was honored with the <strong>Best Innovative IoT System in Healthcare</strong> award during COVID-19 for designing a solution that remotely monitors patients and protects healthcare workers using medical sensors and a cross-platform application. This project gave me valuable experience in managing teams, solving complex issues, and delivering technical solutions from design to production under tight deadlines.
+              </p>
+              <p>
+                In my free time, I enjoy <strong>hiking</strong>, <strong>badminton</strong>, going to the gym, and learning new skills through books, podcasts, and YouTube videos. I also love exploring new cities and staying connected with family and friends.
               </p>
             </div>
           </div>

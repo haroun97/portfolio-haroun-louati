@@ -36,15 +36,12 @@ const Hero = () => {
 
           {/* Text Content */}
           <div className="md:w-2/3 animate-fade-in" style={{animationDelay: "0.2s"}}>
-            <div className="overflow-hidden mb-4">
-              <p className="text-portfolio-orange-light font-mono animate-fade-in-right" style={{animationDelay: "0.3s"}}>
-                Hi, my name is Haroun Louati
-              </p>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in" style={{animationDelay: "0.4s"}}>Software Engineer.</h1>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-300 mb-6 animate-fade-in" style={{animationDelay: "0.5s"}}>Transforming ideas into seamless, automated solutions.</h2>
+            <p className="text-portfolio-orange-light font-mono mb-4">Hi, my name is</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">Haroun Louati.</h1>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">Transforming ideas into seamless, automated solutions.</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-xl">
-              
+              I'm a software engineer specializing in building exceptional digital experiences. 
+              Currently, I'm focused on building accessible, human-centered products.
             </p>
             
             <div className="flex flex-wrap gap-4">

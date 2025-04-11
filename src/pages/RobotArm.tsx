@@ -6,8 +6,12 @@ import RobotArmArchitecture from "@/components/robot-arm/RobotArmArchitecture";
 import RobotArmTechnicalDetails from "@/components/robot-arm/RobotArmTechnicalDetails";
 import RobotArmSkills from "@/components/robot-arm/RobotArmSkills";
 import RobotArmCTA from "@/components/robot-arm/RobotArmCTA";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const RobotArm = () => {
+  // Use the hook directly in this component
+  useScrollToTop();
+  
   const hardwareTechnologies = ["Arduino Uno", "Stepper Motors", "CNC Shield A4988", "3D Printing"];
   const softwareTechnologies = ["Python", "OpenCV", "Visual Studio", "C Programming", "Haarcascade Classifier"];
   const skills = ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "Mechanical Design"];

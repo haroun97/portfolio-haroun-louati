@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Code, Bot, Trophy, Briefcase } from 'lucide-react';
+import { ExternalLink, Github, Code, Bot, Trophy } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -12,26 +12,9 @@ interface Project {
   github?: string;
   demo?: string;
   localPath?: string;
-  icon?: JSX.Element;
 }
 
 const projects: Project[] = [
-  {
-    title: "Professional Experience",
-    description: "Overview of my professional experiences at Siemens Healthineers and Roche, showcasing industry projects and achievements.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Siemens Healthineers", "Roche", "Test Automation", "Resource Management"],
-    localPath: "/professional-experience",
-    icon: <Briefcase size={20} />
-  },
-  {
-    title: "Siemens Healthineers Experience",
-    description: "Professional experience as a Test Automation Engineer at Siemens Healthineers in Germany, focusing on radiography systems development.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EWork%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-    tags: ["Test Automation", "Python", "Electron", "C++"],
-    localPath: "/siemens-experience",
-    icon: <Briefcase size={20} />
-  },
   {
     title: "Box-Covid",
     description: "An intelligent monitoring system that enables doctors to remotely monitor COVID-19 patients using sensors and a cross-platform application.",
@@ -58,8 +41,7 @@ const projects: Project[] = [
     description: "A showcase of custom-built robots for competitions, including All Terrain, Maze Solver, and Line Follower robots with multiple awards.",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
     tags: ["Embedded Systems", "Arduino", "Robotics", "C Programming"],
-    localPath: "/robotics-competition",
-    icon: <Bot size={20} />
+    localPath: "/robotics-competition"
   },
   {
     title: "E-commerce Platform",
@@ -135,7 +117,7 @@ const Projects = () => {
                     to={project.localPath}
                     className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
                   >
-                    {project.icon || <Code size={20} />}
+                    <Code size={20} />
                   </Link>
                 )}
               </CardFooter>

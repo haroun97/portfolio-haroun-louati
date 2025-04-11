@@ -71,12 +71,6 @@ const awards: Award[] = [
     issuer: "Robotics Competition CRATT Junior ISET Rades",
     date: "Jan 2017",
     icon: <Award className="h-6 w-6 text-yellow-500" />
-  },
-  {
-    title: "2nd prize in All Terrain Robot competition",
-    issuer: "Robotics Competition CRATT Junior ISET Rades",
-    date: "Jan 2017",
-    icon: <Trophy className="h-6 w-6 text-yellow-500" />
   }
 ];
 

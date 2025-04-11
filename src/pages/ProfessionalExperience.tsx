@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Briefcase, GraduationCap, School, FileText, Award } from "lucide-react";
+import { Briefcase, School, FileText, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -98,121 +98,6 @@ const experiences: Experience[] = [
     ],
     path: "/roche-experience"
   },
-  {
-    id: "coding-betounsi",
-    company: "Coding Betounsi",
-    title: "Software Engineer - Apprenticeship",
-    period: "Oct 2024 – Present · 7 months",
-    location: "Tunisia",
-    mission: "Building scalable, efficient, and user-friendly web applications.",
-    responsibilities: [
-      {
-        title: "Architecture Design",
-        description: "Designed UML diagrams (Class, ERD, Sequence) to structure and optimize architecture.",
-        skills: ["UML", "Software Architecture", "System Design"],
-        icon: <FileText className="h-8 w-8 text-blue-500" />
-      },
-      {
-        title: "API Development",
-        description: "Developed RESTful APIs for CRUD operations and seamless database integration.",
-        skills: ["Node.js", "AngularJS", "JavaScript", "RESTful APIs"],
-        icon: <FileText className="h-8 w-8 text-green-500" />
-      },
-      {
-        title: "Testing Implementation",
-        description: "Implemented unit tests to ensure backend reliability and high code coverage.",
-        skills: ["Unit Testing", "HTML", "CSS", "FastAPI"],
-        icon: <FileText className="h-8 w-8 text-indigo-500" />
-      }
-    ],
-    path: "/coding-betounsi-experience"
-  },
-  {
-    id: "esprit",
-    company: "ESPRIT",
-    title: "Robotics Engineer Intern",
-    period: "Jul 2021 – Sep 2021 · 3 months",
-    location: "Ariana Governorate, Tunisia",
-    mission: "Contributed to the design and development of a humanoid robot using AI and computer vision.",
-    responsibilities: [
-      {
-        title: "Robot Design",
-        description: "3D-designed the robot with a focus on functionality and aesthetics.",
-        skills: ["SketchUp", "CAD", "Mechanical Design"],
-        icon: <FileText className="h-8 w-8 text-blue-500" />
-      },
-      {
-        title: "Hardware Implementation",
-        description: "Assembled components and programmed STM32 microcontroller for servo control.",
-        skills: ["STM32", "Embedded Software", "Programming (C)", "Problem Solving"],
-        icon: <FileText className="h-8 w-8 text-green-500" />
-      }
-    ],
-    path: "/esprit-internship-experience"
-  },
-  {
-    id: "akwel",
-    company: "AKWEL",
-    title: "Bachelor's Thesis Project",
-    period: "Feb 2019 – May 2019 · 4 months",
-    location: "Mateur, Bizerte, Tunisia",
-    mission: "Improved accuracy of computer vision systems in automotive quality control.",
-    responsibilities: [
-      {
-        title: "Lighting Control System",
-        description: "Developed an automatic lighting control system.",
-        skills: ["Electrical Engineering", "Automotive", "Control Systems"],
-        icon: <FileText className="h-8 w-8 text-blue-500" />
-      },
-      {
-        title: "HMI Development",
-        description: "Created a Human-Machine Interface (HMI) for consistent lighting and improved reliability.",
-        skills: ["HMI", "Embedded Systems", "Electrical Engineering"],
-        icon: <FileText className="h-8 w-8 text-green-500" />
-      }
-    ],
-    path: "/akwel-internship-experience"
-  },
-  {
-    id: "silvatrim",
-    company: "Silvatrim Tunisia / WKW Automotive",
-    title: "Electrical Engineering Trainee",
-    period: "Jan 2018 · 1 month",
-    location: "Utique, Bizerte",
-    mission: "Gained practical experience in industrial electrical systems and controls.",
-    responsibilities: [
-      {
-        title: "Electrical Cabinet Design",
-        description: "Designed and implemented an electrical cabinet to control industrial equipment (chiller, dryer, compressor, water pumps).",
-        skills: ["Electrical Engineering", "Automotive", "Industrial Controls"],
-        icon: <FileText className="h-8 w-8 text-blue-500" />
-      }
-    ],
-    path: "/silvatrim-experience"
-  },
-  {
-    id: "maintenance",
-    company: "Various Companies",
-    title: "Maintenance Trainee Roles",
-    period: "Jan 2017 - Aug 2017",
-    location: "Tunisia",
-    mission: "Gained practical experience in maintenance operations across different industries.",
-    responsibilities: [
-      {
-        title: "Natilait (Aug 2017)",
-        description: "Assisted maintenance team in optimizing production systems and ensuring smooth operations.",
-        skills: ["Electrical Engineering", "Maintenance"],
-        icon: <FileText className="h-8 w-8 text-blue-500" />
-      },
-      {
-        title: "STEG (Jan 2017)",
-        description: "Supported maintenance operations, troubleshooting and assisting with electrical network reliability.",
-        skills: ["Electrical Engineering", "Power Systems"],
-        icon: <FileText className="h-8 w-8 text-green-500" />
-      }
-    ],
-    path: "/maintenance-experience"
-  }
 ];
 
 const ProfessionalExperience = () => {

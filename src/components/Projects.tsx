@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     title: "Box-Covid",
     description: "An intelligent monitoring system that enables doctors to remotely monitor COVID-19 patients using sensors and a cross-platform application.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%23ea580c'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ECovid%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/2043bb29-8e6c-4619-b395-3197dba69f81.png",
     tags: ["IoT", "AWS", "Raspberry Pi", "Mobile App"],
     localPath: "/box-covid"
   },

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
+
+import { useState, useEffect } from 'react';
+import { Code, Menu, X, ChevronDown, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -19,6 +20,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Check if we've scrolled past the home section
       const homeSection = document.getElementById('home');
       const homeSectionHeight = homeSection?.offsetHeight || 0;
       
@@ -28,10 +30,12 @@ const Navbar = () => {
         setIsScrolled(false);
       }
       
+      // Set isHomePage based on whether we're still in the home section
       setIsHomePage(window.scrollY < (homeSectionHeight - 100));
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initial check
     handleScroll();
     
     return () => {
@@ -43,6 +47,8 @@ const Navbar = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
+    // Moving Experiences dropdown to be after Projects
+    // Experiences dropdown is implemented separately in the JSX
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ];
@@ -73,11 +79,13 @@ const Navbar = () => {
           className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
-          <span>Software Engineer</span>
+          <span>Haroun Louati</span>
         </a>
 
-        <nav className="hidden md:flex items-center space-x-4">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-5">
           {navLinks.map((link, index) => {
+            // Render the Home, About, and Projects links
             if (index <= 2) {
               return (
                 <a
@@ -90,16 +98,16 @@ const Navbar = () => {
               );
             }
             
+            // After Projects (index 2), insert the Experiences dropdown
             if (index === 3) {
               return (
                 <React.Fragment key="experiences-fragment">
+                  {/* Experiences Navigation Dropdown */}
                   <NavigationMenu key="experiences-menu">
                     <NavigationMenuList>
                       <NavigationMenuItem>
                         <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
-                          <span className="flex items-center">
-                            <span>Experiences</span>
-                          </span>
+                          Experiences
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <ul className="grid gap-3 p-4 w-[200px]">
@@ -142,6 +150,7 @@ const Navbar = () => {
                     </NavigationMenuList>
                   </NavigationMenu>
                   
+                  {/* Then render the rest of the standard links - Skills and Contact */}
                   <a
                     href={link.href}
                     className={`transition-colors ${getNavTextColor()}`}
@@ -152,6 +161,7 @@ const Navbar = () => {
               );
             }
             
+            // Render the Contact link
             if (index === 4) {
               return (
                 <a
@@ -172,6 +182,7 @@ const Navbar = () => {
           </Button>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
           className={`md:hidden ${!isScrolled && isHomePage ? 'text-white' : 'text-portfolio-blue-dark dark:text-white'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -180,9 +191,11 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-portfolio-blue-dark shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            {/* Home, About, Projects links */}
             {navLinks.slice(0, 3).map((link) => (
               <a
                 key={link.href}
@@ -194,6 +207,7 @@ const Navbar = () => {
               </a>
             ))}
             
+            {/* Mobile Experiences Menu - moved up to be after Projects */}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-2">
               <p className="text-portfolio-blue-dark dark:text-white font-medium py-2">Experiences</p>
               <div className="pl-4 space-y-2">
@@ -224,6 +238,7 @@ const Navbar = () => {
               </div>
             </div>
             
+            {/* Skills and Contact links */}
             {navLinks.slice(3).map((link) => (
               <a
                 key={link.href}

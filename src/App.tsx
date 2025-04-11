@@ -22,6 +22,7 @@ import Awards from "./pages/Awards";
 import VolunteeringExperience from "./pages/VolunteeringExperience";
 import FlightsCarRentals from "./pages/FlightsCarRentals";
 import ChandelierProject from "./pages/ChandelierProject";
+import Resume from "./pages/Resume";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/volunteering-experience" element={<VolunteeringExperience />} />
           <Route path="/flights-car-rentals" element={<FlightsCarRentals />} />
           <Route path="/chandelier-project" element={<ChandelierProject />} />
+          <Route path="/resume" element={<Resume />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

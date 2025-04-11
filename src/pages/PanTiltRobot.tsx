@@ -1,4 +1,5 @@
-import { Bot, Camera, Code, Computer, Database, Eye, Github, Hammer, Heart, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
+
+import { Camera, Code, Computer, Database, Eye, Github, Hammer, Heart, Robot, Smartphone, ThermometerIcon, User, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -53,7 +54,7 @@ const PanTiltRobot = () => {
             <div className="my-12 flex flex-col md:flex-row gap-8">
               <div className="flex-1 bg-blue-50 dark:bg-portfolio-blue-medium/30 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 dark:text-white">
-                  <Bot className="text-portfolio-orange-medium" /> 
+                  <Robot className="text-portfolio-orange-medium" /> 
                   Hardware Components
                 </h3>
                 <ul className="space-y-2 dark:text-gray-300">
@@ -140,7 +141,7 @@ const PanTiltRobot = () => {
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
                   <div className="w-full h-full flex items-center justify-center bg-portfolio-blue-dark/10">
-                    <Bot size={64} className="text-portfolio-blue-light opacity-40" />
+                    <Robot size={64} className="text-portfolio-blue-light opacity-40" />
                   </div>
                 </AspectRatio>
               </div>
@@ -192,7 +193,7 @@ const PanTiltRobot = () => {
               <CardContent className="pt-6">
                 <div className="mb-4 flex justify-center">
                   <div className="bg-portfolio-blue-medium/20 p-4 rounded-full">
-                    <Bot size={32} className="text-portfolio-blue-medium" />
+                    <Robot size={32} className="text-portfolio-blue-medium" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-center mb-4 dark:text-white">Arduino Control</h3>

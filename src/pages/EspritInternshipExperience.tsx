@@ -1,5 +1,5 @@
 
-import { Briefcase, Bot, FileText } from "lucide-react";
+import { Briefcase, Robot, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,7 +18,7 @@ const EspritInternshipExperience = () => {
       <div className="bg-gradient-to-r from-blue-900 to-blue-700 py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <Bot size={64} className="text-white mb-4" />
+            <Robot size={64} className="text-white mb-4" />
             <h1 className="text-4xl font-bold text-white mb-4">Robotics Engineer Intern</h1>
             <div className="flex items-center justify-center gap-2 text-blue-100 mb-4">
               <Briefcase size={18} />
@@ -88,7 +88,7 @@ const EspritInternshipExperience = () => {
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
                     <span className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                      <Bot size={18} className="text-blue-700 dark:text-blue-400" />
+                      <Robot size={18} className="text-blue-700 dark:text-blue-400" />
                     </span>
                     Department
                   </CardTitle>

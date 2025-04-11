@@ -19,7 +19,7 @@ interface Award {
 const awards: Award[] = [
   {
     id: "box-covid-1st",
-    title: "1st Prize – "Box-Covid" Project",
+    title: "1st Prize – \"Box-Covid\" Project",
     institution: "ESPRIT Projects Ball Event",
     date: "June 2021",
     details: "Recognized as the best project in the 4th year – SLEAM specialization (Embedded Systems & Software and Mobile Development). Institution: Ecole Supérieure Privée d'Ingénierie et de Technologies (ESPRIT)",
@@ -29,7 +29,7 @@ const awards: Award[] = [
   },
   {
     id: "box-covid-2nd",
-    title: "Silver Medal for "Box-Covid" Project",
+    title: "Silver Medal for \"Box-Covid\" Project",
     institution: "ESPRIT Projects Ball Event",
     date: "June 2021",
     details: "Ranked 2nd among 200+ projects across all departments at ESPRIT. Institution: Ecole Supérieure Privée d'Ingénierie et de Technologies (ESPRIT)",

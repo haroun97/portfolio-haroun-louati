@@ -45,8 +45,8 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#projects", label: "Projects" },
     { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ];
@@ -77,7 +77,7 @@ const Navbar = () => {
           className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
-          <span>Portfolio</span>
+          <span>Haroun Louati</span>
         </a>
 
         {/* Desktop Navigation */}

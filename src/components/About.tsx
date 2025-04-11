@@ -6,18 +6,18 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
             <h2 className="section-title">About Me</h2>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                I'm a software engineer with 2+ years of professional experience building smart, user-focused solutions. At Siemens Healthineers, I help improve radiography systems by creating diagnostic tools that reduce troubleshooting time from hours to minutes.
+                Hello! I'm a passionate software engineer who loves creating elegant solutions to complex problems. My journey in software development began during college, where I discovered my fascination with turning ideas into functional applications.
               </p>
               <p>
-                My background includes projects like a humanoid robot for kids and a robotic arm for people with limited mobility, using machine learning and computer vision. I also won an award during COVID-19 for an IoT system that safely monitored patients remotely.
+                With several years of professional experience, I've had the opportunity to work on a diverse range of projects spanning web development, cloud architecture, and data engineering. My approach combines technical expertise with a deep understanding of user needs to build software that is not just functional, but also intuitive and enjoyable to use.
               </p>
               <p>
-                I hold a Master's Degree in Computer Science and a Bachelor's Degree in Electrical Engineering. These programs provided me with a strong foundation in both software development and engineering principles.
+                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I believe in continuous learning and pushing the boundaries of what's possible with technology.
               </p>
               <p>
-                Outside of work, I enjoy hiking, badminton, exploring new places, and constantly learning through books, podcasts, and YouTube.
+                I'm currently looking for new opportunities where I can bring my skills and passion to create impactful software solutions. If you're interested in collaborating or just want to connect, feel free to reach out!
               </p>
             </div>
           </div>
@@ -26,11 +26,7 @@ const About = () => {
             <div className="relative w-64 h-64">
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-portfolio-orange-medium rounded-lg"></div>
               <div className="absolute w-full h-full bg-portfolio-blue-medium/20 rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/29a713e2-1f2d-4b20-aaa5-25ab3282ac45.png" 
-                  alt="Haroun Louati" 
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%230a192f\'/%3E%3Ctext x=\'50\' y=\'50\' font-size=\'20\' text-anchor=\'middle\' alignment-baseline=\'middle\' font-family=\'monospace\' fill=\'%233b82f6\'%3E%3Ctspan x=\'50\' y=\'50\'%3EYour%3C/tspan%3E%3Ctspan x=\'50\' y=\'70\'%3EPhoto%3C/tspan%3E%3C/text%3E%3C/svg%3E')] bg-cover bg-center"></div>
               </div>
             </div>
           </div>

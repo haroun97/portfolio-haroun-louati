@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Code, Menu, X, ChevronDown, Trophy, Briefcase, HandHeart } from 'lucide-react';
+import { Code, Menu, X, Trophy, Briefcase, HandHeart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -42,8 +43,8 @@ const Navbar = () => {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -73,10 +74,10 @@ const Navbar = () => {
           className={`flex items-center gap-2 font-bold text-xl ${getLogoTextColor()}`}
         >
           <Code className="text-portfolio-orange-medium" size={28} />
-          <span>Haroun Louati</span>
+          <span>Haroun's Lab</span>
         </a>
 
-        <nav className="hidden md:flex items-center space-x-5">
+        <nav className="hidden md:flex items-center space-x-4">
           {navLinks.map((link, index) => {
             if (index <= 2) {
               return (
@@ -93,11 +94,16 @@ const Navbar = () => {
             if (index === 3) {
               return (
                 <React.Fragment key="experiences-fragment">
-                  <NavigationMenu key="experiences-menu">
+                  <NavigationMenu key="experiences-menu" className="mr-0">
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className={`${getNavTextColor()} bg-transparent`}>
-                          Experiences
+                        <NavigationMenuTrigger 
+                          className={`${getNavTextColor()} bg-transparent p-0 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent focus:shadow-none`}
+                          style={{ boxShadow: 'none' }}
+                        >
+                          <span className="flex items-center">
+                            <span>Experiences</span>
+                          </span>
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <ul className="grid gap-3 p-4 w-[200px]">
@@ -166,7 +172,7 @@ const Navbar = () => {
           })}
           
           <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-            Resume
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </Button>
         </nav>
 

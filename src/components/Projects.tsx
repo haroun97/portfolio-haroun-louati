@@ -95,8 +95,52 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-white dark:bg-portfolio-blue-dark">
       <div className="container mx-auto">
-        <h2 className="section-title">Featured Projects</h2>
+        {/* Experience Section - Moved to the top */}
+        <h2 className="section-title">Experiences & Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {experiences.map((exp, index) => (
+            <Card key={index} className="project-card">
+              <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
+                <img 
+                  src={exp.image} 
+                  alt={exp.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="p-4">
+                    <CardTitle className="text-white">{exp.title}</CardTitle>
+                  </div>
+                </div>
+              </div>
+              
+              <CardContent className="pt-4">
+                <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+                  {exp.description}
+                </CardDescription>
+                
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {exp.tags.map((tag, tagIndex) => (
+                    <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+              
+              <CardFooter className="flex justify-end gap-3 border-t pt-4">
+                <Link 
+                  to={exp.localPath}
+                  className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
+                >
+                  {exp.icon || <Code size={20} />}
+                </Link>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
         
+        {/* Projects Section - Now below the experiences */}
+        <h2 className="section-title mt-16">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="project-card">
@@ -158,50 +202,6 @@ const Projects = () => {
                     {project.icon || <Code size={20} />}
                   </Link>
                 )}
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-        
-        {/* Experience Section */}
-        <h2 className="section-title mt-16">Experiences & Achievements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {experiences.map((exp, index) => (
-            <Card key={index} className="project-card">
-              <div className="h-48 bg-portfolio-blue-dark relative overflow-hidden">
-                <img 
-                  src={exp.image} 
-                  alt={exp.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                  <div className="p-4">
-                    <CardTitle className="text-white">{exp.title}</CardTitle>
-                  </div>
-                </div>
-              </div>
-              
-              <CardContent className="pt-4">
-                <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
-                  {exp.description}
-                </CardDescription>
-                
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {exp.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-              
-              <CardFooter className="flex justify-end gap-3 border-t pt-4">
-                <Link 
-                  to={exp.localPath}
-                  className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white"
-                >
-                  {exp.icon || <Code size={20} />}
-                </Link>
               </CardFooter>
             </Card>
           ))}

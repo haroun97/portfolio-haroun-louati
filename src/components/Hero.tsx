@@ -11,7 +11,7 @@ const Hero = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="md:w-1/3">
+          <div className="md:w-1/3 animate-fade-in" style={{animationDelay: "0.1s"}}>
             <div className="relative animate-fade-in">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-orange-light shadow-xl animate-pulse">
                 <Avatar className="w-full h-full">
@@ -30,8 +30,8 @@ const Hero = () => {
                   <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">HL</AvatarFallback>
                 </Avatar>
               </div>
-              <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-portfolio-orange-medium opacity-20" style={{animationDelay: "1s"}}></div>
-              <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-portfolio-blue-light opacity-20" style={{animationDelay: "1.5s"}}></div>
+              <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-portfolio-orange-medium opacity-20 animate-fade-in" style={{animationDelay: "300ms"}}></div>
+              <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-portfolio-blue-light opacity-20 animate-fade-in" style={{animationDelay: "500ms"}}></div>
             </div>
           </div>
 

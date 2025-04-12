@@ -14,6 +14,7 @@ const RobotArm = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-blue-dark">
+      <RobotArmHero />
       <RobotArmOverview 
         hardwareTechnologies={hardwareTechnologies}
         softwareTechnologies={softwareTechnologies}
@@ -23,7 +24,6 @@ const RobotArm = () => {
       <RobotArmTechnicalDetails />
       <RobotArmSkills skills={skills} />
       <RobotArmCTA />
-      <RobotArmHero />
     </div>
   );
 };

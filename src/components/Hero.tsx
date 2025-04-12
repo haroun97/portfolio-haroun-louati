@@ -30,8 +30,8 @@ const Hero = () => {
                   <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">HL</AvatarFallback>
                 </Avatar>
               </div>
-              <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-portfolio-orange-medium opacity-20"></div>
-              <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-portfolio-blue-light opacity-20"></div>
+              <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-portfolio-orange-medium opacity-20 animate-fade-in delay-300"></div>
+              <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-portfolio-blue-light opacity-20 animate-fade-in delay-500"></div>
             </div>
           </div>
 

@@ -20,7 +20,7 @@ const Hero = () => {
                   <div className="w-full h-full">
                     <AspectRatio ratio={1/1} className="h-full">
                       <AvatarImage 
-                        src="/lovable-uploads/29a713e2-1f2d-4b20-aaa5-25ab3282ac45.png" 
+                        src="/lovable-uploads/haroun-profile-300x300.webp" 
                         alt="Haroun Louati" 
                         className="object-cover w-full h-full"
                         loading="eager"

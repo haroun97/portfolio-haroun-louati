@@ -19,7 +19,7 @@ const projects: ProjectItem[] = [
     description: "A machine learning and computer vision-based robot arm designed to assist people with reduced mobility in everyday tasks.",
     image: "/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png",
     tags: ["Computer Vision", "Arduino", "Machine Learning", "Python"],
-    localPath: "robotArmHero"
+    localPath: "/robot-arm"
   },
   {
     title: "Pan-Tilt-Head-Robot",

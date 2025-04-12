@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { Trophy, Award, Bot as RobotIcon } from "lucide-react";
+import { Trophy, Award, Bot } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -88,7 +87,7 @@ const RoboticsCompetition = () => {
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <RobotIcon size={64} className="text-blue-400 mb-4" />
+            <Bot size={64} className="text-blue-400 mb-4" />
             <h1 className="text-4xl font-bold text-white mb-4">Robotics Competition Portfolio</h1>
             <p className="text-xl text-slate-300 max-w-2xl">
               Showcasing my journey through robotics competitions and the autonomous robots I've developed

@@ -1,4 +1,3 @@
-
 import { ArrowDownCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -11,12 +10,10 @@ const Hero = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          {/* Profile Picture with optimized loading */}
           <div className="md:w-1/3">
-            <div className="relative">
+            <div className="relative animate-fade-in">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-orange-light shadow-xl">
                 <Avatar className="w-full h-full">
-                  {/* Profile image with optimized loading */}
                   <div className="w-full h-full">
                     <AspectRatio ratio={1/1} className="h-full">
                       <AvatarImage 
@@ -37,8 +34,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Text Content */}
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 animate-fade-in-right">
             <div className="mb-4">
               <p className="text-portfolio-orange-light font-mono">
                 Hi, my name is Haroun Louati

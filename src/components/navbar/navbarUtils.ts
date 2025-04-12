@@ -55,7 +55,6 @@ export const getNavLinks = (isHomeRoute: boolean) => [
   { href: isHomeRoute ? "#home" : "/", label: "Home" },
   { href: isHomeRoute ? "#about" : "/#about", label: "About" },
   { href: isHomeRoute ? "#skills" : "/#skills", label: "Skills" },
-  { href: isHomeRoute ? "#experiences" : "/#experiences", label: "Experiences" },
   { href: isHomeRoute ? "#projects" : "/#projects", label: "Projects" },
   { href: isHomeRoute ? "#contact" : "/#contact", label: "Contact" },
 ];

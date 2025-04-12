@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-orange-light shadow-xl">
                 <Avatar className="w-full h-full">
-                  {/* Profile image with proper aspect ratio and loading optimization */}
+                  {/* Profile image with optimized loading */}
                   <div className="w-full h-full">
                     <AspectRatio ratio={1/1} className="h-full">
                       <AvatarImage 
@@ -24,6 +24,8 @@ const Hero = () => {
                         alt="Haroun Louati" 
                         className="object-cover w-full h-full"
                         loading="eager"
+                        fetchPriority="high"
+                        decoding="sync"
                       />
                     </AspectRatio>
                   </div>

@@ -1,3 +1,4 @@
+
 import { ArrowDownCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -17,7 +18,7 @@ const Hero = () => {
                   <div className="w-full h-full">
                     <AspectRatio ratio={1/1} className="h-full">
                       <AvatarImage 
-                        src="/lovable-uploads/29a713e2-1f2d-4b20-aaa5-25ab3282ac45.png" 
+                        src="/lovable-uploads/6dab73a1-c173-41cf-ad05-5f86ab37f3ae.png" 
                         alt="Haroun Louati" 
                         className="object-cover w-full h-full"
                         loading="eager"

@@ -12,11 +12,7 @@ const Projects = () => {
     if (location.hash) {
       // Remove the # character
       const targetId = location.hash.substring(1);
-      
-      // Small delay to ensure the component is fully mounted
-      setTimeout(() => {
-        scrollToElement(targetId);
-      }, 100);
+      scrollToElement(targetId);
     }
   }, [location]);
 

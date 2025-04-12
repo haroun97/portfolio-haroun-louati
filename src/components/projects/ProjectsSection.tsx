@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Code, Bot, Lightbulb, Plane } from 'lucide-react';
+import { Code, Bot as RobotIcon, Lightbulb, Plane } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import ShowMoreButton from './ShowMoreButton';
 import SectionTitle from './SectionTitle';

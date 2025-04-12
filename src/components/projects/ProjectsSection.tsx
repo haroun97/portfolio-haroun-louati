@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Code, Bot, Lightbulb, Plane } from 'lucide-react';
 import ProjectCard from './ProjectCard';
@@ -19,7 +18,8 @@ const projects: ProjectItem[] = [
     description: "A machine learning and computer vision-based robot arm designed to assist people with reduced mobility in everyday tasks.",
     image: "/lovable-uploads/833ab8c3-1109-4160-9975-984c336d6563.png",
     tags: ["Computer Vision", "Arduino", "Machine Learning", "Python"],
-    localPath: "/robot-arm"
+    localPath: "/robot-arm#robotArmHero",
+    icon: <Bot size={20} />
   },
   {
     title: "Pan-Tilt-Head-Robot",

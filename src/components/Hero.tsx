@@ -20,13 +20,13 @@ const Hero = () => {
                   <div className="w-full h-full">
                     <AspectRatio ratio={1/1} className="h-full">
                       <AvatarImage 
-                        src="/src/assets/profile.jpg" 
-                        alt="Profile" 
+                        src="/lovable-uploads/29a713e2-1f2d-4b20-aaa5-25ab3282ac45.png" 
+                        alt="Haroun Louati" 
                         className="object-cover w-full h-full"
                       />
                     </AspectRatio>
                   </div>
-                  <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">SE</AvatarFallback>
+                  <AvatarFallback className="text-4xl bg-portfolio-blue-medium text-white">HL</AvatarFallback>
                 </Avatar>
               </div>
               <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-full bg-portfolio-orange-medium opacity-20 animate-pulse" style={{animationDelay: "1s"}}></div>
@@ -34,22 +34,25 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Text Content */}
-          <div className="md:w-2/3 animate-fade-in" style={{animationDelay: "0.2s"}}>
-            <p className="text-portfolio-orange-light font-mono mb-4">Hi, my name is</p>
+          {/* Text Content - Animation classes removed */}
+          <div className="md:w-2/3">
+            <div className="mb-4">
+              <p className="text-portfolio-orange-light font-mono">
+                Hi, my name is Haroun Louati
+              </p>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">Software Engineer.</h1>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">I build things for the web.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-300 mb-6">Transforming ideas into seamless, automated solutions.</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-xl">
-              I'm a software engineer specializing in building exceptional digital experiences. 
-              Currently, I'm focused on building accessible, human-centered products.
+              
             </p>
             
             <div className="flex flex-wrap gap-4">
               <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
-                View My Projects
+                <a href="#projects">View My Projects</a>
               </Button>
               <Button variant="outline" className="border-portfolio-blue-light text-portfolio-blue-lightest hover:bg-portfolio-blue-medium/20">
-                Get In Touch
+                <a href="#contact">Get In Touch</a>
               </Button>
             </div>
           </div>

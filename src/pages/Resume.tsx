@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Download, ZoomIn, ZoomOut } from 'lucide-react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Slider } from "@/components/ui/slider";
-import { useLocation } from 'react-router-dom';
-import { scrollToElement } from '@/utils/scrollUtils';
 
 const Resume = () => {
   const [zoomLevel, setZoomLevel] = useState(100);
-  const location = useLocation();
-  
-  useEffect(() => {
-    const hash = location.hash;
-    if (hash) {
-      const sectionId = hash.substring(1);
-      setTimeout(() => {
-        scrollToElement(sectionId);
-      }, 100);
-    }
-  }, [location]);
   
   const handleZoomIn = () => {
     setZoomLevel(Math.min(zoomLevel + 10, 200));

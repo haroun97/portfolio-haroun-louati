@@ -30,6 +30,7 @@ export const useNavbarState = () => {
     };
   }, []);
 
+  // Determine if we're on the home page route
   const isHomeRoute = location.pathname === '/';
 
   const toggleMobileMenu = () => {
@@ -54,10 +55,8 @@ export const getNavLinks = (isHomeRoute: boolean) => [
   { href: isHomeRoute ? "#home" : "/", label: "Home" },
   { href: isHomeRoute ? "#about" : "/#about", label: "About" },
   { href: isHomeRoute ? "#skills" : "/#skills", label: "Skills" },
-  { href: isHomeRoute ? "#professional-experiences" : "/#professional-experiences", label: "Professional" },
-  { href: isHomeRoute ? "#volunteering-experiences" : "/#volunteering-experiences", label: "Volunteering" },
-  { href: isHomeRoute ? "#awards" : "/#awards", label: "Awards" },
-  { href: isHomeRoute ? "#featured-projects" : "/#featured-projects", label: "Projects" },
+  { href: isHomeRoute ? "#experiences" : "/#experiences", label: "Experiences" },
+  { href: isHomeRoute ? "#projects" : "/#projects", label: "Projects" },
   { href: isHomeRoute ? "#contact" : "/#contact", label: "Contact" },
 ];
 

@@ -20,18 +20,6 @@ const PanTiltRobot = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-blue-dark">
-      {/* Floating Images */}
-      <div className="fixed left-0 top-1/4 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
-        <div className="w-full flex items-center justify-center bg-portfolio-blue-dark/10 rounded-full p-4 animate-floating-left">
-          <Camera size={64} className="text-portfolio-blue-light" />
-        </div>
-      </div>
-      <div className="fixed right-0 top-1/2 w-1/4 max-w-[300px] z-10 opacity-70 pointer-events-none hidden lg:block">
-        <div className="w-full flex items-center justify-center bg-portfolio-blue-dark/10 rounded-full p-4 animate-floating-right">
-          <Bot size={64} className="text-portfolio-blue-light" />
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-portfolio-blue-dark text-white relative overflow-hidden py-24">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMWEyZTQ0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyYTRhN2YiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"></div>

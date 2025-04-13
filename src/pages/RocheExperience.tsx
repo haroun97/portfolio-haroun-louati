@@ -53,8 +53,8 @@ const RocheExperience = () => {
             </p>
             <div className="flex gap-4 mt-8">
               <Button asChild variant="secondary">
-                <Link to="/professional-experience" className="flex items-center gap-2">
-                  Back to Professional Experience
+                <Link to="/" className="flex items-center gap-2">
+                  Back to Home
                 </Link>
               </Button>
             </div>

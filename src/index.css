@@ -141,3 +141,30 @@
     @apply bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300;
   }
 }
+
+/* Floating animations for the Box-Covid images */
+@keyframes float-left {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float-right {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.animate-floating-left {
+  animation: float-left 5s ease-in-out infinite;
+}
+
+.animate-floating-right {
+  animation: float-right 6s ease-in-out infinite;
+}

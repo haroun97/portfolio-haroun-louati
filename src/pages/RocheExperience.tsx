@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
+import { useHashScroll } from "@/hooks/useHashScroll";
 
 // Experience area type
 interface ExperienceArea {
@@ -40,6 +41,9 @@ const experienceAreas: ExperienceArea[] = [
 ];
 
 const RocheExperience = () => {
+  // Use the hash scroll hook to handle navigation to specific sections
+  useHashScroll();
+
   return (
     <main className="min-h-screen bg-background">
       {/* Header */}
@@ -63,7 +67,7 @@ const RocheExperience = () => {
       </div>
 
       {/* Mission Overview */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-900">
+      <section id="mission" className="py-16 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Mission</h2>

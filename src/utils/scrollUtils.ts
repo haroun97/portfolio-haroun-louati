@@ -16,3 +16,18 @@ export const scrollToElement = (elementId: string) => {
     });
   }
 };
+
+/**
+ * Check for hash in URL and scroll to that element
+ * Use this in useEffect on component mount
+ */
+export const handleUrlHash = () => {
+  if (window.location.hash) {
+    // Remove the # character
+    const targetId = window.location.hash.substring(1);
+    // Use setTimeout to ensure DOM is fully loaded
+    setTimeout(() => {
+      scrollToElement(targetId);
+    }, 100);
+  }
+};

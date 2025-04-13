@@ -28,7 +28,12 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const handleReadMoreClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (experience.localPath) {
-      navigate(experience.localPath);
+      // For Roche card specifically, navigate to the mission section at the top
+      if (experience.title === "Roche") {
+        navigate(`${experience.localPath}#mission`);
+      } else {
+        navigate(experience.localPath);
+      }
     }
   };
   

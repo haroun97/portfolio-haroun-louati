@@ -9,7 +9,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { scrollToElement } from '@/utils/scrollUtils';
 
 interface ExperiencesDropdownProps {
   getNavTextColor: () => string;
@@ -17,14 +16,6 @@ interface ExperiencesDropdownProps {
 
 const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
   const navTextColor = getNavTextColor();
-  
-  const handleSectionNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    // If we're on the home page, scroll to the section
-    if (window.location.pathname === '/') {
-      e.preventDefault();
-      scrollToElement(sectionId);
-    }
-  };
   
   return (
     <NavigationMenu className="inline-flex">
@@ -37,20 +28,11 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
             Experiences
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-white dark:bg-slate-800">
-              <li className="row-span-3">
-                <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-portfolio-blue-light to-portfolio-blue-medium p-6 no-underline outline-none focus:shadow-md">
-                  <div className="mt-4 mb-2 text-lg font-medium text-white">Experiences</div>
-                  <p className="text-sm leading-tight text-white/90">
-                    Browse through my professional journey, volunteering work, and achievements.
-                  </p>
-                </div>
-              </li>
+            <ul className="grid gap-3 p-4 w-[200px] bg-white dark:bg-slate-800">
               <li>
                 <Link
-                  to="/#professional-experiences"
+                  to="/professional-experience"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
-                  onClick={(e) => handleSectionNavigation(e, "professional-experiences")}
                 >
                   <Briefcase size={18} />
                   <span>Professional</span>
@@ -58,9 +40,8 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
               </li>
               <li>
                 <Link
-                  to="/#volunteering-experiences"
+                  to="/volunteering-experience"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
-                  onClick={(e) => handleSectionNavigation(e, "volunteering-experiences")}
                 >
                   <HandHeart size={18} />
                   <span>Volunteering</span>
@@ -68,9 +49,8 @@ const ExperiencesDropdown = ({ getNavTextColor }: ExperiencesDropdownProps) => {
               </li>
               <li>
                 <Link
-                  to="/#awards"
+                  to="/awards"
                   className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700"
-                  onClick={(e) => handleSectionNavigation(e, "awards")}
                 >
                   <Trophy size={18} />
                   <span>Awards</span>

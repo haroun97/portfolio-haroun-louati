@@ -1,3 +1,4 @@
+
 import { Briefcase, Bot, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,6 +30,11 @@ const EspritInternshipExperience = () => {
               Ariana Governorate, Tunisia
             </p>
             <div className="flex gap-4 mt-8">
+              <Button asChild variant="secondary">
+                <Link to="/professional-experience" className="flex items-center gap-2">
+                  All Experiences
+                </Link>
+              </Button>
               <Button asChild variant="outline" className="bg-white/10 text-white hover:bg-white/20 border-white/20">
                 <Link to="/" className="flex items-center gap-2">
                   Back to Home
@@ -221,6 +227,9 @@ const EspritInternshipExperience = () => {
             
             {/* Navigation buttons */}
             <div className="flex justify-center mt-12 gap-4">
+              <Button asChild>
+                <Link to="/professional-experience">View All Experiences</Link>
+              </Button>
               <Button asChild variant="outline">
                 <Link to="/">Back to Home</Link>
               </Button>

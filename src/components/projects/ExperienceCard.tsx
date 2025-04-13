@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ProjectItem } from './ProjectCard';
 
@@ -13,7 +14,19 @@ interface ExperienceCardProps {
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const navigate = useNavigate();
   
-  const handleCardClick = () => {
+  const handleCardClick = (e: React.MouseEvent) => {
+    // Don't navigate if clicking on the read more button
+    if ((e.target as HTMLElement).closest('.read-more-btn')) {
+      return;
+    }
+    
+    if (experience.localPath) {
+      navigate(experience.localPath);
+    }
+  };
+  
+  const handleReadMoreClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (experience.localPath) {
       navigate(experience.localPath);
     }
@@ -21,6 +34,9 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   
   // Replace "Diagnostics" with "Software Development" in description if present
   const updatedDescription = experience.description.replace("Diagnostics", "Software Development");
+  
+  // Determine if this is the Roche card
+  const isRocheCard = experience.title === "Roche";
   
   return (
     <Card 
@@ -52,6 +68,20 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             </Badge>
           ))}
         </div>
+        
+        {isRocheCard && (
+          <div className="mt-4">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="read-more-btn border-portfolio-blue-light text-portfolio-blue-dark dark:text-portfolio-blue-lightest hover:bg-portfolio-blue-medium/10"
+              onClick={handleReadMoreClick}
+            >
+              Read More
+              <ArrowRight size={16} className="ml-1" />
+            </Button>
+          </div>
+        )}
       </CardContent>
       
       <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">

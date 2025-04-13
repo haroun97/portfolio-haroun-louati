@@ -22,6 +22,8 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     
     if (experience.localPath) {
       navigate(experience.localPath);
+      // Scroll to top
+      window.scrollTo(0, 0);
     }
   };
   
@@ -29,6 +31,8 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     e.stopPropagation();
     if (experience.localPath) {
       navigate(experience.localPath);
+      // Scroll to top
+      window.scrollTo(0, 0);
     }
   };
   

@@ -40,7 +40,7 @@ const projects: ProjectItem[] = [
   {
     title: "Flights & Car Rentals Booking",
     description: "A full-stack booking application for a travel agency with customer, agent, and administrator interfaces.",
-    image: "/lovable-uploads/1afbc0fd-6181-4a1e-aafa-dfe361a7b6aa.png",
+    image: "/lovable-uploads/410fd57c-b32e-4bfa-be78-2b43c5c2faa7.png",
     tags: ["C Programming", "Glade Interface", "Software Development"],
     localPath: "/flights-car-rentals",
     icon: <Plane size={20} />
@@ -48,7 +48,7 @@ const projects: ProjectItem[] = [
   {
     title: "Smart Recycled Chandelier",
     description: "A chandelier created from recycled materials featuring smartphone-controlled RGB LED lighting via Bluetooth.",
-    image: "/lovable-uploads/fea13577-7147-4458-9a24-3fe78dee9ec9.png", // Updated image
+    image: "/lovable-uploads/fea13577-7147-4458-9a24-3fe78dee9ec9.png", 
     tags: ["Arduino", "Bluetooth", "Embedded Systems", "Sustainable Design"],
     localPath: "/chandelier-project",
     icon: <Lightbulb size={20} />

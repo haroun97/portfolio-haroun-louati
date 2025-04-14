@@ -1,5 +1,4 @@
-
-import { Lightbulb, Smartphone, Recycle } from "lucide-react";
+import { ArrowLeftIcon, Lightbulb, Code } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,17 +8,18 @@ const ChandelierProject = () => {
   return (
     <main className="min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-800 to-indigo-700 py-16">
+      <div className="bg-gradient-to-r from-amber-800 to-amber-600 py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <Lightbulb size={64} className="text-white mb-4" />
-            <h1 className="text-4xl font-bold text-white mb-4">Smart Chandelier from Recycled Materials</h1>
-            <p className="text-xl text-purple-100 max-w-3xl">
-              Combining sustainability with smart technology
+            <Lightbulb size={64} className="text-amber-200 mb-6" />
+            <h1 className="text-4xl font-bold text-white mb-4">Smart Recycled Chandelier</h1>
+            <p className="text-xl text-amber-100 max-w-3xl">
+              A chandelier created from recycled materials featuring smartphone-controlled RGB LED lighting via Bluetooth.
             </p>
             <div className="flex gap-4 mt-8">
               <Button asChild variant="secondary">
                 <Link to="/" className="flex items-center gap-2">
+                  <ArrowLeftIcon size={16} />
                   Back to Home
                 </Link>
               </Button>

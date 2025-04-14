@@ -1,3 +1,4 @@
+
 import { Briefcase, Bot, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -219,12 +220,7 @@ const EspritInternshipExperience = () => {
               </AccordionItem>
             </Accordion>
             
-            {/* Navigation buttons */}
-            <div className="flex justify-center mt-12 gap-4">
-              <Button asChild variant="outline">
-                <Link to="/">Back to Home</Link>
-              </Button>
-            </div>
+            {/* Navigation buttons - removed back to home button at bottom as requested */}
           </div>
         </div>
       </section>

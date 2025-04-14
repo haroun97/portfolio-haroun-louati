@@ -203,7 +203,7 @@ const SiemensExperience = () => {
           <div className="max-w-4xl mx-auto">
             <Tabs defaultValue="languages" className="w-full">
               <TabsList className="grid grid-cols-3 mb-8">
-                <TabsTrigger value="languages">Programming Languages</TabsTrigger>
+                <TabsTrigger value="languages">Programming</TabsTrigger>
                 <TabsTrigger value="tools">Tools & Platforms</TabsTrigger>
                 <TabsTrigger value="methodologies">Methodologies</TabsTrigger>
               </TabsList>

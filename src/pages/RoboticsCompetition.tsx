@@ -19,7 +19,7 @@ interface RobotProject {
   period: string;
   description: string;
   skills: string[];
-  image?: string;
+  image: string;
 }
 
 // Award type
@@ -38,7 +38,7 @@ const robotProjects: RobotProject[] = [
     period: "Nov 2018 - Jan 2019",
     description: "All Terrain Robot is able to navigate across bumpy and rough terrains. It has 4 wheels and 4 motors. Also the robot can be controlled up to 15 meters by PS2 controller.",
     skills: ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "C (Programming Language)"],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/c8880da3-3cc5-4d77-907f-9e3f25c9fd3f.png",
   },
   {
     id: "maze-solver",
@@ -46,7 +46,7 @@ const robotProjects: RobotProject[] = [
     period: "2017 - 2018",
     description: "The Maze solver robot is an autonomous Robot. It must follow the best possible path among various possible paths. Also, it is able to find the end of the maze as fast as possible. The Robot uses 2 Ultrasonic sensors to determine the distance of the wall in two directions (front and right). In this project we use wall following algorithm. The electronic circuitry of the robot consists of the Arduino board, Ultrasonic sensors, L298 H-bridge motor driver coupled with two geared DC motors and 12V battery.",
     skills: ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "C (Programming Language)"],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/309b8922-00a9-4832-8df3-6ada442c0108.png",
   },
   {
     id: "line-follower",
@@ -54,7 +54,7 @@ const robotProjects: RobotProject[] = [
     period: "2016 - 2017",
     description: "The line follower robot is an autonomous robot which follows either black line in white area or white line in black area. The robot must be able to detect particular line and keep following it.",
     skills: ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "C (Programming Language)"],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/925c19f0-af3f-4353-ac81-d63f6964ceb4.png",
   }
 ];
 
@@ -103,6 +103,55 @@ const RoboticsCompetition = () => {
         </div>
       </div>
 
+      {/* Gallery Section */}
+      <section className="py-12 bg-slate-50 dark:bg-slate-950">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Robot Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/925c19f0-af3f-4353-ac81-d63f6964ceb4.png" 
+                alt="Line Follower Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">Line Follower Robot</h3>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/309b8922-00a9-4832-8df3-6ada442c0108.png" 
+                alt="Maze Solver Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">Maze Solver Robot</h3>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/c8880da3-3cc5-4d77-907f-9e3f25c9fd3f.png" 
+                alt="All Terrain Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">All Terrain Robot</h3>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/ade2a6f7-46f7-4c0b-9001-d3f49c9cda72.png" 
+                alt="Advanced Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">Advanced Robot</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Awards Section */}
       <section className="py-16 bg-slate-100 dark:bg-slate-900">
         <div className="container mx-auto px-4">
@@ -143,7 +192,7 @@ const RoboticsCompetition = () => {
                       <img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                     <div className="md:w-2/3">

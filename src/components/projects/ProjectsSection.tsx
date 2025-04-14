@@ -32,7 +32,7 @@ const projects: ProjectItem[] = [
   {
     title: "Robotics Competition",
     description: "A showcase of custom-built robots for competitions, including All Terrain, Maze Solver, and Line Follower robots with multiple awards.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/ade2a6f7-46f7-4c0b-9001-d3f49c9cda72.png",
     tags: ["Embedded Systems", "Arduino", "Robotics", "C Programming"],
     localPath: "/robotics-competition",
     icon: <Bot size={20} />

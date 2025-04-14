@@ -19,7 +19,7 @@ interface RobotProject {
   period: string;
   description: string;
   skills: string[];
-  image: string;
+  image?: string;
 }
 
 // Award type
@@ -38,15 +38,15 @@ const robotProjects: RobotProject[] = [
     period: "Nov 2018 - Jan 2019",
     description: "All Terrain Robot is able to navigate across bumpy and rough terrains. It has 4 wheels and 4 motors. Also the robot can be controlled up to 15 meters by PS2 controller.",
     skills: ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "C (Programming Language)"],
-    image: "/lovable-uploads/ade2a6f7-46f7-4c0b-9001-d3f49c9cda72.png",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
   },
   {
     id: "maze-solver",
     title: "Maze Solver Robot",
     period: "2017 - 2018",
-    description: "The Maze solver robot is an autonomous Robot. It must follow the best possible path among various possible paths. Also, it is able to find the end of the maze as fast as possible.",
+    description: "The Maze solver robot is an autonomous Robot. It must follow the best possible path among various possible paths. Also, it is able to find the end of the maze as fast as possible. The Robot uses 2 Ultrasonic sensors to determine the distance of the wall in two directions (front and right). In this project we use wall following algorithm. The electronic circuitry of the robot consists of the Arduino board, Ultrasonic sensors, L298 H-bridge motor driver coupled with two geared DC motors and 12V battery.",
     skills: ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "C (Programming Language)"],
-    image: "/lovable-uploads/309b8922-00a9-4832-8df3-6ada442c0108.png",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
   },
   {
     id: "line-follower",
@@ -54,7 +54,7 @@ const robotProjects: RobotProject[] = [
     period: "2016 - 2017",
     description: "The line follower robot is an autonomous robot which follows either black line in white area or white line in black area. The robot must be able to detect particular line and keep following it.",
     skills: ["Embedded Systems", "Problem Solving", "Embedded Software", "Software Development", "C (Programming Language)"],
-    image: "/lovable-uploads/925c19f0-af3f-4353-ac81-d63f6964ceb4.png",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3ERobot%3C/tspan%3E%3C/text%3E%3C/svg%3E",
   }
 ];
 
@@ -143,7 +143,7 @@ const RoboticsCompetition = () => {
                       <img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="md:w-2/3">

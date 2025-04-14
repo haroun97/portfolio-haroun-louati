@@ -31,6 +31,7 @@ const FlightsCarRentals = () => {
         </div>
       </div>
 
+      {/* Project Details */}
       <section className="py-16 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

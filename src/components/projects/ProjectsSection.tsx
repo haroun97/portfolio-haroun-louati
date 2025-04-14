@@ -32,7 +32,7 @@ const projects: ProjectItem[] = [
   {
     title: "Robotics Competition",
     description: "A showcase of custom-built robots for competitions, including All Terrain, Maze Solver, and Line Follower robots with multiple awards.",
-    image: "/lovable-uploads/3d31a27a-81c9-492b-a359-f378caede6ea.png",
+    image: "/lovable-uploads/ade2a6f7-46f7-4c0b-9001-d3f49c9cda72.png",
     tags: ["Embedded Systems", "Arduino", "Robotics", "C Programming"],
     localPath: "/robotics-competition",
     icon: <Bot size={20} />
@@ -40,7 +40,7 @@ const projects: ProjectItem[] = [
   {
     title: "Flights & Car Rentals Booking",
     description: "A full-stack booking application for a travel agency with customer, agent, and administrator interfaces.",
-    image: "/lovable-uploads/1afbc0fd-6181-4a1e-aafa-dfe361a7b6aa.png",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
     tags: ["C Programming", "Glade Interface", "Software Development"],
     localPath: "/flights-car-rentals",
     icon: <Plane size={20} />
@@ -48,7 +48,7 @@ const projects: ProjectItem[] = [
   {
     title: "Smart Recycled Chandelier",
     description: "A chandelier created from recycled materials featuring smartphone-controlled RGB LED lighting via Bluetooth.",
-    image: "/lovable-uploads/fea13577-7147-4458-9a24-3fe78dee9ec9.png", // Updated image
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
     tags: ["Arduino", "Bluetooth", "Embedded Systems", "Sustainable Design"],
     localPath: "/chandelier-project",
     icon: <Lightbulb size={20} />

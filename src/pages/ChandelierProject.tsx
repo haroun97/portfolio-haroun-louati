@@ -1,9 +1,8 @@
-import { ArrowLeftIcon, Lightbulb, Code, RecycleIcon, Smartphone } from "lucide-react";
+import { ArrowLeftIcon, Lightbulb, Code } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import RobotArmCTA from "@/components/robot-arm/RobotArmCTA";
 
 const ChandelierProject = () => {
   return (
@@ -46,7 +45,7 @@ const ChandelierProject = () => {
                   <CardContent className="pt-6">
                     <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
                       <span className="p-2 rounded-full bg-purple-100 dark:bg-purple-900">
-                        <RecycleIcon size={18} className="text-purple-600" />
+                        <Recycle size={18} className="text-purple-600" />
                       </span>
                       Materials Used
                     </h3>
@@ -138,9 +137,6 @@ const ChandelierProject = () => {
           </div>
         </div>
       </section>
-      
-      {/* Add the CTA section */}
-      <RobotArmCTA />
     </main>
   );
 };

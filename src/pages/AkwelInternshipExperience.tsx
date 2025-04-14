@@ -216,13 +216,6 @@ const AkwelInternshipExperience = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            
-            {/* Navigation buttons - updated section */}
-            <div className="flex justify-center mt-12 gap-4">
-              <Button asChild variant="outline">
-                <Link to="/">Back to Home</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

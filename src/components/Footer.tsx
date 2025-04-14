@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
             <p className="text-sm">
-              &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+              &copy; {new Date().getFullYear()} Haroun's Lab. All rights reserved.
             </p>
           </div>
           

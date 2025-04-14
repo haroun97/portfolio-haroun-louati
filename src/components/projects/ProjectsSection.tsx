@@ -32,7 +32,7 @@ const projects: ProjectItem[] = [
   {
     title: "Robotics Competition",
     description: "A showcase of custom-built robots for competitions, including All Terrain, Maze Solver, and Line Follower robots with multiple awards.",
-    image: "/lovable-uploads/ade2a6f7-46f7-4c0b-9001-d3f49c9cda72.png",
+    image: "/lovable-uploads/3d31a27a-81c9-492b-a359-f378caede6ea.png",
     tags: ["Embedded Systems", "Arduino", "Robotics", "C Programming"],
     localPath: "/robotics-competition",
     icon: <Bot size={20} />

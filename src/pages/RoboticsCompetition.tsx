@@ -103,6 +103,55 @@ const RoboticsCompetition = () => {
         </div>
       </div>
 
+      {/* Gallery Section */}
+      <section className="py-12 bg-slate-50 dark:bg-slate-950">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Robot Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/925c19f0-af3f-4353-ac81-d63f6964ceb4.png" 
+                alt="Line Follower Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">Line Follower Robot</h3>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/309b8922-00a9-4832-8df3-6ada442c0108.png" 
+                alt="Maze Solver Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">Maze Solver Robot</h3>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/c8880da3-3cc5-4d77-907f-9e3f25c9fd3f.png" 
+                alt="All Terrain Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">All Terrain Robot</h3>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="/lovable-uploads/ade2a6f7-46f7-4c0b-9001-d3f49c9cda72.png" 
+                alt="Advanced Robot" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-4">
+                <h3 className="font-medium">Advanced Robot</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Awards Section */}
       <section className="py-16 bg-slate-100 dark:bg-slate-900">
         <div className="container mx-auto px-4">

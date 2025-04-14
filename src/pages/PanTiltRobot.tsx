@@ -29,9 +29,9 @@ const PanTiltRobot = () => {
             <p className="text-xl md:text-2xl text-portfolio-blue-lightest max-w-3xl mb-8">
               Objects and Faces Detection and Tracking System
             </p>
-            <Link to="/#featured-projects">
+            <Link to="/">
               <Button variant="outline" className="border-portfolio-blue-light text-portfolio-blue-lightest hover:bg-portfolio-blue-medium/20">
-                Back to Projects
+                Back to Home
               </Button>
             </Link>
           </div>

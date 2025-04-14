@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import ProjectsContainer from './projects/ProjectsContainer';
 import { useLocation } from 'react-router-dom';
-import { scrollToElement, handleUrlHash } from '@/utils/scrollUtils';
+import { scrollToElement } from '@/utils/scrollUtils';
 
 const Projects = () => {
   const location = useLocation();

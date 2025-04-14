@@ -14,9 +14,6 @@ const RobotArmCTA = () => {
           <Button asChild size="lg">
             <Link to="/#contact">Contact Me</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link to="/">Back to Home</Link>
-          </Button>
         </div>
       </div>
     </section>

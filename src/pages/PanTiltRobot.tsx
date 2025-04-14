@@ -292,7 +292,7 @@ const PanTiltRobot = () => {
             Check out my other work or get in touch to discuss collaboration opportunities.
           </p>
           <div className="flex justify-center">
-            <Link to="/#featured-projects">
+            <Link to="/#contact">
               <Button className="bg-portfolio-blue-light hover:bg-portfolio-blue-lightest/90 text-white">
                 Contact Me
               </Button>

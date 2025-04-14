@@ -48,7 +48,7 @@ const projects: ProjectItem[] = [
   {
     title: "Smart Recycled Chandelier",
     description: "A chandelier created from recycled materials featuring smartphone-controlled RGB LED lighting via Bluetooth.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a192f'/%3E%3Ctext x='50' y='50' font-size='20' text-anchor='middle' alignment-baseline='middle' font-family='monospace' fill='%233b82f6'%3E%3Ctspan x='50' y='45'%3E%26lt;/%26gt;%3C/tspan%3E%3Ctspan x='50' y='65'%3EProject%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+    image: "/lovable-uploads/fea13577-7147-4458-9a24-3fe78dee9ec9.png", // Updated image
     tags: ["Arduino", "Bluetooth", "Embedded Systems", "Sustainable Design"],
     localPath: "/chandelier-project",
     icon: <Lightbulb size={20} />

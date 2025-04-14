@@ -58,7 +58,7 @@ const PanTiltRobot = () => {
                 <ul className="space-y-2 dark:text-gray-300">
                   {hardwareTechnologies.map((tech, index) => (
                     <li key={index} className="flex items-center gap-2">
-                      <span className="text-portfolio-orange-medium"></span> {tech}
+                      <span className="text-portfolio-orange-medium">•</span> {tech}
                     </li>
                   ))}
                 </ul>

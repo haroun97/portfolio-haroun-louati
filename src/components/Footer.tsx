@@ -20,6 +20,7 @@ const Footer = () => {
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              aria-label="Scroll to top of page"
             >
               <span>Back to Top</span>
               <ArrowUp size={16} />

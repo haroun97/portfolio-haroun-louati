@@ -7,27 +7,9 @@ import { Link } from "react-router-dom";
 const FlightsCarRentals = () => {
   return (
     <main className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-800 to-purple-700 py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex flex-col items-start text-left md:w-1/2 mb-6 md:mb-0">
-              <h1 className="text-4xl font-bold text-white mb-4">Flights & Car Rentals Booking Application</h1>
-              <p className="text-xl text-blue-100 max-w-3xl">
-                A comprehensive booking system for travel agencies
-              </p>
-              <div className="flex gap-4 mt-8">
-                <Button asChild variant="secondary">
-                  <Link to="/" className="flex items-center gap-2">
-                    Back to Home
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      {/* Removed header image section */}
+      
+      {/* Rest of the page remains the same */}
       <section className="py-16 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

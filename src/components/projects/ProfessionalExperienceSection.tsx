@@ -19,7 +19,7 @@ const professionalExperiences: ProjectItem[] = [
     title: "Roche",
     description: "Working on innovative healthcare solutions and diagnostic systems.",
     image: "/lovable-uploads/0821873c-31c0-4049-abce-9b09466aec83.png",
-    tags: ["Healthcare", "Diagnostics", "Research"],
+    tags: ["Software Development","Healthcare", "Research"],
     localPath: "/roche-experience",
     icon: <Briefcase size={20} />
   },

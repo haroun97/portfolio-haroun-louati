@@ -4,22 +4,20 @@ import { Link } from "react-router-dom";
 
 const RobotArmCTA = () => {
   return (
-    <section className="py-16 px-6 bg-gradient-to-r from-portfolio-blue-dark to-portfolio-blue-medium text-white">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Interested in similar projects?</h2>
+    <section className="py-16 bg-slate-50 dark:bg-slate-900">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold mb-6">Interested in Learning More?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Check out my other work or get in touch to discuss collaboration opportunities.
+          Feel free to contact me if you'd like to learn more about this project or discuss how we could collaborate on something similar.
         </p>
-        <div className="flex justify-center">
-          <Link to="/#contact">
-            <Button className="bg-portfolio-blue-light hover:bg-portfolio-blue-lightest/90 text-white">
-              Contact Me
-            </Button>
-          </Link>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button asChild size="lg">
+            <Link to="/#contact">Contact Me</Link>
+          </Button>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default RobotArmCTA;

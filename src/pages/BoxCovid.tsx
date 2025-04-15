@@ -356,6 +356,11 @@ const BoxCovid = () => {
             Check out my other work or get in touch to discuss collaboration opportunities.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/#projects">
+              <Button className="bg-portfolio-orange-medium hover:bg-portfolio-orange-dark text-white">
+                View All Projects
+              </Button>
+            </Link>
             <Link to="/#contact">
               <Button className="bg-portfolio-blue-medium hover:bg-portfolio-blue-dark text-white">
                 Contact Me

@@ -29,9 +29,9 @@ const PanTiltRobot = () => {
             <p className="text-xl md:text-2xl text-portfolio-blue-lightest max-w-3xl mb-8">
               Objects and Faces Detection and Tracking System
             </p>
-            <Link to="/">
+            <Link to="/#featured-projects">
               <Button variant="outline" className="border-portfolio-blue-light text-portfolio-blue-lightest hover:bg-portfolio-blue-medium/20">
-                Back to Home
+                Back to Projects
               </Button>
             </Link>
           </div>
@@ -58,7 +58,7 @@ const PanTiltRobot = () => {
                 <ul className="space-y-2 dark:text-gray-300">
                   {hardwareTechnologies.map((tech, index) => (
                     <li key={index} className="flex items-center gap-2">
-                      <span className="text-portfolio-orange-medium">•</span> {tech}
+                      <span className="text-portfolio-orange-medium">���</span> {tech}
                     </li>
                   ))}
                 </ul>
@@ -292,7 +292,7 @@ const PanTiltRobot = () => {
             Check out my other work or get in touch to discuss collaboration opportunities.
           </p>
           <div className="flex justify-center">
-            <Link to="/#contact">
+            <Link to="/#featured-projects">
               <Button className="bg-portfolio-blue-light hover:bg-portfolio-blue-lightest/90 text-white">
                 Contact Me
               </Button>

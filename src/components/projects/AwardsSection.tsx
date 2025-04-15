@@ -65,7 +65,8 @@ const AwardsSection = () => {
       {awardsExperiences.length > 3 && (
         <ShowMoreButton 
           showAll={showAllAwards} 
-          toggleShowAll={() => setShowAllAwards(!showAllAwards)} 
+          toggleShowAll={() => setShowAllAwards(!showAllAwards)}
+          sectionId="awards"
         />
       )}
     </>

@@ -81,7 +81,8 @@ const ProfessionalExperienceSection = () => {
       {professionalExperiences.length > 3 && (
         <ShowMoreButton 
           showAll={showAllProfessional} 
-          toggleShowAll={() => setShowAllProfessional(!showAllProfessional)} 
+          toggleShowAll={() => setShowAllProfessional(!showAllProfessional)}
+          sectionId="professional-experiences"
         />
       )}
     </>

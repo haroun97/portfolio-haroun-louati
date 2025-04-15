@@ -72,7 +72,8 @@ const ProjectsSection = () => {
         <div className="flex justify-center mt-8">
           <ShowMoreButton 
             showAll={showAllProjects} 
-            toggleShowAll={() => setShowAllProjects(!showAllProjects)} 
+            toggleShowAll={() => setShowAllProjects(!showAllProjects)}
+            sectionId="featured-projects"
           />
         </div>
       )}

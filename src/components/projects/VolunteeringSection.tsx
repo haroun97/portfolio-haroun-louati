@@ -57,7 +57,8 @@ const VolunteeringSection = () => {
       {volunteeringExperiences.length > 3 && (
         <ShowMoreButton 
           showAll={showAllVolunteering} 
-          toggleShowAll={() => setShowAllVolunteering(!showAllVolunteering)} 
+          toggleShowAll={() => setShowAllVolunteering(!showAllVolunteering)}
+          sectionId="volunteering-experiences"
         />
       )}
     </>

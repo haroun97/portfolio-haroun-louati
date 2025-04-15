@@ -14,7 +14,7 @@ const ShowMoreButton = ({ showAll, toggleShowAll }: ShowMoreButtonProps) => {
       <Button 
         variant="outline" 
         onClick={toggleShowAll}
-        className="border-portfolio-blue-medium text-portfolio-blue-medium dark:border-portfolio-blue-light dark:text-portfolio-blue-light hover:bg-portfolio-blue-medium/10 dark:hover:bg-portfolio-blue-light/20 hover:text-portfolio-blue-dark dark:hover:text-white transition-colors duration-300"
+        className="border-portfolio-blue-medium text-portfolio-blue-medium dark:border-portfolio-blue-light dark:text-portfolio-blue-light hover:bg-portfolio-blue-light/10"
       >
         {showAll ? "Show Less" : "View More"}
       </Button>

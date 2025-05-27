@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap } from 'lucide-react';
 
@@ -19,37 +19,49 @@ interface EducationCardProps {
 
 const EducationCard = ({ education }: EducationCardProps) => {
   return (
-    <Card className="h-full hover:shadow-lg transition-all duration-300 border-blue-100 dark:border-blue-900/20">
-      <CardHeader className="flex flex-row items-center gap-4 bg-blue-50 dark:bg-blue-900/20">
-        <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-          {education.image ? (
-            <div className="w-16 h-16 overflow-hidden rounded-full">
-              <img src={education.image} alt={education.institution} className="w-full h-full object-contain" />
-            </div>
-          ) : (
-            <GraduationCap className="h-8 w-8 text-blue-600" />
-          )}
-        </div>
-        <div className="flex-1">
-          <CardTitle className="text-lg">{education.degree}</CardTitle>
-          <p className="text-sm text-muted-foreground">{education.institution}</p>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-6">
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-700">
-              {education.years}
-            </Badge>
+    <Card className="project-card flex flex-col h-full hover:shadow-lg transition-all duration-300">
+      <div className="h-48 bg-white dark:bg-portfolio-blue-dark relative overflow-hidden">
+        {education.image ? (
+          <img 
+            src={education.image} 
+            alt={education.institution}
+            className="w-full h-full object-contain p-2"
+          />
+        ) : (
+          <div className="w-full h-full bg-portfolio-blue-dark flex items-center justify-center">
+            <GraduationCap className="h-16 w-16 text-white" />
           </div>
-          
-          {education.description && (
-            <p className="text-gray-700 dark:text-gray-300 text-sm">
-              {education.description}
-            </p>
-          )}
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+          <div className="p-4">
+            <CardTitle className="text-white">{education.degree}</CardTitle>
+          </div>
+        </div>
+      </div>
+      
+      <CardContent className="pt-4 flex-grow">
+        <CardDescription className="text-gray-700 dark:text-gray-300 mb-4">
+          <strong>{education.institution}</strong>
+        </CardDescription>
+        
+        {education.description && (
+          <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+            {education.description}
+          </p>
+        )}
+        
+        <div className="flex flex-wrap gap-2 mt-2">
+          <Badge variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
+            {education.years}
+          </Badge>
         </div>
       </CardContent>
+      
+      <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+        <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
+          <GraduationCap size={20} />
+        </div>
+      </CardFooter>
     </Card>
   );
 };

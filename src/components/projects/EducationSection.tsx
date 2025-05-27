@@ -9,7 +9,7 @@ const educationExperiences: EducationItem[] = [
     degree: "Master's Degree in Computer Science",
     institution: "Private Higher School of Engineering and Technologies (ESPRIT), Tunisia",
     years: "2019–2022",
-    image: "/lovable-uploads/7f0e09b7-3ea5-453a-a71f-56ebaba6bcad.png",
+    image: "/lovable-uploads/039d1f43-7715-47f6-887a-aba82f2ea56d.png",
     description: "Specialized in embedded systems, software development, and mobile applications. Graduated with distinction and recognition for academic excellence."
   },
   {

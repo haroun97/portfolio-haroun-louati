@@ -11,9 +11,9 @@ const ProjectsContainer = () => {
     <section id="projects" className="section-padding bg-white dark:bg-portfolio-blue-dark">
       <div className="container mx-auto">
         <ProfessionalExperienceSection />
+        <EducationSection />
         <VolunteeringSection />
         <AwardsSection />
-        <EducationSection />
         <ProjectsSection />
       </div>
     </section>

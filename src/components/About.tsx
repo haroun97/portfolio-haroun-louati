@@ -8,7 +8,7 @@ const About = () => {
             <h2 className="section-title">About Me</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
               <p>
-                I'm a software engineer with 2+ years of professional experience building smart, user-focused solutions. At Siemens Healthineers, I help improve radiography systems by creating diagnostic tools that reduce troubleshooting time from hours to minutes.
+                I'm a software engineer with 3+ years of professional experience building smart, user-focused solutions. At Siemens Healthineers, I help improve radiography systems by creating diagnostic tools that reduce troubleshooting time from hours to minutes.
               </p>
               <p>
                 My background includes projects like a humanoid robot for kids and a robotic arm for people with limited mobility, using machine learning and computer vision. I also won an award during COVID-19 for an IoT system that safely monitored patients remotely.

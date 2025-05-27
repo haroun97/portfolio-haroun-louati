@@ -64,16 +64,6 @@ const Contact = () => {
             </p>
             
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <Mail className="text-portfolio-orange-light" size={20} />
-                <a 
-                  href="mailto:louatiharoun@gmail.com" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  louatiharoun@gmail.com
-                </a>
-              </div>
-              
               <div className="flex gap-4">
                 <a 
                   href="https://github.com/haroun97" 

@@ -9,7 +9,7 @@ import { ProjectItem } from './ProjectCard';
 const professionalExperiences: ProjectItem[] = [
   {
     title: "Siemens Healthineers",
-    description: "Developing and implementing advanced diagnostics software solutions for healthcare systems. (2023 - Present)",
+    description: "Developed and implemented advanced diagnostics software solutions for healthcare systems. (2023 - Present)",
     image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png", 
     tags: ["Software Development", "Medical Technology", "Diagnostics"],
     localPath: "/siemens-experience",
@@ -17,7 +17,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "Roche",
-    description: "Working on innovative healthcare solutions and diagnostic systems. (2022 - 2023)",
+    description: "Developed and implemented a comprehensive Resource Management System (2022 - 2023)",
     image: "/lovable-uploads/0821873c-31c0-4049-abce-9b09466aec83.png",
     tags: ["Software Development","Healthcare", "Research"],
     localPath: "/roche-experience",

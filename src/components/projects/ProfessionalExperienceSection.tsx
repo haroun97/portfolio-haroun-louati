@@ -14,7 +14,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Software Development", "Medical Technology", "Diagnostics"],
     localPath: "/siemens-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Jan 2023 - Present"
+    dateRange: "Jan 2023 - Sep 2024"
   },
   {
     title: "Roche",
@@ -23,7 +23,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Software Development","Healthcare", "Research"],
     localPath: "/roche-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Mar 2022 - Dec 2022"
+    dateRange: "Jun 2022 - Nov 2022"
   },
   {
     title: "Coding Betounsi",
@@ -32,7 +32,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Software Development", "Team Leadership", "Project Management"],
     localPath: "/coding-betounsi-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Jun 2021 - Feb 2022"
+    dateRange: "Oct 2024 – Present"
   },
   {
     title: "ESPRIT Internship",
@@ -41,7 +41,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Internship", "Technical Development", "Academic"],
     localPath: "/esprit-internship-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Jul 2022 - Sep 2022"
+    dateRange: "Jul 2021 – Sep 2021"
   },
   {
     title: "AKWEL Internship",
@@ -50,7 +50,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Mechanical Engineering", "Automotive", "Industrial"],
     localPath: "/akwel-internship-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Jul 2019 - Aug 2019"
+    dateRange: "Feb 2019 – May 2019"
   },
   {
     title: "Silvatrim Internship",
@@ -59,7 +59,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Manufacturing", "Production", "Industrial"],
     localPath: "/silvatrim-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Aug 2018 - Sep 2018"
+    dateRange: "Jan 2018"
   },
   {
     title: "Maintenance Experience",
@@ -68,7 +68,7 @@ const professionalExperiences: ProjectItem[] = [
     tags: ["Technical Support", "Maintenance", "Engineering"],
     localPath: "/maintenance-experience",
     icon: <Briefcase size={20} />,
-    dateRange: "Jun 2017 - Aug 2017"
+    dateRange: "Jan 2017 - Aug 2017"
   },
 ];
 

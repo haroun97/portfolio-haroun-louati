@@ -11,6 +11,8 @@ const Resume = () => {
   const [zoomLevel, setZoomLevel] = useState(100);
   const location = useLocation();
   
+  const pdfUrl = "https://vnlbcokzbdntnjovoyzp.supabase.co/storage/v1/object/sign/cv/CV%20Haroun%20Louati.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzZkNGQzNmM4LWFjNDUtNDJkNi05YjQ2LWVhOWUyMDE2Y2JmZCJ9.eyJ1cmwiOiJjdi9DViBIYXJvdW4gTG91YXRpLnBkZiIsImlhdCI6MTc0ODM3OTUzNiwiZXhwIjoxNzc5OTE1NTM2fQ.9f1y65B44bVjvlGVJP58caI0b84_baWcBw-FQdt9hBc";
+  
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -90,8 +92,8 @@ const Resume = () => {
               <Button className="flex items-center gap-2 bg-portfolio-orange-medium hover:bg-portfolio-orange-dark">
                 <Download size={18} />
                 <a 
-                  href="/lovable-uploads/faf1b9ea-6810-4f32-a613-ae524e1fc705.png" 
-                  download="haroun_louati_resume.pdf"
+                  href={pdfUrl}
+                  download="Haroun_Louati_Resume.pdf"
                   className="text-white"
                 >
                   Download Resume
@@ -110,10 +112,11 @@ const Resume = () => {
                 }}
                 className="w-full flex justify-center"
               >
-                <img 
-                  src="/lovable-uploads/faf1b9ea-6810-4f32-a613-ae524e1fc705.png" 
-                  alt="Haroun Louati Resume" 
-                  className="w-full h-auto"
+                <iframe
+                  src={`${pdfUrl}#toolbar=0`}
+                  title="Haroun Louati Resume"
+                  className="w-full h-[800px] border-0"
+                  style={{ minHeight: '800px' }}
                 />
               </div>
             </div>

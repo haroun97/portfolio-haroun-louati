@@ -30,6 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: ["louatiharoun@gmail.com"],
+      reply_to: [email], // This ensures replies go to the person who filled out the form
       subject: `New Contact Form Message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -39,6 +40,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p>${message.replace(/\n/g, '<br>')}</p>
         <hr>
         <p><small>This message was sent from your portfolio contact form.</small></p>
+        <p><small>You can reply directly to this email to respond to ${name}.</small></p>
       `,
     });
 

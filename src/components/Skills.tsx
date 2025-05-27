@@ -16,23 +16,19 @@ const skillCategories: SkillCategory[] = [
     title: "Frontend",
     skills: [
       "HTML/CSS",
-      "JavaScript (ES6+)",
+      "JavaScript",
       "TypeScript",
       "React",
-      "Redux",
       "Next.js",
       "Tailwind CSS",
-      "SCSS",
     ]
   },
   {
     title: "Backend",
     skills: [
       "Node.js",
-      "Express",
       "Python",
       "Django",
-      "GraphQL",
       "RESTful APIs",
       "SQL",
       "NoSQL",
@@ -46,9 +42,6 @@ const skillCategories: SkillCategory[] = [
       "CI/CD",
       "AWS",
       "Firebase",
-      "Testing (Jest, RTL)",
-      "Webpack",
-      "Figma",
     ]
   }
 ];
@@ -68,7 +61,7 @@ const languageSkills: LanguageSkill[] = [
   },
   {
     language: "German",
-    level: "Beginner Level"
+    level: "Basic to Intermediate"
   }
 ];
 

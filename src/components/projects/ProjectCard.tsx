@@ -25,7 +25,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const navigate = useNavigate();
   
   const handleCardClick = () => {
-    if (project.localPath) {
+    if (project.demo) {
+      window.open(project.demo, '_blank', 'noopener,noreferrer');
+    } else if (project.localPath) {
       navigate(project.localPath);
     }
   };

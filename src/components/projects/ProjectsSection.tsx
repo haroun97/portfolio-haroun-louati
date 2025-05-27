@@ -1,12 +1,20 @@
 
 import React, { useState } from 'react';
-import { Code, Bot, Lightbulb, Plane } from 'lucide-react';
+import { Code, Bot, Lightbulb, Plane, Globe } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import ShowMoreButton from './ShowMoreButton';
 import SectionTitle from './SectionTitle';
 import { ProjectItem } from './ProjectCard';
 
 const projects: ProjectItem[] = [
+  {
+    title: "Travel Blog Website",
+    description: "A travel blog website to share nice places to visit and the best activities to do. Discover breathtaking destinations and travel experiences.",
+    image: "/lovable-uploads/51443241-cb1f-4560-8a14-c5eae3612e95.png",
+    tags: ["Travel", "Blog", "Web Development", "Tourism"],
+    demo: "https://www.harountravel.com/",
+    icon: <Globe size={20} />
+  },
   {
     title: "Box-Covid",
     description: "An intelligent monitoring system that enables doctors to remotely monitor COVID-19 patients using sensors and a cross-platform application.",

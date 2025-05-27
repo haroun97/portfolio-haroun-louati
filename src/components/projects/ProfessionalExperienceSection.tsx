@@ -9,7 +9,7 @@ import { ProjectItem } from './ProjectCard';
 const professionalExperiences: ProjectItem[] = [
   {
     title: "Siemens Healthineers",
-    description: "Developing and implementing advanced diagnostics software solutions for healthcare systems.",
+    description: "Developing and implementing advanced diagnostics software solutions for healthcare systems. (2023 - Present)",
     image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png", 
     tags: ["Software Development", "Medical Technology", "Diagnostics"],
     localPath: "/siemens-experience",
@@ -17,7 +17,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "Roche",
-    description: "Working on innovative healthcare solutions and diagnostic systems.",
+    description: "Working on innovative healthcare solutions and diagnostic systems. (2022 - 2023)",
     image: "/lovable-uploads/0821873c-31c0-4049-abce-9b09466aec83.png",
     tags: ["Software Development","Healthcare", "Research"],
     localPath: "/roche-experience",
@@ -25,7 +25,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "Coding Betounsi",
-    description: "Leading software development projects and technical initiatives.",
+    description: "Leading software development projects and technical initiatives. (2021 - 2022)",
     image: "/lovable-uploads/0f1307dc-22fb-48af-ad49-4860776ab65b.png",
     tags: ["Software Development", "Team Leadership", "Project Management"],
     localPath: "/coding-betounsi-experience",
@@ -33,7 +33,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "ESPRIT Internship",
-    description: "Academic internship developing technical skills and industry experience.",
+    description: "Academic internship developing technical skills and industry experience. (2022)",
     image: "/lovable-uploads/3f02a935-1c51-449b-a5ef-e0b2a6fac9d8.png",
     tags: ["Internship", "Technical Development", "Academic"],
     localPath: "/esprit-internship-experience",
@@ -41,7 +41,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "AKWEL Internship",
-    description: "Industrial experience in mechanical and systems engineering.",
+    description: "Industrial experience in mechanical and systems engineering. (2019)",
     image: "/lovable-uploads/f22477d8-4be7-4748-acdd-f49d97168bc6.png",
     tags: ["Mechanical Engineering", "Automotive", "Industrial"],
     localPath: "/akwel-internship-experience",
@@ -49,7 +49,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "Silvatrim Internship",
-    description: "Experience in manufacturing and production systems.",
+    description: "Experience in manufacturing and production systems. (2018)",
     image: "/lovable-uploads/44e45b1f-3570-4dc3-b5f0-5782827edc9d.png",
     tags: ["Manufacturing", "Production", "Industrial"],
     localPath: "/silvatrim-experience",
@@ -57,7 +57,7 @@ const professionalExperiences: ProjectItem[] = [
   },
   {
     title: "Maintenance Experience",
-    description: "Technical maintenance and system support role.",
+    description: "Technical maintenance and system support role. (2017)",
     image: "/lovable-uploads/0fe50239-19a9-4be2-bd16-c25aabca71e8.png",
     tags: ["Technical Support", "Maintenance", "Engineering"],
     localPath: "/maintenance-experience",

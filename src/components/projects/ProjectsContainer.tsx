@@ -3,6 +3,7 @@ import React from 'react';
 import ProfessionalExperienceSection from './ProfessionalExperienceSection';
 import VolunteeringSection from './VolunteeringSection';
 import AwardsSection from './AwardsSection';
+import EducationSection from './EducationSection';
 import ProjectsSection from './ProjectsSection';
 
 const ProjectsContainer = () => {
@@ -12,6 +13,7 @@ const ProjectsContainer = () => {
         <ProfessionalExperienceSection />
         <VolunteeringSection />
         <AwardsSection />
+        <EducationSection />
         <ProjectsSection />
       </div>
     </section>

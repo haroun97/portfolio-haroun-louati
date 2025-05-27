@@ -6,6 +6,11 @@ interface SkillCategory {
   skills: string[];
 }
 
+interface LanguageSkill {
+  language: string;
+  level: string;
+}
+
 const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
@@ -48,13 +53,32 @@ const skillCategories: SkillCategory[] = [
   }
 ];
 
+const languageSkills: LanguageSkill[] = [
+  {
+    language: "Arabic",
+    level: "Native"
+  },
+  {
+    language: "French",
+    level: "Business Proficiency"
+  },
+  {
+    language: "English",
+    level: "Advanced"
+  },
+  {
+    language: "German",
+    level: "Beginner Level"
+  }
+];
+
 const Skills = () => {
   return (
     <section id="skills" className="section-padding bg-white dark:bg-portfolio-blue-dark">
       <div className="container mx-auto">
         <h2 className="section-title">Technical Skills</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <Card key={index} className="overflow-hidden shadow-md">
               <div className="h-3 bg-gradient-to-r from-portfolio-blue-medium to-portfolio-orange-medium"></div>
@@ -73,6 +97,28 @@ const Skills = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <h2 className="section-title">Language Skills</h2>
+        
+        <div className="max-w-4xl mx-auto">
+          <Card className="overflow-hidden shadow-md">
+            <div className="h-3 bg-gradient-to-r from-portfolio-orange-medium to-portfolio-blue-medium"></div>
+            <CardContent className="pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {languageSkills.map((language, index) => (
+                  <div key={index} className="flex justify-between items-center p-4 bg-gray-50 dark:bg-portfolio-blue-medium/20 rounded-lg">
+                    <span className="text-lg font-medium text-portfolio-blue-dark dark:text-white">
+                      {language.language}
+                    </span>
+                    <span className="bg-portfolio-blue-medium text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {language.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

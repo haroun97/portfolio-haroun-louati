@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, Calendar } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
@@ -54,7 +54,14 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         </div>
       </CardContent>
       
-      <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+      <CardFooter className="flex justify-between items-center border-t pt-4 mt-auto">
+        {experience.dateRange && (
+          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+            <Calendar size={16} />
+            <span>{experience.dateRange}</span>
+          </div>
+        )}
+        
         <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
           {experience.icon || <Briefcase size={20} />}
         </div>

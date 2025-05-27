@@ -9,59 +9,66 @@ import { ProjectItem } from './ProjectCard';
 const professionalExperiences: ProjectItem[] = [
   {
     title: "Siemens Healthineers",
-    description: "Developed and implemented advanced diagnostics software solutions for healthcare systems. (2023 - Present)",
+    description: "Developed and implemented advanced diagnostics software solutions for healthcare systems.",
     image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png", 
     tags: ["Software Development", "Medical Technology", "Diagnostics"],
     localPath: "/siemens-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Jan 2023 - Present"
   },
   {
     title: "Roche",
-    description: "Developed and implemented a comprehensive Resource Management System (2022 - 2023)",
+    description: "Developed and implemented a comprehensive Resource Management System",
     image: "/lovable-uploads/0821873c-31c0-4049-abce-9b09466aec83.png",
     tags: ["Software Development","Healthcare", "Research"],
     localPath: "/roche-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Mar 2022 - Dec 2022"
   },
   {
     title: "Coding Betounsi",
-    description: "Leading software development projects and technical initiatives. (2021 - 2022)",
+    description: "Leading software development projects and technical initiatives.",
     image: "/lovable-uploads/0f1307dc-22fb-48af-ad49-4860776ab65b.png",
     tags: ["Software Development", "Team Leadership", "Project Management"],
     localPath: "/coding-betounsi-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Jun 2021 - Feb 2022"
   },
   {
     title: "ESPRIT Internship",
-    description: "Academic internship developing technical skills and industry experience. (2022)",
+    description: "Academic internship developing technical skills and industry experience.",
     image: "/lovable-uploads/3f02a935-1c51-449b-a5ef-e0b2a6fac9d8.png",
     tags: ["Internship", "Technical Development", "Academic"],
     localPath: "/esprit-internship-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Jul 2022 - Sep 2022"
   },
   {
     title: "AKWEL Internship",
-    description: "Industrial experience in mechanical and systems engineering. (2019)",
+    description: "Industrial experience in mechanical and systems engineering.",
     image: "/lovable-uploads/f22477d8-4be7-4748-acdd-f49d97168bc6.png",
     tags: ["Mechanical Engineering", "Automotive", "Industrial"],
     localPath: "/akwel-internship-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Jul 2019 - Aug 2019"
   },
   {
     title: "Silvatrim Internship",
-    description: "Experience in manufacturing and production systems. (2018)",
+    description: "Experience in manufacturing and production systems.",
     image: "/lovable-uploads/44e45b1f-3570-4dc3-b5f0-5782827edc9d.png",
     tags: ["Manufacturing", "Production", "Industrial"],
     localPath: "/silvatrim-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Aug 2018 - Sep 2018"
   },
   {
     title: "Maintenance Experience",
-    description: "Technical maintenance and system support role. (2017)",
+    description: "Technical maintenance and system support role.",
     image: "/lovable-uploads/0fe50239-19a9-4be2-bd16-c25aabca71e8.png",
     tags: ["Technical Support", "Maintenance", "Engineering"],
     localPath: "/maintenance-experience",
-    icon: <Briefcase size={20} />
+    icon: <Briefcase size={20} />,
+    dateRange: "Jun 2017 - Aug 2017"
   },
 ];
 

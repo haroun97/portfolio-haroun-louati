@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink, Github, Code } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,6 +14,7 @@ export interface ProjectItem {
   demo?: string;
   localPath?: string;
   icon?: JSX.Element;
+  dateRange?: string;
 }
 
 interface ProjectCardProps {

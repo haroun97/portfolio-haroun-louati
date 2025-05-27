@@ -88,6 +88,17 @@ const Resume = () => {
                 
                 <span className="ml-2 text-sm text-muted-foreground">{zoomLevel}%</span>
               </div>
+              
+              <Button className="flex items-center gap-2 bg-portfolio-orange-medium hover:bg-portfolio-orange-dark">
+                <Download size={18} />
+                <a 
+                  href={pdfUrl}
+                  download="Haroun_Louati_Resume.pdf"
+                  className="text-white"
+                >
+                  Download Resume
+                </a>
+              </Button>
             </div>
           </div>
           

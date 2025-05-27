@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, Calendar } from 'lucide-react';
 
 export interface EducationItem {
   id: string;
@@ -49,15 +49,14 @@ const EducationCard = ({ education }: EducationCardProps) => {
             {education.description}
           </p>
         )}
-        
-        <div className="flex flex-wrap gap-2 mt-2">
-          <Badge variant="secondary" className="bg-portfolio-blue-lightest/30 text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:bg-portfolio-blue-medium/30">
-            {education.years}
-          </Badge>
-        </div>
       </CardContent>
       
-      <CardFooter className="flex justify-end gap-3 border-t pt-4 mt-auto">
+      <CardFooter className="flex justify-between items-center border-t pt-4 mt-auto">
+        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+          <Calendar size={16} />
+          <span>{education.years}</span>
+        </div>
+        
         <div className="text-portfolio-blue-medium hover:text-portfolio-blue-dark dark:text-portfolio-blue-lightest dark:hover:text-white">
           <GraduationCap size={20} />
         </div>

@@ -8,6 +8,15 @@ import { ProjectItem } from './ProjectCard';
 
 const professionalExperiences: ProjectItem[] = [
   {
+    title: "Automate AI",
+    description: "Led cross-functional team to build ML solutions for automated crop boundary detection. Designed scalable architecture and developed secure APIs with Django.",
+    image: "/lovable-uploads/d68c2c09-54bd-41e3-a98d-8cbaa13613ae.png", 
+    tags: ["GIS", "Team Leadership", "Machine Learning", "Django", "AWS", "TypeScript"],
+    localPath: "/automate-ai-experience",
+    icon: <Briefcase size={20} />,
+    dateRange: "May 2025 - Present"
+  },
+  {
     title: "Siemens Healthineers",
     description: "Developed and implemented advanced diagnostics software solutions for healthcare systems.",
     image: "/lovable-uploads/2c12b290-f091-44ab-b535-e3fc89fe3301.png", 

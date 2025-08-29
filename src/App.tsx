@@ -18,6 +18,7 @@ import EspritInternshipExperience from "./pages/EspritInternshipExperience";
 import AkwelInternshipExperience from "./pages/AkwelInternshipExperience";
 import SilvatrimExperience from "./pages/SilvatrimExperience";
 import MaintenanceExperience from "./pages/MaintenanceExperience";
+import AutomateAiExperience from "./pages/AutomateAiExperience";
 import Awards from "./pages/Awards";
 import FlightsCarRentals from "./pages/FlightsCarRentals";
 import ChandelierProject from "./pages/ChandelierProject";
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/akwel-internship-experience" element={<AkwelInternshipExperience />} />
           <Route path="/silvatrim-experience" element={<SilvatrimExperience />} />
           <Route path="/maintenance-experience" element={<MaintenanceExperience />} />
+          <Route path="/automate-ai-experience" element={<AutomateAiExperience />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/flights-car-rentals" element={<FlightsCarRentals />} />
           <Route path="/chandelier-project" element={<ChandelierProject />} />

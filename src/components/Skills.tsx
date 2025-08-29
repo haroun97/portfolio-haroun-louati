@@ -13,35 +13,73 @@ interface LanguageSkill {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend",
+    title: "Frontend Development",
     skills: [
       "HTML/CSS",
       "JavaScript",
       "TypeScript",
       "React",
-      "Next.js",
+      "Electron",
+      "Interactive Dashboards",
+      "Data Visualization",
       "Tailwind CSS",
     ]
   },
   {
-    title: "Backend",
+    title: "Backend & APIs",
     skills: [
-      "Node.js",
       "Python",
       "Django",
+      "Node.js",
+      "C++",
       "RESTful APIs",
+      "Stateless APIs",
+      "IAM Security",
       "SQL",
-      "NoSQL",
     ]
   },
   {
-    title: "Tools & Technologies",
+    title: "Cloud & DevOps",
     skills: [
+      "AWS (EC2, S3, CloudFront)",
+      "Azure DevOps Server",
+      "CI/CD Pipelines",
       "Git/GitHub",
       "Docker",
-      "CI/CD",
-      "AWS",
-      "Firebase",
+      "Load Balancers",
+    ]
+  },
+  {
+    title: "Data & Machine Learning",
+    skills: [
+      "Machine Learning",
+      "GIS (Geographic Information Systems)",
+      "ETL Tools",
+      "Data Processing",
+      "Crop Boundary Detection",
+      "Satellite Imagery Analysis",
+    ]
+  },
+  {
+    title: "Testing & Quality Assurance",
+    skills: [
+      "Pytest",
+      "Software Testing",
+      "Test Automation",
+      "HP Quality Center",
+      "Unit Testing",
+      "Integration Testing",
+    ]
+  },
+  {
+    title: "Leadership & Management",
+    skills: [
+      "Team Leadership",
+      "Project Management", 
+      "Agile Scrum Methodologies",
+      "Cross-functional Teams",
+      "Technical Documentation",
+      "Training & Mentoring",
     ]
   }
 ];
@@ -71,7 +109,7 @@ const Skills = () => {
       <div className="container mx-auto">
         <h2 className="section-title">Technical Skills</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <Card key={index} className="overflow-hidden shadow-md">
               <div className="h-3 bg-gradient-to-r from-portfolio-blue-medium to-portfolio-orange-medium"></div>
